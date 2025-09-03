@@ -1,0 +1,380 @@
+/* ======== VARIABLES Y ESTILOS GLOBALES ======== */
+:root {
+  --primary-color: #CFAE4D; /* Acento “Royal” (Dorado rico) */
+  --background-color: #0A0E1A; /* Fondo principal (Azul noche) */
+  --surface-color: #1B1035; /* Fondo secundario (Púrpura oscuro) */
+  --text-color: #D8D8E0; /* Texto principal (Gris humo) */
+  --text-color-dark: #0A0E1A; /* Usar el fondo principal para texto oscuro */
+  --accent-futuristic: #FF00A0; /* Acento futurista (Magenta vibrante) */
+  --hover-active: #8E2DE2; /* Hover/activo (Púrpura brillante) */
+  --font-family: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+.section--dark {
+  background-color: var(--surface-color);
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 700;
+}
+
+/* ======== BOTONES (CTA) ======== */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn--primary {
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+}
+
+.btn--primary:hover {
+  transform: translateY(-3px);
+  background-color: var(--hover-active);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn--secondary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  transform: translateY(-3px);
+  border-color: var(--hover-active);
+}
+
+.btn--large {
+  font-size: 1.1rem;
+  padding: 15px 35px;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+/* ======== HEADER Y NAVEGACIÓN ======== */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(10, 14, 26, 0.8); /* Usar el color de fondo principal con transparencia */
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  border-bottom: 1px solid var(--surface-color);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+}
+
+.nav__logo {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav__link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--hover-active);
+}
+
+/* ======== SECCIÓN HERO ======== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(10,14,26,0.7), rgba(10,14,26,0.7)), /* Usar el color de fondo principal con transparencia */
+    url('https://via.placeholder.com/1920x1080/0A0E1A/1B1035?text=Fondo+Gamer+Abstracto')
+    no-repeat center center/cover;
+}
+
+.hero__title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+/* ======== SECCIONES DE CONTENIDO ======== */
+.about__grid,
+.creators__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.creators__grid {
+  grid-template-columns: 1fr 2fr;
+}
+
+.about__image,
+.creators__image {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 10rem;
+}
+
+.about__text h3,
+.creators__text h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ======== JUEGOS SOPORTADOS ======== */
+.games__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.game-card {
+  background-color: var(--background-color);
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid var(--surface-color);
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--hover-active);
+}
+
+.game-card i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.game-card__title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* ======== TESTIMONIOS ======== */
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: var(--surface-color);
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.testimonial-card cite {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* ======== CTA FINAL ======== */
+.cta {
+  background-color: var(--primary-color);
+  color: var(--text-color-dark);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.cta__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta .btn--primary {
+  background-color: var(--accent-futuristic);
+  color: var(--text-color);
+  border: 2px solid var(--accent-futuristic);
+}
+
+.cta .btn--primary:hover {
+  background-color: var(--hover-active);
+  border-color: var(--hover-active);
+}
+
+/* ======== FOOTER ======== */
+.footer {
+  background-color: var(--surface-color);
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer__socials {
+  margin-bottom: 15px;
+}
+
+.footer__social-link {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin: 0 15px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer__social-link:hover {
+  color: var(--primary-color);
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .section__title {
+    font-size: 2rem;
+  }
+
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__btn {
+    font-size: 0.9rem;
+  }
+
+  .hero__title {
+    font-size: 2.8rem;
+  }
+
+  .about__grid,
+  .creators__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .creators__grid .creators__image {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* ======== Animaciones ======== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ======== TIENDA (SHOP) ======== */
+.shop__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.shop-card {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  padding: 32px 24px 24px 24px;
+  text-align: center;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  border: 1px solid var(--surface-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.shop-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  border-color: var(--hover-active);
+}
+.shop-card__img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+.shop-card__title {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.shop-card__price {
+  display: block;
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin: 12px 0 18px 0;
+  font-weight: 700;
+}
+.shop-card .btn {
+  width: 100%;
+  font-size: 1rem;
+}
