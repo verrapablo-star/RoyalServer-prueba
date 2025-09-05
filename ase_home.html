@@ -8,51 +8,478 @@
 </head>
 <body>
   <header class="header">
-    <div id="nav-bar-ase-container"></div>
-    <div style="padding: 30px 0; text-align: center; background: #181818;">
-      <img src="img/ARK_EVOLVED.png" alt="ARK Survival Evolved" style="height:80px;vertical-align:middle;">
-      <h1 style="display:inline-block; margin-left: 18px; color: var(--primary-color); font-size:2.5rem; font-family:'Montserrat',sans-serif;">ARK: Survival Evolved</h1>
+  <div id="nav-bar-home-container"></div>
+    <div style="height:40px; display:flex; align-items:center; background:#181818; padding-left:32px;">
+      <img src="img/ARK_EVOLVED.png" alt="ARK Survival Evolved" style="height:28px;vertical-align:middle;">
+      <h1 style="margin-left: 14px; color: var(--primary-color); font-size:1.25rem; font-family:'Montserrat',sans-serif; text-align:left; display:inline-block;">ARK: Survival Evolved</h1>
     </div>
   </header>
-  <main>
-    <section class="section container">
-      <h2 class="section__title">Bienvenido al Reino de ARK</h2>
-      <p>Servidor PvE x3, comunidad activa, eventos semanales y soporte 24/7.</p>
-      <ul style="margin: 30px 0; font-size:1.2rem;">
-        <li>Mapa: Ragnarok</li>
-        <li>Mods: Structures+, Dino Storage, Awesome Spyglass</li>
-        <li>Eventos: Batallas de tribus, carreras de dinos, búsqueda del tesoro</li>
-        <li>Premios: Skins exclusivas, dinos especiales, recursos</li>
-        <li>Discord: <a href="https://discord.gg/TU_INVITACION" target="_blank">Únete aquí</a></li>
-      </ul>
-      <div style="margin-top:40px;">
-        <img src="img/ARK_EVOLVED.png" alt="ARK Banner" style="width:320px;max-width:100%;border-radius:12px;box-shadow:0 4px 24px #0005;">
+  <main style="margin-top:56px;">
+    <!-- Top ARK background image with random text overlay -->
+  <div class="hero" style="position:relative;width:100%;height:634px;overflow:hidden;">
+  <img class="hero-bg" src="img/FONDO_ARK_EVOLVED.jpg" alt="Fondo ARK Evolved" style="width:100%;height:100%;object-fit:cover;object-position:top;filter:brightness(0.7);-webkit-mask-image:linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);-webkit-mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-image:linear-gradient(to bottom, black 0%, black 70%, transparent 100%);mask-size:100% 100%;mask-repeat:no-repeat;">
+      <div class="hero-overlay" style="position:absolute;top:0;left:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:2;padding:24px;">
+      <h2 id="ark-random-text" style="color:#fff;font-size:2.2rem;font-family:'Montserrat',sans-serif;text-shadow:0 2px 16px #0009;letter-spacing:2px;background:rgba(0,0,0,0.25);padding:18px 32px;border-radius:16px;">Un mundo primitivo espera ser conquistado...</h2>
+          </div>
+    </div>
+    <!-- Mapas section: lista de mapas con paneles (status, nombre en juego, jugadores, botón Unirse) -->
+    <section id="mapas" class="section container" style="margin-top:32px;">
+      <h2 class="section__title">Mapas</h2>
+      <div class="maps-grid">
+        <!-- Cada tarjeta representa un mapa; los valores son placeholders editables luego -->
+        <div class="map-card" data-map="Aberration">
+          <div class="map-card__header"><h3>Aberration</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Extintion">
+          <div class="map-card__header"><h3>Extintion</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="The Island">
+          <div class="map-card__header"><h3>The Island</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Scorched Earth">
+          <div class="map-card__header"><h3>Scorched Earth</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Génesis">
+          <div class="map-card__header"><h3>Génesis</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Génesis 2">
+          <div class="map-card__header"><h3>Génesis 2</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Fjordur">
+          <div class="map-card__header"><h3>Fjordur</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Lost Island">
+          <div class="map-card__header"><h3>Lost Island</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="The Center">
+          <div class="map-card__header"><h3>The Center</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Valguero">
+          <div class="map-card__header"><h3>Valguero</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
+
+        <div class="map-card" data-map="Ragnarok">
+          <div class="map-card__header"><h3>Ragnarok</h3><span class="status offline">OFFLINE</span></div>
+          <div class="map-card__body">
+            <label class="map-label">Nombre en juego</label>
+            <input class="server-name" type="text" placeholder="Nombre del servidor..." />
+            <div class="players">Jugadores: <span class="count">--</span></div>
+          </div>
+          <div class="map-card__footer"><button class="join-btn">Unirse</button></div>
+        </div>
       </div>
     </section>
-    <section class="section container">
-      <h2 class="section__title">Datos Random</h2>
-      <ul style="font-size:1.1rem;">
-        <li>Jugadores activos: 57</li>
-        <li>Último evento: Carrera de Raptors</li>
-        <li>Próximo wipe: 12/09/2025</li>
-        <li>Tribos registradas: 14</li>
-        <li>Top tribu: Los Dinos Locos</li>
-      </ul>
-    </section>
-  </main>
   <footer class="footer">
     <div class="container">
       <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
+<style>
+@keyframes fadeInDesc {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+#ark-desc {
+  animation: fadeInDesc 1.2s;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-24px); }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes zoom {
+  0% { transform: scale(0.7); opacity:0; }
+  80% { transform: scale(1.1); opacity:1; }
+  100% { transform: scale(1); }
+}
+.bounce { animation: bounce 1.2s; }
+.fadeIn { animation: fadeIn 1.2s; }
+.zoom { animation: zoom 1.2s; }
+
+/* Hero background fixed and blur-on-scroll behavior */
+.hero { position:relative; height:634px; overflow:hidden; }
+.hero-bg { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:top; transition:filter 300ms ease, transform 400ms ease; z-index:1; }
+.hero-overlay { position:relative; z-index:2; }
+
+/* When page is scrolled, make the hero background very blurred and dimmed */
+body.scrolled .hero-bg { filter:brightness(0.45) blur(8px); }
+
+/* Make sure content after hero overlaps nicely */
+.section { position:relative; z-index:3; }
+
+/* Maps list and enhanced cards */
+.maps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:20px; align-items: start; margin-top:20px; }
+.map-card { position:relative; /* layered backgrounds: subtle glassy dark base + faint highlight gradient */
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), rgba(10,12,16,0.48);
+  padding:18px 16px 64px 16px; border-radius:14px; color:var(--text-color); display:flex; flex-direction:row; align-items:center; transform:translateY(12px); opacity:0; transition:transform 360ms cubic-bezier(.2,.9,.2,1), box-shadow 300ms ease, opacity 260ms ease; min-height:96px; overflow:hidden; border:1.5px solid rgba(255,255,255,0.06);
+  /* decorative gradient border via background-clip trick */
+  background-origin: border-box;
+}
+
+.map-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  pointer-events: none;
+  opacity: 0.12;
+  background: linear-gradient(90deg, var(--primary-color), var(--hover-active));
+  z-index: 0;
+}
+
+/* Aberration: left-anchored background panel (gentle fade into card) */
+/* Make the Aberration card height match the thumbnail crop and align corners */
+.map-card[data-map="Aberration"] { padding-left: 232px; height: calc(200px + 24px); /* image height(200) + top/bottom 12px */ }
+.map-card[data-map="Aberration"]::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  bottom: 12px;
+  width: 200px;
+  border-radius: 14px; /* match .map-card border-radius */
+  background-image: url('img/ABE_INGAME.jpg');
+  /* stronger zoomed-in crop so only a readable portion shows */
+  background-size: 320%;
+  /* bias focal area to show the glowing left-center details */
+  background-position: 18% center;
+  background-repeat: no-repeat;
+  z-index: 1;
+  pointer-events: none;
+  filter: saturate(128%);
+  /* minimal blur so the crop reads large but fades softly at the edge */
+  -webkit-filter: blur(0.3px) saturate(1.25);
+  filter: blur(0.3px) saturate(1.25);
+  /* fade the image smoothly into the card using a mask gradient */
+  -webkit-mask-image: linear-gradient(to right, black 0%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
+  mask-image: linear-gradient(to right, black 0%, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0) 100%);
+}
+/* Aberration: use the image as the card background so image edges align with panel borders */
+.map-card[data-map="Aberration"] {
+  /* background is the zoomed-in image; it will cover the panel area */
+  background-image: url('img/ABE_INGAME.jpg'), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)), rgba(10,12,16,0.28);
+  background-repeat: no-repeat;
+  background-size: 320% auto; /* zoomed crop */
+  background-position: 18% center, center center, center center;
+  padding: 12px 16px; /* thinner panel */
+  min-height: 120px; /* thinner */
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* overlay on the right to fade the image into the card content for readability */
+.map-card[data-map="Aberration"]::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 200px; /* leave left portion showing the image */
+  right: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(10,12,16,0.72) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+/* ensure header/body content sits above the overlay */
+.map-card[data-map="Aberration"] .map-card__header,
+.map-card[data-map="Aberration"] .map-card__body,
+.map-card[data-map="Aberration"] .map-card__footer { position: relative; z-index: 2; }
+
+/* ensure header/body content sits above the background */
+.map-card__header, .map-card__body { position:relative; z-index:2; }
+
+.map-card:hover { transform:translateY(-6px); box-shadow:0 16px 48px rgba(0,0,0,0.65); }
+
+.map-card__header { display:flex; flex-direction:column; justify-content:center; margin-right:18px; flex:0 0 220px; z-index:2; }
+.map-card__header h3 { margin:0; font-size:1.05rem; color:var(--primary-color); text-shadow:0 2px 6px rgba(0,0,0,0.6); }
+.status { font-weight:700; /* very small pill-shaped badge */ font-size:0.65rem; line-height:1; height:16px; padding:0 8px; border-radius:999px; width:auto; z-index:3; position:absolute; top:8px; right:8px; margin:0; display:inline-flex; align-items:center; gap:6px; }
+.status::before { content: ''; width:6px; height:6px; border-radius:50%; display:inline-block; flex:0 0 6px; background:#fff; border:2px solid transparent; box-sizing:border-box; }
+.status.online { background: linear-gradient(90deg, rgba(46,204,113,0.98), rgba(39,174,96,0.98)); color:#062a11; box-shadow:0 4px 14px rgba(46,204,113,0.06); animation: pulseGreen 1.2s infinite linear; }
+.status.online::before { border-color: rgba(46,204,113,0.98); box-shadow:0 0 6px rgba(46,204,113,0.12); animation: dotPulse 1.2s infinite linear; }
+.status.offline { background: linear-gradient(90deg, rgba(231,76,60,0.98), rgba(192,57,43,0.98)); color:#fff; box-shadow:0 4px 14px rgba(231,76,60,0.06); animation: pulseRed 1.2s infinite linear; }
+.status.offline::before { border-color: rgba(231,76,60,0.98); box-shadow:0 0 6px rgba(231,76,60,0.12); animation: dotPulse 1.2s infinite linear reverse; }
+
+.map-card__body { display:flex; align-items:center; gap:14px; flex:1 1 auto; z-index:2; }
+.map-label { font-size:0.8rem; color:var(--text-color); display:none; }
+.server-name { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.04); padding:10px 12px; border-radius:8px; color:var(--text-color); width:240px; }
+.players { font-size:0.95rem; color:var(--text-color); }
+.map-card__footer { position:absolute; right:12px; bottom:12px; display:flex; justify-content:flex-end; flex:0 0 auto; z-index:3; }
+/* Redesigned Join button: gold primary, icon, hover animations */
+.join-btn {
+  background: linear-gradient(90deg, var(--primary-color), #b78f39);
+  border: none;
+  color: #0b0b0b; /* near-black for text for strong contrast */
+  padding:8px 12px 8px 44px; /* more space for larger icon */
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:800;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.5), inset 0 -2px 0 rgba(0,0,0,0.06);
+  position: relative;
+  transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease, color 180ms ease;
+  text-transform:uppercase;
+}
+.join-btn::before {
+  content: '';
+  position: absolute;
+  left:12px;
+  top:50%;
+  transform:translateY(-50%);
+  width:18px;
+  height:18px;
+  display:inline-block;
+  /* lightning bolt icon (monochrome) */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M20 2 L8 18h8l-2 12 16-20h-8l-2-12z' fill='%230b0b0b'/></svg>");
+  background-size:contain;
+  background-repeat:no-repeat;
+  transition: transform 240ms cubic-bezier(.2,.9,.2,1), filter 200ms ease;
+}
+.join-btn:hover { transform: translateY(-4px) scale(1.02); filter:brightness(1.02); box-shadow: 0 14px 36px rgba(0,0,0,0.6); }
+.map-card:hover .join-btn::before { transform: translateY(-50%) rotate(-8deg) translateX(3px) scale(1.05); animation: hit 320ms ease; }
+
+/* Invert colors on hover: dark background, gold text/icon */
+.join-btn:hover {
+  background: #0b0b0b;
+  color: var(--primary-color);
+}
+.join-btn:hover::before {
+  /* replace icon fill with project gold */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M20 2 L8 18h8l-2 12 16-20h-8l-2-12z' fill='%23CFAE4D'/></svg>");
+  filter: none;
+}
+
+/* Futuristic magenta/cyan hover flares: a moving gradient overlay with blend and blur */
+.join-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0; /* cover the entire button */
+  border-radius: 10px;
+  pointer-events: none;
+  z-index: 1; /* sit above background but below text/icon */
+  mix-blend-mode: screen; /* bright additive blending */
+  opacity: 0;
+  background: linear-gradient(120deg,
+    rgba(255,0,255,0.0) 0%,
+    rgba(255,0,255,0.14) 12%,
+    rgba(0,255,255,0.12) 48%,
+    rgba(255,0,255,0.14) 82%,
+    rgba(255,0,255,0.0) 100%);
+  background-size: 220% 100%;
+  filter: blur(8px) saturate(140%);
+  transform: translateX(-15%);
+  transition: opacity 220ms ease, transform 420ms cubic-bezier(.2,.9,.2,1);
+}
+
+/* Activate flares when hovering the button or its card */
+.join-btn:hover::after,
+.map-card:hover .join-btn::after {
+  opacity: 1;
+  transform: translateX(15%);
+  animation: flareMove 900ms linear infinite, flarePulse 1100ms ease-in-out infinite;
+}
+
+@keyframes flareMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes flarePulse {
+  0% { opacity: 0.28; }
+  10% { opacity: 0.9; }
+  30% { opacity: 0.35; }
+  60% { opacity: 0.7; }
+  100% { opacity: 0.28; }
+}
+
+@keyframes hit { 0% { transform: translateY(-50%) translateX(0) scale(1); } 40% { transform: translateY(-58%) translateX(3px) scale(1.14); } 100% { transform: translateY(-50%) translateX(3px) scale(1.05); } }
+
+/* Make status badge react on hover too */
+.map-card:hover .status { transform: translateY(-2px) scale(1.02); }
+
+/* subtle animated gradient accent */
+@keyframes accentMove { 0% { background-position:0% 50%; } 50% { background-position:100% 50%; } 100% { background-position:0% 50%; } }
+.map-card.accent::after { animation:accentMove 6s linear infinite; }
+
+/* status pulse when online */
+@keyframes pulseGreen { 0% { box-shadow:0 0 0 0 rgba(46,204,113,0.22); } 50% { box-shadow:0 0 0 6px rgba(46,204,113,0.06); } 100% { box-shadow:0 0 0 0 rgba(46,204,113,0); } }
+
+@keyframes pulseRed { 0% { box-shadow:0 0 0 0 rgba(231,76,60,0.22); } 50% { box-shadow:0 0 0 6px rgba(231,76,60,0.06); } 100% { box-shadow:0 0 0 0 rgba(231,76,60,0); } }
+
+@keyframes dotPulse { 0% { transform:scale(1); } 50% { transform:scale(1.25); } 100% { transform:scale(1); } }
+
+/* Appear animation helper */
+.map-card.show { transform:translateY(0); opacity:1; }
+
+/* Responsive: stack card content vertically on small screens */
+@media (max-width:600px) {
+  .map-card { flex-direction:column; align-items:flex-start; padding:12px; padding-bottom:18px; min-height:initial; }
+  .map-card[data-map="Aberration"] { padding-left:12px; }
+  .map-card__header { flex: none; margin-right:0; margin-bottom:8px; }
+  .map-card__body { flex-direction:column; gap:8px; width:100%; }
+  .server-name { width:100%; }
+  .map-card__footer { width:100%; display:flex; justify-content:flex-end; margin-top:8px; position:static; }
+  .status { position:static; margin-top:6px; }
+  .map-card::after { display:none; }
+}
+</style>
 <script>
-// Cargar el nav_bar_ase.html dinámicamente
-fetch('nav_bar_ase.html')
+// Cargar el ASE_nav_bar.html dinámicamente
+fetch('ASE_nav_bar.html')
   .then(res => res.text())
   .then(html => {
-    document.getElementById('nav-bar-ase-container').innerHTML = html;
+    document.getElementById('nav-bar-home-container').innerHTML = html;
   });
+
+// Animación random para el texto principal
+window.addEventListener('DOMContentLoaded', function() {
+  const anims = ['bounce', 'fadeIn', 'zoom'];
+  const el = document.getElementById('ark-random-text');
+  if (el) {
+    const anim = anims[Math.floor(Math.random() * anims.length)];
+    el.classList.add(anim);
+  }
+});
+
+// Blur hero background when scrolling down so texts remain readable
+;(function(){
+  const THRESHOLD = 80;
+  function onScroll(){
+    if(window.scrollY > THRESHOLD) document.body.classList.add('scrolled');
+    else document.body.classList.remove('scrolled');
+  }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  // run once on load
+  onScroll();
+})();
+
+// Maps cards staggered reveal and join button placeholder
+window.addEventListener('load', function(){
+  const cards = Array.from(document.querySelectorAll('.map-card'));
+  cards.forEach((c, i) => setTimeout(()=> c.classList.add('show'), i * 90));
+
+  document.querySelectorAll('.join-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const card = e.target.closest('.map-card');
+      const map = card ? card.getAttribute('data-map') : 'mapa';
+      alert('Unirse a: ' + map + '\n(Enlace pendiente de definir)');
+    });
+  });
+});
+
+// Sample server state data (demo) - actualizará tarjetas con estados y contadores
+;(function(){
+  const sample = {
+    'Aberration': { status: 'online', players: 24, name: 'ARK_Aber_01' },
+    'Ragnarok': { status: 'online', players: 42, name: 'RS_Ragnarok' },
+    'The Island': { status: 'offline', players: 0, name: '' },
+    'Fjordur': { status: 'online', players: 13, name: 'Fjordur_Pub' }
+  };
+
+  function applySample(){
+    document.querySelectorAll('.map-card').forEach(card => {
+      const id = card.getAttribute('data-map');
+      const data = sample[id];
+      const statusEl = card.querySelector('.status');
+      const countEl = card.querySelector('.players .count');
+      const nameInput = card.querySelector('.server-name');
+      if(!statusEl || !countEl) return;
+      if(data){
+        // set status
+        statusEl.textContent = data.status.toUpperCase();
+        statusEl.classList.remove('online','offline');
+        statusEl.classList.add(data.status);
+        // set players
+        countEl.textContent = data.players;
+        // set server name if provided
+        if(nameInput && data.name) nameInput.value = data.name;
+        // visual accent
+        if(data.status === 'online') card.classList.add('accent');
+        else card.classList.remove('accent');
+      } else {
+        statusEl.textContent = 'OFFLINE';
+        statusEl.classList.remove('online');
+        statusEl.classList.add('offline');
+        countEl.textContent = '--';
+      }
+    });
+  }
+
+  // apply after a short delay so cards are present
+  window.addEventListener('DOMContentLoaded', () => setTimeout(applySample, 120));
+})();
 </script>
 </body>
 </html>

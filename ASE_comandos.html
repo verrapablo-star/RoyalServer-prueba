@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comandos ARK - RoyalServers</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="nav-bar-home-container"></div>
+  <div style="height:40px; display:flex; align-items:center; background:#181818; padding-left:32px; margin-top:8px;">
+    <img src="img/ARK_EVOLVED.png" alt="ARK Survival Evolved" style="height:28px;vertical-align:middle;">
+    <h1 style="margin-left: 14px; color: var(--primary-color); font-size:1.25rem; font-family:'Montserrat',sans-serif; text-align:left; display:inline-block;">ARK: Survival Evolved</h1>
+  </div>
+  <main class="container" style="margin-top:32px;">
+    <h2>Comandos ARK</h2>
+    <p>Contenido random de comandos. (Se definirá luego)</p>
+  </main>
+</body>
+<script>
+fetch('ASE_nav_bar.html')
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById('nav-bar-home-container').innerHTML = html;
+  });
+</script>
+</html>
