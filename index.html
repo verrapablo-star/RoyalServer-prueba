@@ -9,7 +9,7 @@
   <!-- Fuentes y estilos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
   <!-- Animaciones AOS -->
@@ -22,22 +22,13 @@
 
   <!-- HEADER -->
   <header class="header">
-    <nav class="nav container">
-      <a href="#" class="nav__logo">JF PUTO</a>
-      <ul class="nav__list">
-        <li><a href="#quienes-somos" class="nav__link">Quiénes Somos</a></li>
-        <li><a href="#juegos" class="nav__link">Juegos</a></li>
-        <li><a href="#creadores" class="nav__link">Creadores</a></li>
-        <li><a href="#testimonios" class="nav__link">Testimonios</a></li>
-        <li><a href="shop.html" class="nav__link">Shop</a></li>
-      </ul>
-      <a href="https://dsc.gg/royalserver" target="_blank" class="btn btn--primary nav__btn">Únete a Discord</a>
-    </nav>
+  <div id="nav-bar-home-container"></div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero__content container" data-aos="fade-up" data-aos-duration="1000">
+  <section class="hero" style="position:relative;overflow:hidden;">
+    <img src="img/FONDO_GAMER.png" alt="Fondo Gamer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.35;pointer-events:none;" loading="lazy">
+    <div class="hero__content container" data-aos="fade-up" data-aos-duration="1000" style="position:relative;z-index:2;">
       <h1 class="hero__title">Tu Reino Gamer Te Espera</h1>
       <p class="hero__subtitle">Servidores de alto rendimiento, una comunidad activa y el mejor lugar para jugar y crear contenido. Bienvenido a RoyalServers.</p>
       <a href="https://discord.gg/TU_INVITACION" class="btn btn--primary btn--large">
@@ -66,7 +57,7 @@
       <h2 class="section__title" data-aos="fade-up">Nuestros Reinos Principales</h2>
       <div class="games__grid">
         <div class="game-card" data-aos="zoom-in" data-aos-delay="100">
-          <i class="fa-solid fa-cube"></i>
+          <img src="img/MINECRAFT.jpg" alt="Minecraft" class="game-card__img" style="width:90px;height:90px;object-fit:contain;">
           <h3 class="game-card__title">Minecraft</h3>
           <p>Survival, Creativo y eventos únicos.</p>
         </div>
@@ -76,23 +67,22 @@
           <p>Torneos organizados y equipos competitivos.</p>
         </div>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="300">
-          <i class="fa-solid fa-person-rifle"></i>
+          <img src="img/CS_2.jpg" alt="Counter-Strike 2" class="game-card__img" style="width:90px;height:90px;object-fit:contain;">
           <h3 class="game-card__title">Counter-Strike 2</h3>
           <p>Prácticas, retakes y comunidad activa.</p>
         </div>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="400">
-          <i class="fa-solid fa-helmet-safety"></i>
+          <img src="img/RUST.png" alt="Rust" class="game-card__img" style="width:90px;height:90px;object-fit:contain;">
           <h3 class="game-card__title">Rust</h3>
           <p>Vanilla y modificado, alianzas y guerra.</p>
         </div>
-        <div class="game-card" data-aos="zoom-in" data-aos-delay="500">
-          <i class="fa-solid fa-paw"></i>
-          <i class="fa-solid fa-axe"></i>
+        <a href="ase_home.html" class="game-card" data-aos="zoom-in" data-aos-delay="500" style="text-decoration:none;color:inherit;">
+          <img src="img/ARK_EVOLVED.png" alt="ARK: Survival Evolved" class="game-card__img" style="width:130px;height:130px;object-fit:cover;object-position:center;">
           <h3 class="game-card__title">ARK: Survival Evolved</h3>
           <p>Supervivencia con dinosaurios y criaturas épicas.</p>
-        </div>
+        </a>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="600">
-          <i class="fa-solid fa-mountain"></i>
+          <img src="img/ARK_ASCENDED.png" alt="ARK: Survival Ascended" class="game-card__img" style="width:140px;height:140px;object-fit:cover;object-position:center;">
           <h3 class="game-card__title">ARK: Survival Ascended</h3>
           <p>La nueva generación de supervivencia en ARK.</p>
         </div>
@@ -161,6 +151,14 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Cargar el nav_bar_home.html dinámicamente
+    fetch('nav_bar_home.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('nav-bar-home-container').innerHTML = html;
+      });
+  </script>
   <script>
     AOS.init({
       once: true,

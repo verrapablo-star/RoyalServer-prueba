@@ -1,3 +1,183 @@
+/* Animación de resplandor para ROYALSERVERS en nav */
+/* Animación de resplandor intenso y acercamiento para ROYALSERVERS y logo */
+.nav__logo .nav-logo-text,
+.nav__logo img {
+  transition: transform 0.3s;
+}
+.nav__logo:hover .nav-logo-text,
+.nav__logo:hover img {
+  transform: scale(1.08);
+}
+/* --- RESPONSIVE NAVBAR Y LAYOUT --- */
+@media (max-width: 900px) {
+  .nav.container {
+    flex-direction: row;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  .nav__list {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav.container {
+    flex-wrap: wrap;
+    padding: 0.5rem 0.5rem;
+  }
+  .nav__logo {
+    font-size: 1.2rem;
+  }
+  .nav__list {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #181818;
+    padding: 1rem 0;
+    gap: 1.2rem;
+    align-items: flex-start;
+    z-index: 100;
+    display: none;
+    box-shadow: 0 8px 24px #0003;
+  }
+  .nav__list.active {
+    display: flex;
+  }
+  .nav__btn {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .nav__toggle {
+    display: flex !important;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    align-items: center;
+    margin-left: auto;
+    z-index: 101;
+  }
+}
+
+@media (max-width: 500px) {
+  .nav.container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.2rem 0.2rem;
+  }
+  .nav__logo img {
+    height: 1.5rem;
+  }
+  .nav__logo {
+    font-size: 1rem;
+  }
+}
+/* NAVBAR FLEX Y ESPACIADO */
+.nav.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: nowrap;
+  overflow-x: visible;
+  max-width: 100vw;
+  width: 100%;
+  padding-left: 3vw;
+  padding-right: 3vw;
+  min-width: 0;
+}
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+}
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+  min-width: 0;
+}
+.nav__logo, .nav__link, .nav__btn {
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: unset;
+}
+.nav__link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav__link:hover {
+  color: #f1c40f;
+}
+.nav__btn {
+  margin-left: 1.5rem;
+}
+/* Ruleta Modal */
+.ruleta-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.ruleta-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  z-index: 1;
+}
+.ruleta-container {
+  position: relative;
+  background: #222;
+  border-radius: 2rem;
+  padding: 3rem 2rem 2rem 2rem;
+  box-shadow: 0 0 40px #000a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+#ruleta-canvas {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #0005;
+  margin-bottom: 1.5rem;
+}
+#cerrar-ruleta {
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+#girar-ruleta {
+  font-size: 1.2rem;
+}
 /* ======== VARIABLES Y ESTILOS GLOBALES ======== */
 :root {
   --primary-color: #CFAE4D; /* Acento “Royal” (Dorado rico) */
@@ -5,7 +185,7 @@
   --surface-color: #1B1035; /* Fondo secundario (Púrpura oscuro) */
   --text-color: #D8D8E0; /* Texto principal (Gris humo) */
   --text-color-dark: #0A0E1A; /* Usar el fondo principal para texto oscuro */
-  --accent-futuristic: #FF00A0; /* Acento futurista (Magenta vibrante) */
+  --accent-futuristic: #030303; /* Acento futurista (Magenta vibrante) */
   --hover-active: #8E2DE2; /* Hover/activo (Púrpura brillante) */
   --font-family: 'Poppins', sans-serif;
 }
