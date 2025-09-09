@@ -560,24 +560,32 @@ body {
 }
 /* ======== MAPAS ASE - PANEL ABERRATION ======== */
 .map-panel {
-  background: #181f3a;
+  /* Fondo de las tarjetas de mapas pedido: #1B1035 */
+  background: #1B1035;
   border-radius: 18px;
-  box-shadow: 0 0 0 2px #CFAE4D, 0 8px 32px #181f3a99;
+  /* Single clean purple border + subtle drop shadow */
+  border: 3px solid var(--hover-active);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.45);
   padding: 12px 12px 10px 12px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* Estirar contenido para respetar el grid y evitar columnas desalineadas */
+  align-items: stretch;
   position: relative;
   min-height: 220px;
-  max-width: 360px;
   width: 100%;
-  height: 220px;
   box-sizing: border-box;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.16s ease, transform 0.16s ease, border-color 0.12s ease;
 }
 .map-panel.aberration {
   position: relative;
   overflow: hidden;
+}
+
+.map-panel:hover {
+  transform: translateY(-6px);
+  border-color: #B86BFF;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.52);
 }
 .panel-header {
   width: 100%;
@@ -621,12 +629,12 @@ body {
 .panel-status.online .status-icon {
   background: #7CFFB2;
   box-shadow: 0 0 0 0 #7CFFB2;
-  animation: pulse-green 1.2s infinite;
+  animation: pulse-green 2s infinite, status-scale 1.4s infinite ease-in-out;
 }
 .panel-status.offline .status-icon {
   background: #FF7C7C;
   box-shadow: 0 0 0 0 #FF7C7C;
-  animation: pulse-red 1.2s infinite;
+  animation: pulse-red 2s infinite, status-scale 1.4s infinite ease-in-out;
 }
 @keyframes pulse-green {
   0% { box-shadow: 0 0 0 0 #7CFFB2; }
@@ -637,6 +645,13 @@ body {
   0% { box-shadow: 0 0 0 0 #FF7C7C; }
   70% { box-shadow: 0 0 0 8px rgba(255,124,124,0); }
   100% { box-shadow: 0 0 0 0 #FF7C7C; }
+}
+
+/* Animación de pulso sutil que escala ligeramente el badge */
+@keyframes status-scale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+  100% { transform: scale(1); }
 }
 .panel-title {
   font-size: 1.45rem;
@@ -682,24 +697,34 @@ body {
   transition: width 0.4s;
 }
 .panel-btn {
-  width: 100%;
-  padding: 6px 0;
-  background: #CFAE4D;
-  color: #181f3a;
-  font-weight: 700;
-  font-size: 0.85rem;
+  display: block; /* ensure width applies */
+  box-sizing: border-box;
+  width: calc(100% - 24px); /* leave 12px space each side for aesthetics */
+  margin: 6px 12px 0 12px;
+  padding: 10px 0; /* slightly larger click area */
+  background: var(--primary-color);
+  color: var(--text-color-dark);
+  font-weight: 600;
+  font-size: 1rem;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 2px 8px #181f3a44;
-  margin-top: 4px;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.18s, transform 0.12s;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 .panel-btn:hover {
-  background: #1B1035;
-  color: #CFAE4D;
-  transform: scale(1.04);
+  background: var(--hover-active);
+  color: var(--text-color);
+  transform: translateY(-2px);
 }
+/* Asegurar que las imágenes dentro de las tarjetas no provocan overflow y mantienen aspecto */
+.map-panel img { display:block; width:100%; height:auto; max-height:220px; object-fit:cover; border-radius:8px; }
+
+/* Evitar que algún contenedor cree scrollbar interno accidental */
+main, body, html { height: auto; }
 /* Imagen superior en el panel de Aberration */
 .map-panel.aberration .panel-img-bg {
   position: absolute;

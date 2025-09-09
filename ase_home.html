@@ -2,849 +2,254 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-    if(grid){mapas.forEach(m=>grid.appendChild(crearPanel(m)))}
-  </script>
-
-</body>
-</html>
-      .then(html => {
-        document.getElementById('nav-bar-home-container').innerHTML = html;
-      });
-
-    // Datos de los mapas
-    const mapas = [
-      { nombre: "The Island", online: true, jugadores: 1 },
-      { nombre: "Aberration", online: false, jugadores: 0 },
-      { nombre: "Crystal Isles", online: true, jugadores: 1 },
-      { nombre: "Extinction", online: true, jugadores: 1 },
-      { nombre: "Fjordur", online: true, jugadores: 2 },
-      { nombre: "Scorched Earth", online: true, jugadores: 0 },
-      { nombre: "Ragnarok", online: true, jugadores: 1 },
-      { nombre: "Valguero", online: true, jugadores: 0 },
-      { nombre: "Génesis", online: true, jugadores: 0 },
-      { nombre: "Génesis 2", online: true, jugadores: 4 },
-      { nombre: "Lost Island", online: true, jugadores: 0 },
-      { nombre: "The Center", online: true, jugadores: 0 }
-    ];
-  const maxJugadores = 80;
-    const grid = document.querySelector('.maps-grid');
-    if (grid) {
-      mapas.forEach(mapa => {
-        const panel = document.createElement('div');
-        panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-        panel.innerHTML = `
-          <h3 class="panel-title" style="margin-top:0; margin-bottom:4px;">${mapa.nombre}</h3>
-          ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-          <div class="panel-header" style="margin-top:${mapa.nombre === 'Aberration' ? '8px' : '0'};">
-            <span class="panel-status ${mapa.online ? 'online' : 'offline'}">
-              <span class="status-icon"></span>
-              ${mapa.online ? 'ONLINE' : 'OFFLINE'}
-            </span>
-          </div>
-          <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-          <div class="panel-players">
-            <!DOCTYPE html>
-            <html lang="es">
-            <head>
-              <meta charset="UTF-8">
-              <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>ARK: Survival Evolved - RoyalServers</title>
-              <link rel="stylesheet" href="css/styles.css">
-              <style>
-                /* Page reset and safety against horizontal scroll */
-                html,body{margin:0;padding:0;overflow-x:hidden;background:#080710;color:#fff}
-
-                /* Full-bleed purple background for the mapas section. Do NOT add border-radius here
-                   so it spans edge-to-edge. The inner container (.maps-inner) keeps content constrained
-                   and provides the rounded card look. */
-                .mapas-bg{background:#1B1035;width:100%;}
-
-                /* Constrained inner content with rounded background/shadow */
-                .maps-inner{max-width:1200px;margin:0 auto;padding:22px;border-radius:18px;box-shadow:0 4px 32px #0005;background:transparent}
-
-                .maps-grid{box-sizing:border-box;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start;margin-top:10px}
-
-                /* Panel styles */
-                .map-panel{background:#181f3a;border-radius:18px;padding:12px;display:flex;flex-direction:column;position:relative;min-height:220px;box-sizing:border-box}
-
-                /* For Aberration we offset the content so the absolute image doesn't overlap controls */
-                .map-panel.aberration{padding-top:84px}
-                .map-panel.aberration .panel-img-bg{position:absolute;top:0;left:0;width:100%;height:72px;background-image:url('img/ABE_INGAME.jpg');background-size:cover;background-position:center top;border-top-left-radius:18px;border-top-right-radius:18px;filter:brightness(0.9);z-index:1}
-
-                .panel-title{font-family:'Montserrat',sans-serif;color:#fff;font-size:1.25rem;margin:0;padding:0 6px}
-                .panel-header{width:100%;display:flex;justify-content:flex-end;padding:0 6px}
-                .panel-status{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#2ecc71;color:#072;font-weight:700}
-                .panel-status.offline{background:#ff6b6b;color:#5a1b1b}
-                .panel-desc{color:#bcd1ff66;font-size:0.85rem;margin-top:6px;padding:0 6px}
-                .panel-players{color:#fff;font-size:0.9rem;padding:0 6px;display:flex;align-items:center;gap:8px;margin-top:6px}
-                .panel-bar{width:100%;height:8px;background:#0f1220;border-radius:8px;margin-top:10px;overflow:hidden}
-                .panel-bar > div{height:100%;background:#CFAE4D}
-                .panel-btn{background:#CFAE4D;border:none;padding:10px;border-radius:10px;font-weight:700;cursor:pointer;margin-top:auto;width:100%}
-
-                @media (max-width:420px){.maps-inner{padding:12px}.map-panel{min-height:200px}}
-              </style>
-            </head>
-            <body>
-              <header class="header">
-                <div id="nav-bar-home-container"></div>
-                <div style="height:40px; display:flex; align-items:center; background:#181818; padding-left:24px;">
-                  <img src="img/ARK_EVOLVED.png" alt="ARK" style="height:28px;vertical-align:middle;">
-                  <h1 style="margin-left:12px;color:var(--primary-color);font-size:1.1rem;font-family:'Montserrat',sans-serif;">ARK: Survival Evolved</h1>
-                </div>
-              </header>
-
-              <main style="margin-top:40px;">
-                <div class="hero" style="position:relative;width:100%;height:420px;overflow:hidden;">
-                  <img class="hero-bg" src="img/FONDO_ARK_EVOLVED.jpg" alt="Fondo" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.7)">
-                  <div class="hero-overlay" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:2;padding:24px;">
-                    <h2 id="ark-random-text" style="color:#fff;font-size:2rem;font-family:'Montserrat',sans-serif;background:rgba(0,0,0,0.25);padding:14px 24px;border-radius:12px;">Un mundo primitivo espera ser conquistado...</h2>
-                  </div>
-                </div>
-
-                <!-- Mapas: fondo full-bleed, contenido centrado -->
-                <section id="mapas" class="section mapas-bg" style="margin-top:28px;">
-                  <div class="maps-inner">
-                    <h2 class="section__title" style="margin-bottom:12px;color:#fff">AsePvE X3</h2>
-                    <div class="maps-grid">
-                      <!-- Panels injected by JS -->
-                    </div>
-                  </div>
-                </section>
-
-                <footer class="footer" style="margin-top:32px;padding:22px 0;background:transparent;color:#ddd">
-                  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 22px">&copy; 2025 RoyalServers. Todos los derechos reservados.</div>
-                </footer>
-              </main>
-
-              <script>
-                // Load nav bar
-                fetch('ASE_nav_bar.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).catch(()=>{});
-
-                const mapas = [
-                  { nombre: "The Island", online: true, jugadores: 1 },
-                  { nombre: "Aberration", online: false, jugadores: 0 },
-                  { nombre: "Crystal Isles", online: true, jugadores: 1 },
-                  { nombre: "Extinction", online: true, jugadores: 1 },
-                  { nombre: "Fjordur", online: true, jugadores: 2 },
-                  { nombre: "Scorched Earth", online: true, jugadores: 0 },
-                  { nombre: "Ragnarok", online: true, jugadores: 1 },
-                  { nombre: "Valguero", online: true, jugadores: 0 },
-                  { nombre: "Génesis", online: true, jugadores: 0 },
-                  { nombre: "Génesis 2", online: true, jugadores: 4 },
-                  { nombre: "Lost Island", online: true, jugadores: 0 },
-                  { nombre: "The Center", online: true, jugadores: 0 }
-                ];
-
-                const maxJugadores = 80;
-                const grid = document.querySelector('.maps-grid');
-
-                function crearPanel(mapa){
-                  const panel = document.createElement('div');
-                  panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-                  panel.innerHTML = `
-                    <h3 class="panel-title">${mapa.nombre}</h3>
-                    ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-                    <div class="panel-header">
-                      <span class="panel-status ${mapa.online ? 'online' : 'offline'}">${mapa.online ? 'ONLINE' : 'OFFLINE'}</span>
-                    </div>
-                    <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-                    <div class="panel-players"><span>👥</span><span><b>${mapa.jugadores}/${maxJugadores}</b> Jugadores</span></div>
-                    <div class="panel-bar"><div style="width:${(mapa.jugadores/maxJugadores)*100}%"></div></div>
-                    <button class="panel-btn">CONECTAR</button>
-                  `;
-                  return panel;
-                }
-
-                if(grid){mapas.forEach(m=>grid.appendChild(crearPanel(m)))}
-              </script>
-
-            </body>
-            </html>
-            <div class="panel-bar-fill" style="width:${(mapa.jugadores/maxJugadores)*100}%"></div>
-          </div>
-          <button class="panel-btn" style="width:100%;margin-top:4px;">CONECTAR</button>
-        `;
-        grid.appendChild(panel);
-      });
-    }
-  </script>
-</body>
-<style>
-/* MAPAS: Paneles estilo moderno */
-.maps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  align-items: start;
-  margin-top: 20px;
-}
-.map-panel {
-  background: #181f3a;
-  border-radius: 18px;
-  box-shadow: 0 0 0 2px #CFAE4D, 0 8px 32px #181f3a99;
-  padding: 12px 12px 10px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  min-height: 220px;
-  max-width: 360px;
-  width: 100%;
-  height: 220px;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.map-panel.aberration {
-  /* Sin tamaño especial, igual al resto */
-}
-.map-panel.aberration .panel-img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-image: url('img/ABE_INGAME.jpg');
-  background-size: 200% 200%;
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 1;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  filter: brightness(0.92) saturate(1.18);
-}
-.map-panel.aberration .panel-title,
-.map-panel.aberration .panel-header {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-}
-/* Fondo para la sección de mapas */
-.mapas-bg {
-  background: #1B1035;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #0005;
-}
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ARK: Survival Evolved - RoyalServers</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CDN para prototipo rápido -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS animations CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    /* Reset mínimo y seguridad contra scroll horizontal */
+    html,body{margin:0;padding:0;overflow-x:hidden;background:#080710;color:#fff;font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto}
+   /* Espacio superior para que el hero no quede oculto detrás del nav fijo
+     Ajustar --ase-nav-offset si el nav cambia de altura. */
+   :root{--ase-nav-offset:72px}
+   #ase-root > header{margin-top:var(--ase-nav-offset)}
+   @media(max-width:640px){ :root{--ase-nav-offset:56px} #ase-root > header{margin-top:var(--ase-nav-offset)} }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div id="nav-bar-home-container"></div>
+    <div style="height:40px; display:flex; align-items:center; background:#181818; padding-left:24px;">
+      <img src="img/ARK_EVOLVED.png" alt="ARK" style="height:28px;vertical-align:middle;">
+      <h1 style="margin-left:12px;color:var(--primary-color);font-size:1.1rem;font-family:'Montserrat',sans-serif;">ARK: Survival Evolved</h1>
     </div>
-  </footer>
+  </header>
+
+  <main style="margin-top:8px;">
+    <!-- App principal montada con React (CDN) y Tailwind para prototipo -->
+    <div id="ase-root" class="min-h-[60vh]"></div>
+
+  <div id="foot-home-container"></div>
+  </main>
+
+  <!-- React + ReactDOM CDN -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <!-- App JS: componentes internos y datos de ejemplo -->
   <script>
-    // Cargar el nav_bar_ase.html dinámicamente
-    fetch('ASE_nav_bar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('nav-bar-home-container').innerHTML = html;
+    // NOTA: Este es un prototipo integrado en un solo archivo. Para producción, separar en módulos.
+    const e = React.createElement;
+
+    // Datos de ejemplo - lista completa de mapas solicitada.
+    // NOTA: Los campos `online` y `players` son placeholders y deben reemplazarse
+    //       por la respuesta de la API que devuelva el estado real del servidor.
+    //       También reemplazar thumbnails y el enlace steam://connect por las IPs reales.
+    const SAMPLE_MAPS = [
+      { id: 'map-842', title: 'Aberration',     searchName: 'ABE_842',    thumbnail: 'img/MAPS_ABE.jpg',       online: false, players: 0, connect: 'steam://connect/192.0.2.11:27015' },
+      { id: 'map-193', title: 'The Center',     searchName: 'CENTER_193', thumbnail: 'img/MAPS_CENTER.jpg',    online: true,  players: 4, connect: 'steam://connect/192.0.2.12:27015' },
+      { id: 'map-451', title: 'Crystal Isles',  searchName: 'CRYSTAL_451',thumbnail: 'img/MAPS_CRYSTAL.jpg',   online: true,  players: 7, connect: 'steam://connect/192.0.2.13:27015' },
+      { id: 'map-660', title: 'Extintion',      searchName: 'EXT_660',    thumbnail: 'img/MAPS_EXTINTION.jpg', online: true,  players: 2, connect: 'steam://connect/192.0.2.14:27015' },
+      { id: 'map-277', title: 'Fjordur',        searchName: 'FJORDUR_277',thumbnail: 'img/MAPS_FJORDUR.jpg',   online: true,  players: 5, connect: 'steam://connect/192.0.2.15:27015' },
+      { id: 'map-908', title: 'Génesis',        searchName: 'GEN1_908',   thumbnail: 'img/MAPS_GEN1.jpg',      online: false, players: 0, connect: 'steam://connect/192.0.2.16:27015' },
+      { id: 'map-902', title: 'Génesis 2',      searchName: 'GEN2_902',   thumbnail: 'img/MAPS_GEN2.jpg',      online: true,  players: 1, connect: 'steam://connect/192.0.2.17:27015' },
+      { id: 'map-101', title: 'The Island',     searchName: 'ISLAND_101', thumbnail: 'img/MAPS_ISLA.png',      online: true,  players: 9, connect: 'steam://connect/192.0.2.18:27015' },
+      { id: 'map-555', title: 'Lost Island',    searchName: 'LOST_555',   thumbnail: 'img/MAPS_LOST.jpg',      online: false, players: 0, connect: 'steam://connect/192.0.2.19:27015' },
+      { id: 'map-321', title: 'Ragnarok',       searchName: 'RAGNAROK_321',thumbnail: 'img/MAPS_RAGNAROK.jpeg', online: true,  players: 3, connect: 'steam://connect/192.0.2.20:27015' },
+      { id: 'map-412', title: 'Valguero',       searchName: 'VALGUERO_412',thumbnail: 'img/MAPS_VALGUERO.jpg',  online: true,  players: 6, connect: 'steam://connect/192.0.2.21:27015' },
+      { id: 'map-709', title: 'Scorched Earth', searchName: 'SCORCHED_709',thumbnail: 'img/MAPS_SCORCHED.png',  online: false, players: 0, connect: 'steam://connect/192.0.2.22:27015' }
+    ];
+
+    // Componente MapCard (accesible)
+    function MapCard({map}){
+      return (
+        // Añadimos la clase `map-panel` para aplicar estilos globales desde styles.css
+  e('article', {className:'map-panel rounded-lg shadow-md p-4 flex flex-col', role:'article', 'aria-labelledby': `map-${map.id}-title`, 'data-aos':'zoom-in', 'data-aos-delay':'120'},
+          // Thumbnail
+          e('img', {src: map.thumbnail, alt: `${map.title} thumbnail`, className:'w-full h-40 object-cover rounded-md mb-3'}),
+          // Title and search name
+          e('div', {className:'flex-1'},
+            e('h3', {id:`map-${map.id}-title`, className:'text-white text-lg font-semibold mb-1'}, map.title),
+            e('div', {className:'text-sm text-gray-300 mb-2'}, e('span', null, `Search name: `), e('strong', {className:'text-gray-100'}, map.searchName))
+          ),
+          // Status / players
+          e('div', {className:'flex items-center justify-between mt-2'},
+            // Usar la clase `panel-status` para aprovechar estilos y animaciones en styles.css
+            e('span', {className:`panel-status ${map.online? 'online' : 'offline'}`, 'aria-label': map.online? 'Servidor online' : 'Servidor offline', role: 'status'},
+              e('span', {className:'status-icon', 'aria-hidden': true, style:{background: map.online ? '#34D399' : '#ef4444'}}),
+              e('strong', {className:'status-text', style:{marginLeft:6, fontWeight:800}}, map.online? 'ONLINE' : 'OFFLINE')
+            ),
+            e('span', {className:'text-sm text-gray-300'}, `${map.players} jugadores`)
+          ),
+          // Conectar button
+          e('div', {className:'mt-4'},
+            // El enlace usa steam://connect; si el navegador no lo soporta, será manejado por el usuario/cliente Steam.
+            e('a', {href: map.connect, className:'panel-btn', 'aria-label': `Conectar a ${map.title}`}, 'Conectar')
+          )
+        )
+      );
+    }
+
+    // Cluster config block (updated: two-column layout with left text/cards and right image)
+    function ClusterConfig(){
+      // icons (emoji) pool for a simple "random" icon per card at render time
+      const icons = ['🎯','🧭','💰','🛠️','🌐','⚡','🔥','⭐'];
+      const features = [
+        'Dificultad personalizada',
+        'Loots Personalizados',
+        'Economia ingame',
+        'Soporte',
+        'Eventos'
+      ];
+
+      // Create simple label-only cards (no icons). Text forced to a single line with ellipsis if needed.
+      // Usar la misma animación y delay para todas las tarjetas del cluster
+      const NODE_AOS = { 'data-aos': 'fade-up', 'data-aos-delay': '120' };
+      const nodes = features.map((f,i)=> {
+        return e('div', Object.assign({key: i, className:'p-3 rounded-lg shadow-sm hover:scale-105 transition border flex items-center justify-center', style:{border:'1px solid var(--primary-color)', color:'var(--primary-color)'}}, NODE_AOS),
+          e('span', {className:'block text-center font-semibold text-sm uppercase', style:{whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', width: '100%'}}, f)
+        );
       });
 
-    // Datos de los mapas
-    const mapas = [
-      { nombre: "The Island", online: true, jugadores: 1 },
-      { nombre: "Aberration", online: false, jugadores: 0 },
-      { nombre: "Crystal Isles", online: true, jugadores: 1 },
-      { nombre: "Extinction", online: true, jugadores: 1 },
-      { nombre: "Fjordur", online: true, jugadores: 2 },
-      { nombre: "Scorched Earth", online: true, jugadores: 0 },
-      { nombre: "Ragnarok", online: true, jugadores: 1 },
-      { nombre: "Valguero", online: true, jugadores: 0 },
-      { nombre: "Génesis", online: true, jugadores: 0 },
-      { nombre: "Génesis 2", online: true, jugadores: 4 },
-      { nombre: "Lost Island", online: true, jugadores: 0 },
-      { nombre: "The Center", online: true, jugadores: 0 }
-    ];
-  const maxJugadores = 80;
-    const grid = document.querySelector('.maps-grid');
-    if (grid) {
-      mapas.forEach(mapa => {
-        const panel = document.createElement('div');
-        panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-        panel.innerHTML = `
-          <h3 class="panel-title" style="margin-top:0; margin-bottom:4px;">${mapa.nombre}</h3>
-          ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-          <div class="panel-header" style="margin-top:${mapa.nombre === 'Aberration' ? '8px' : '0'};">
-            <span class="panel-status ${mapa.online ? 'online' : 'offline'}">
-              <span class="status-icon"></span>
-              ${mapa.online ? 'ONLINE' : 'OFFLINE'}
-            </span>
-          </div>
-          <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-          <div class="panel-players">
-            <span class="panel-players-icon">👥</span>
-            <span class="panel-players-count"><b>${mapa.jugadores}/${maxJugadores}</b> Jugadores</span>
-          </div>
-          <div class="panel-bar">
-            <div class="panel-bar-fill" style="width:${(mapa.jugadores/maxJugadores)*100}%"></div>
-          </div>
-          <button class="panel-btn" style="width:100%;margin-top:4px;">CONECTAR</button>
-        `;
-        grid.appendChild(panel);
-      });
-    }
-  </script>
-</body>
-<style>
-/* MAPAS: Paneles estilo moderno */
-.maps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  align-items: start;
-  margin-top: 20px;
-}
-.map-panel {
-  background: #181f3a;
-  border-radius: 18px;
-  box-shadow: 0 0 0 2px #CFAE4D, 0 8px 32px #181f3a99;
-  padding: 12px 12px 10px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  min-height: 220px;
-  max-width: 360px;
-  width: 100%;
-  height: 220px;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.map-panel.aberration {
-  /* Sin tamaño especial, igual al resto */
-}
-.map-panel.aberration .panel-img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-image: url('img/ABE_INGAME.jpg');
-  background-size: 200% 200%;
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 1;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  filter: brightness(0.92) saturate(1.18);
-}
-.map-panel.aberration .panel-title,
-.map-panel.aberration .panel-header {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-}
-/* Fondo para la sección de mapas */
-.mapas-bg {
-  background: #1B1035;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #0005;
-}
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script>
-    // Cargar el nav_bar_ase.html dinámicamente
-    fetch('ASE_nav_bar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('nav-bar-home-container').innerHTML = html;
-      });
+      // comunidad node (now a regular grid cell so layout becomes 2x3)
+      // "Comunidad Activa" debe usar la misma animación que el resto
+      const comunidad = (function(){
+        return e('div', Object.assign({key: 'comunidad', className:'p-3 rounded-lg shadow-sm transition border flex items-center justify-center', style:{border:'1px solid var(--primary-color)', color:'var(--primary-color)'}}, NODE_AOS),
+          e('span', {className:'block text-center font-semibold text-sm uppercase', style:{whiteSpace:'nowrap', overflow:'hidden', textOverflow:'ellipsis', width:'100%'}}, 'Comunidad Activa')
+        );
+      })();
 
-    // Datos de los mapas
-    const mapas = [
-      { nombre: "The Island", online: true, jugadores: 1 },
-      { nombre: "Aberration", online: false, jugadores: 0 },
-      { nombre: "Crystal Isles", online: true, jugadores: 1 },
-      { nombre: "Extinction", online: true, jugadores: 1 },
-      { nombre: "Fjordur", online: true, jugadores: 2 },
-      { nombre: "Scorched Earth", online: true, jugadores: 0 },
-      { nombre: "Ragnarok", online: true, jugadores: 1 },
-      { nombre: "Valguero", online: true, jugadores: 0 },
-      { nombre: "Génesis", online: true, jugadores: 0 },
-      { nombre: "Génesis 2", online: true, jugadores: 4 },
-      { nombre: "Lost Island", online: true, jugadores: 0 },
-      { nombre: "The Center", online: true, jugadores: 0 }
-    ];
-  const maxJugadores = 80;
-    const grid = document.querySelector('.maps-grid');
-    if (grid) {
-      mapas.forEach(mapa => {
-        const panel = document.createElement('div');
-        panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-        panel.innerHTML = `
-          <h3 class="panel-title" style="margin-top:0; margin-bottom:4px;">${mapa.nombre}</h3>
-          ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-          <div class="panel-header" style="margin-top:${mapa.nombre === 'Aberration' ? '8px' : '0'};">
-            <span class="panel-status ${mapa.online ? 'online' : 'offline'}">
-              <span class="status-icon"></span>
-              ${mapa.online ? 'ONLINE' : 'OFFLINE'}
-            </span>
-          </div>
-          <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-          <div class="panel-players">
-            <span class="panel-players-icon">👥</span>
-            <span class="panel-players-count"><b>${mapa.jugadores}/${maxJugadores}</b> Jugadores</span>
-          </div>
-          <div class="panel-bar">
-            <div class="panel-bar-fill" style="width:${(mapa.jugadores/maxJugadores)*100}%"></div>
-          </div>
-          <button class="panel-btn" style="width:100%;margin-top:4px;">CONECTAR</button>
-        `;
-        grid.appendChild(panel);
-      });
+      return (
+        e('section', {className:'text-white py-12 px-6 rounded-2xl shadow-lg flex items-center justify-between max-w-5xl mx-auto my-8', 'data-aos':'fade-up'},
+          // Left column: text and feature cards
+          e('div', {className:'w-1/2 space-y-6', 'data-aos':'fade-right', 'data-aos-delay':'120'},
+            e('h2', {className:'text-3xl font-bold', style: {color: 'var(--primary-color)'}}, 'CLUSTER PVE CROSSPLAY x4'),
+            e('p', {className:'text-lg text-gray-300'},
+              'Cluster de 12 mapas FULL PVE + mapas de eventos PVE/PVP.',
+              e('br'),
+              'Crossplay en PC para Steam y Epic.'
+            ),
+            e('div', {className:'grid grid-cols-2 gap-4'},
+              ...nodes,
+              comunidad
+            )
+          ),
+          // Right column: image
+          e('div', {className:'w-1/2 flex justify-center', 'data-aos':'fade-left', 'data-aos-delay':'160'},
+            e('img', {src:'img/OVIS.png', alt:'Ovis', className:'rounded-2xl shadow-lg max-h-96', 'data-aos':'zoom-in', 'data-aos-delay':'200'})
+          )
+        )
+      );
     }
-  </script>
-</body>
-<style>
-/* MAPAS: Paneles estilo moderno */
-.maps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  align-items: start;
-  margin-top: 20px;
-}
-.map-panel {
-  background: #181f3a;
-  border-radius: 18px;
-  box-shadow: 0 0 0 2px #CFAE4D, 0 8px 32px #181f3a99;
-  padding: 12px 12px 10px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  min-height: 220px;
-  max-width: 360px;
-  width: 100%;
-  height: 220px;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.map-panel.aberration {
-  /* Sin tamaño especial, igual al resto */
-}
-.map-panel.aberration .panel-img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-image: url('img/ABE_INGAME.jpg');
-  background-size: 200% 200%;
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 1;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  filter: brightness(0.92) saturate(1.18);
-}
-.map-panel.aberration .panel-title,
-.map-panel.aberration .panel-header {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-}
-/* Fondo para la sección de mapas */
-.mapas-bg {
-  background: #1B1035;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #0005;
-}
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script>
-    // Cargar el nav_bar_ase.html dinámicamente
-    fetch('ASE_nav_bar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('nav-bar-home-container').innerHTML = html;
-      });
 
-    // Datos de los mapas
-    const mapas = [
-      { nombre: "The Island", online: true, jugadores: 1 },
-      { nombre: "Aberration", online: false, jugadores: 0 },
-      { nombre: "Crystal Isles", online: true, jugadores: 1 },
-      { nombre: "Extinction", online: true, jugadores: 1 },
-      { nombre: "Fjordur", online: true, jugadores: 2 },
-      { nombre: "Scorched Earth", online: true, jugadores: 0 },
-      { nombre: "Ragnarok", online: true, jugadores: 1 },
-      { nombre: "Valguero", online: true, jugadores: 0 },
-      { nombre: "Génesis", online: true, jugadores: 0 },
-      { nombre: "Génesis 2", online: true, jugadores: 4 },
-      { nombre: "Lost Island", online: true, jugadores: 0 },
-      { nombre: "The Center", online: true, jugadores: 0 }
-    ];
-  const maxJugadores = 80;
-    const grid = document.querySelector('.maps-grid');
-    if (grid) {
-      mapas.forEach(mapa => {
-        const panel = document.createElement('div');
-        panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-        panel.innerHTML = `
-          <h3 class="panel-title" style="margin-top:0; margin-bottom:4px;">${mapa.nombre}</h3>
-          ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-          <div class="panel-header" style="margin-top:${mapa.nombre === 'Aberration' ? '8px' : '0'};">
-            <span class="panel-status ${mapa.online ? 'online' : 'offline'}">
-              <span class="status-icon"></span>
-              ${mapa.online ? 'ONLINE' : 'OFFLINE'}
-            </span>
-          </div>
-          <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-          <div class="panel-players">
-            <span class="panel-players-icon">👥</span>
-            <span class="panel-players-count"><b>${mapa.jugadores}/${maxJugadores}</b> Jugadores</span>
-          </div>
-          <div class="panel-bar">
-            <div class="panel-bar-fill" style="width:${(mapa.jugadores/maxJugadores)*100}%"></div>
-          </div>
-          <button class="panel-btn" style="width:100%;margin-top:4px;">CONECTAR</button>
-        `;
-        grid.appendChild(panel);
-      });
+    // Hero component
+    function Hero(){
+      return (
+  // Añadimos data-aos para que el hero también tenga animación al aparecer
+  // Aumentamos la altura del hero y agregamos tamaños responsivos
+  e('header', {className:'relative w-full h-[520px] md:h-[680px] lg:h-[820px] overflow-hidden rounded-b-xl', 'data-aos':'fade-down', 'data-aos-delay':'80'},
+          // Background image - reemplazar src si se necesita otra imagen
+          e('img', {src:'img/FONDO_ARK_EVOLVED.jpg', alt:'Fondo ARK', className:'absolute inset-0 w-full h-full object-cover brightness-75'}),
+          // Overlay general (sutil) para contraste
+          e('div', {className:'absolute inset-0 bg-gradient-to-b from-transparent to-black/40'}),
+          // Degradado inferior que mezcla la imagen con el color de fondo de la página (#080710)
+          e('div', {className:'absolute left-0 right-0 bottom-0 h-40 pointer-events-none', style:{background:'linear-gradient(180deg, rgba(0,0,0,0) 0%, #080710 100%)'}}),
+          e('div', {className:'relative z-10 flex flex-col items-center justify-center h-full text-center px-6'},
+            e('h1', {className:'text-4xl md:text-5xl font-bold text-white mb-3', 'data-aos':'zoom-in', 'data-aos-delay':'140'}, 'Un mundo primitivo espera ser conquistado...'),
+            e('p', {className:'text-gray-300 max-w-2xl', 'data-aos':'fade-up', 'data-aos-delay':'180'}, 'Únete a Royal Servers y comienza a forjar tu propio destino.')
+          )
+        )
+      );
     }
-  </script>
-</body>
-<style>
-/* MAPAS: Paneles estilo moderno */
-.maps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  align-items: start;
-  margin-top: 20px;
-}
-.map-panel {
-  background: #181f3a;
-  border-radius: 18px;
-  box-shadow: 0 0 0 2px #CFAE4D, 0 8px 32px #181f3a99;
-  padding: 12px 12px 10px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  min-height: 220px;
-  max-width: 360px;
-  width: 100%;
-  height: 220px;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.map-panel.aberration {
-  /* Sin tamaño especial, igual al resto */
-}
-.map-panel.aberration .panel-img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-image: url('img/ABE_INGAME.jpg');
-  background-size: 200% 200%;
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 1;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  filter: brightness(0.92) saturate(1.18);
-}
-.map-panel.aberration .panel-title,
-.map-panel.aberration .panel-header {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-}
-/* Fondo para la sección de mapas */
-.mapas-bg {
-  background: #1B1035;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #0005;
-}
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script>
-    // Cargar el nav_bar_ase.html dinámicamente
-    fetch('ASE_nav_bar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('nav-bar-home-container').innerHTML = html;
-      });
 
-    // Datos de los mapas
-    const mapas = [
-      { nombre: "The Island", online: true, jugadores: 1 },
-      { nombre: "Aberration", online: false, jugadores: 0 },
-      { nombre: "Crystal Isles", online: true, jugadores: 1 },
-      { nombre: "Extinction", online: true, jugadores: 1 },
-      { nombre: "Fjordur", online: true, jugadores: 2 },
-      { nombre: "Scorched Earth", online: true, jugadores: 0 },
-      { nombre: "Ragnarok", online: true, jugadores: 1 },
-      { nombre: "Valguero", online: true, jugadores: 0 },
-      { nombre: "Génesis", online: true, jugadores: 0 },
-      { nombre: "Génesis 2", online: true, jugadores: 4 },
-      { nombre: "Lost Island", online: true, jugadores: 0 },
-      { nombre: "The Center", online: true, jugadores: 0 }
-    ];
-  const maxJugadores = 80;
-    const grid = document.querySelector('.maps-grid');
-    if (grid) {
-      mapas.forEach(mapa => {
-        const panel = document.createElement('div');
-        panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-        panel.innerHTML = `
-          <h3 class="panel-title" style="margin-top:0; margin-bottom:4px;">${mapa.nombre}</h3>
-          ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-          <div class="panel-header" style="margin-top:${mapa.nombre === 'Aberration' ? '8px' : '0'};">
-            <span class="panel-status ${mapa.online ? 'online' : 'offline'}">
-              <span class="status-icon"></span>
-              ${mapa.online ? 'ONLINE' : 'OFFLINE'}
-            </span>
-          </div>
-          <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-          <div class="panel-players">
-            <span class="panel-players-icon">👥</span>
-            <span class="panel-players-count"><b>${mapa.jugadores}/${maxJugadores}</b> Jugadores</span>
-          </div>
-          <div class="panel-bar">
-            <div class="panel-bar-fill" style="width:${(mapa.jugadores/maxJugadores)*100}%"></div>
-          </div>
-          <button class="panel-btn" style="width:100%;margin-top:4px;">CONECTAR</button>
-        `;
-        grid.appendChild(panel);
-      });
+    // Maps grid + summary
+    function MapsSection({maps}){
+      const totalMaps = maps.length;
+      const totalPlayers = maps.reduce((s,m)=> s + (m.players||0), 0);
+      return (
+        e('section', {className:'max-w-6xl mx-auto my-8 px-4'},
+          e('div', {className:'flex items-center justify-between mb-4'},
+            e('h3', {className:'text-2xl text-white font-semibold'}, 'Mapas'),
+            e('div', {className:'text-sm text-gray-300'}, `${totalMaps} mapas — ${totalPlayers} jugadores en total`)
+          ),
+          e('div', {className:'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'},
+            maps.map(m=> e(MapCard, {key:m.id, map:m}))
+          )
+        )
+      )
     }
-  </script>
-</body>
-<style>
-/* MAPAS: Paneles estilo moderno */
-.maps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  align-items: start;
-  margin-top: 20px;
-}
-.map-panel {
-  background: #181f3a;
-  border-radius: 18px;
-  box-shadow: 0 0 0 2px #CFAE4D, 0 8px 32px #181f3a99;
-  padding: 12px 12px 10px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  min-height: 220px;
-  max-width: 360px;
-  width: 100%;
-  height: 220px;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.map-panel.aberration {
-  /* Sin tamaño especial, igual al resto */
-}
-.map-panel.aberration .panel-img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-image: url('img/ABE_INGAME.jpg');
-  background-size: 200% 200%;
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 1;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  filter: brightness(0.92) saturate(1.18);
-}
-.map-panel.aberration .panel-title,
-.map-panel.aberration .panel-header {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-}
-/* Fondo para la sección de mapas */
-.mapas-bg {
-  background: #1B1035;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #0005;
-}
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script>
-    // Cargar el nav_bar_ase.html dinámicamente
-    fetch('ASE_nav_bar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('nav-bar-home-container').innerHTML = html;
-      });
 
-    // Datos de los mapas
-    const mapas = [
-      { nombre: "The Island", online: true, jugadores: 1 },
-      { nombre: "Aberration", online: false, jugadores: 0 },
-      { nombre: "Crystal Isles", online: true, jugadores: 1 },
-      { nombre: "Extinction", online: true, jugadores: 1 },
-      { nombre: "Fjordur", online: true, jugadores: 2 },
-      { nombre: "Scorched Earth", online: true, jugadores: 0 },
-      { nombre: "Ragnarok", online: true, jugadores: 1 },
-      { nombre: "Valguero", online: true, jugadores: 0 },
-      { nombre: "Génesis", online: true, jugadores: 0 },
-      { nombre: "Génesis 2", online: true, jugadores: 4 },
-      { nombre: "Lost Island", online: true, jugadores: 0 },
-      { nombre: "The Center", online: true, jugadores: 0 }
-    ];
-  const maxJugadores = 80;
-    const grid = document.querySelector('.maps-grid');
-    if (grid) {
-      mapas.forEach(mapa => {
-        const panel = document.createElement('div');
-        panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-        panel.innerHTML = `
-          <h3 class="panel-title" style="margin-top:0; margin-bottom:4px;">${mapa.nombre}</h3>
-          ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-          <div class="panel-header" style="margin-top:${mapa.nombre === 'Aberration' ? '8px' : '0'};">
-            <span class="panel-status ${mapa.online ? 'online' : 'offline'}">
-              <span class="status-icon"></span>
-              ${mapa.online ? 'ONLINE' : 'OFFLINE'}
-            </span>
-          </div>
-          <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-          <div class="panel-players">
-            <span class="panel-players-icon">👥</span>
-            <span class="panel-players-count"><b>${mapa.jugadores}/${maxJugadores}</b> Jugadores</span>
-          </div>
-          <div class="panel-bar">
-            <div class="panel-bar-fill" style="width:${(mapa.jugadores/maxJugadores)*100}%"></div>
-          </div>
-          <button class="panel-btn" style="width:100%;margin-top:4px;">CONECTAR</button>
-        `;
-        grid.appendChild(panel);
-      });
+    // Sección CrossPlay para PC (similar a la sección 'creadores' en index.html)
+    function CrossplaySection(){
+      return (
+        e('section', {id:'crossplay', className:'section section--dark py-12', 'data-aos':'fade-up'},
+          e('div', {className:'container'},
+            e('h2', {className:'section__title', 'data-aos':'fade-up'}, 'CrossPlay para PC'),
+            e('div', {className:'creators__grid', style:{display:'flex', alignItems:'center', gap:'24px', marginTop:'16px'}},
+              e('div', {className:'creators__image', 'data-aos':'fade-right', 'data-aos-delay':'100', style:{flex:'0 0 140px', display:'flex', justifyContent:'center', alignItems:'center'}},
+                // Usar logo existente como imagen representativa
+                e('img', {src:'img/RS_LOGO.png', alt:'RoyalServers', style:{width:'110px',height:'110px',objectFit:'contain'}})
+              ),
+              e('div', {className:'creators__text', 'data-aos':'fade-left', 'data-aos-delay':'200', style:{flex:'1'}},
+                e('h3', null, 'Compatible con las plataformas de Epic y Steam'),
+                e('p', null, 'Compatible con las plataformas de Epic y Steam, disfruta de nuestro servidor desde tu plataforma preferida. ¡Únete ahora y comienza tu aventura!'),
+                e('a', {href:'https://discord.gg/TU_INVITACION', className:'btn btn--secondary', style:{marginTop:'10px', display:'inline-block'}}, 'Unirse a la comunidad')
+              )
+            )
+          )
+        )
+      );
     }
-  </script>
-</body>
-<style>
-/* MAPAS: Paneles estilo moderno */
-.maps-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 20px;
-  align-items: start;
-  margin-top: 20px;
-}
-.map-panel {
-  background: #181f3a;
-  border-radius: 18px;
-  box-shadow: 0 0 0 2px #CFAE4D, 0 8px 32px #181f3a99;
-  padding: 12px 12px 10px 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-  min-height: 220px;
-  max-width: 360px;
-  width: 100%;
-  height: 220px;
-  box-sizing: border-box;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.map-panel.aberration {
-  /* Sin tamaño especial, igual al resto */
-}
-.map-panel.aberration .panel-img-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 72px;
-  background-image: url('img/ABE_INGAME.jpg');
-  background-size: 200% 200%;
-  background-position: center top;
-  background-repeat: no-repeat;
-  z-index: 1;
-  border-top-left-radius: 18px;
-  border-top-right-radius: 18px;
-  filter: brightness(0.92) saturate(1.18);
-}
-.map-panel.aberration .panel-title,
-.map-panel.aberration .panel-header {
-  position: relative;
-  z-index: 2;
-  background: transparent;
-}
-/* Fondo para la sección de mapas */
-.mapas-bg {
-  background: #1B1035;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px #0005;
-}
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-  <script>
-    // Cargar el nav_bar_ase.html dinámicamente
-    fetch('ASE_nav_bar.html')
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('nav-bar-home-container').innerHTML = html;
-      });
 
-    // Datos de los mapas
-    const mapas = [
-      { nombre: "The Island", online: true, jugadores: 1 },
-      { nombre: "Aberration", online: false, jugadores: 0 },
-      { nombre: "Crystal Isles", online: true, jugadores: 1 },
-      { nombre: "Extinction", online: true, jugadores: 1 },
-      { nombre: "Fjordur", online: true, jugadores: 2 },
-      { nombre: "Scorched Earth", online: true, jugadores: 0 },
-      { nombre: "Ragnarok", online: true, jugadores: 1 },
-      { nombre: "Valguero", online: true, jugadores: 0 },
-      { nombre: "Génesis", online: true, jugadores: 0 },
-      { nombre: "Génesis 2", online: true, jugadores: 4 },
-      { nombre: "Lost Island", online: true, jugadores: 0 },
-      { nombre: "The Center", online: true, jugadores: 0 }
-    ];
-  const maxJugadores = 80;
-    const grid = document.querySelector('.maps-grid');
-    if (grid) {
-      mapas.forEach(mapa => {
-        const panel = document.createElement('div');
-        panel.className = 'map-panel' + (mapa.nombre === 'Aberration' ? ' aberration' : '');
-        panel.innerHTML = `
-          <h3 class="panel-title" style="margin-top:0; margin-bottom:4px;">${mapa.nombre}</h3>
-          ${mapa.nombre === 'Aberration' ? '<div class="panel-img-bg"></div>' : ''}
-          <div class="panel-header" style="margin-top:${mapa.nombre === 'Aberration' ? '8px' : '0'};">
-            <span class="panel-status ${mapa.online ? 'online' : 'offline'}">
-              <span class="status-icon"></span>
-              ${mapa.online ? 'ONLINE' : 'OFFLINE'}
-            </span>
-          </div>
-          <div class="panel-desc">! [ARG/LAT] --WILD DODO GAMING-- [X3,Tx10,Bx14.SS,TP] - (v358.24)</div>
-          <div class="panel-players">
-            <span class="panel-players-icon">👥</span>
-            <span class="panel-players-count"><b>${mapa.jugadores}/${maxJugadores}</b> Jugadores</span>
-          </div>
-          <div class="panel-bar">
-            <div class="panel-bar-fill" style="width:${(mapa.jugadores/maxJugadores)*100}%"></div>
-          </div>
-          <button class="panel-btn" style="width:100%;margin-top:4px;">CONECTAR</button>
-        `;
-        grid.appendChild(panel);
-      });
+  function App(){
+      // En producción, aquí se llamaría a la API para traer estado real (fetch/axios)
+      // Comentario: Reemplazar SAMPLE_MAPS por el arreglo recibido de la API.
+      const maps = SAMPLE_MAPS;
+      return (
+        e(React.Fragment, null,
+          e(Hero),
+          // Principal content container (cluster + mapas)
+          e('div', {className:'container mx-auto px-4'},
+            e(ClusterConfig),
+            e(MapsSection, {maps})
+          ),
+          // CrossplaySection fuera del container para que el fondo ocupe todo el ancho
+          e(CrossplaySection)
+        )
+      );
     }
+
+    // Montar la aplicación
+    const root = ReactDOM.createRoot(document.getElementById('ase-root'));
+    root.render(e(App));
   </script>
+
+  <script>
+    // Load nav bar (sin modificaciones al archivo original)
+    fetch('ASE_nav_bar.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).catch(()=>{});
+  </script>
+
+  <script>
+    // Cargar footer dinámicamente
+    fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).catch(()=>{});
+  </script>
+
+  <!-- AOS script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 800 });
+  </script>
+
+  <script>
+    // Force AOS to re-check DOM after React mounts dynamic content
+    // Small timeout to ensure React render finished in typical cases
+    setTimeout(function(){ try{ AOS.refresh(); }catch(e){} }, 250);
+  </script>
+
 </body>
 </html>

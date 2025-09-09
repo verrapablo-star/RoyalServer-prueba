@@ -112,7 +112,7 @@
           <h3 class="game-card__title">Minecraft</h3>
           <p>Survival, Creativo y eventos únicos.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="#" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="200">
@@ -120,7 +120,7 @@
           <h3 class="game-card__title">Valorant</h3>
           <p>Torneos organizados y equipos competitivos.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="#" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="300">
@@ -128,7 +128,7 @@
           <h3 class="game-card__title">Counter-Strike 2</h3>
           <p>Prácticas, retakes y comunidad activa.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="#" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="400">
@@ -136,7 +136,7 @@
           <h3 class="game-card__title">Rust</h3>
           <p>Vanilla y modificado, alianzas y guerra.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="#" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="500" style="text-decoration:none;color:inherit;">
@@ -152,7 +152,7 @@
           <h3 class="game-card__title">ARK: Survival Ascended</h3>
           <p>La nueva generación de supervivencia en ARK.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="#" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
       </div>
@@ -343,16 +343,7 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__socials">
-        <a href="#" class="footer__social-link"><i class="fa-brands fa-twitch"></i></a>
-        <a href="#" class="footer__social-link"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" class="footer__social-link"><i class="fa-brands fa-youtube"></i></a>
-      </div>
-      <p>&copy; 2025 RoyalServers. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  <div id="foot-home-container"></div>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -363,6 +354,8 @@
       .then(html => {
         document.getElementById('nav-bar-home-container').innerHTML = html;
       });
+  // Cargar el footer dinámicamente
+  fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).catch(()=>{});
   </script>
   <script>
     AOS.init({
