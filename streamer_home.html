@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RoyalServers - Recursos para Creadores</title>
+  <meta name="description" content="Recursos, soporte y oportunidades para streamers y creadores en RoyalServers." />
+
+  <!-- Fuentes y estilos (misma paleta) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- HEADER (dinámico) -->
+  <header class="header">
+    <div id="nav-bar-home-container"></div>
+  </header>
+
+  <!-- HERO para creadores -->
+  <section class="hero" style="position:relative;overflow:hidden;">
+    <img src="img/FONDO_GAMER.png" alt="Fondo Gamer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.28;pointer-events:none;" loading="lazy">
+    <div class="hero__content container" data-aos="fade-up" data-aos-duration="1000" style="position:relative;z-index:2;">
+      <h1 class="hero__title">Herramientas y apoyo para creadores</h1>
+      <p class="hero__subtitle">Recursos, difusión y comunidad para que tu contenido crezca. Accede a plantillas, eventos patrocinados y asesoría técnica.</p>
+      <a href="https://discord.gg/TU_INVITACION" class="btn btn--primary btn--large"><i class="fa-brands fa-discord"></i> Unirte a la comunidad</a>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: Recursos rápidos -->
+  <section id="recursos" class="section container">
+    <h2 class="section__title" data-aos="fade-up">Recursos rápidos</h2>
+    <div class="diff__grid" data-aos="fade-up" data-aos-delay="120" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px;">
+      <div class="diff-card" data-aos="zoom-in" data-aos-delay="140" style="background:var(--card-bg,#0b1220);padding:22px;border-radius:12px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
+        <div style="font-size:28px;color:#CFAE4D;margin-bottom:8px;"><i class="fa-solid fa-file-video"></i></div>
+        <h4 style="margin:0 0 8px;font-size:1.05rem;">Overlays y escenas</h4>
+        <p style="margin:0;font-size:0.95rem;opacity:0.95;">Plantillas editables para OBS/Streamlabs listas para usar.</p>
+      </div>
+
+      <div class="diff-card" data-aos="zoom-in" data-aos-delay="180" style="background:var(--card-bg,#0b1220);padding:22px;border-radius:12px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
+        <div style="font-size:28px;color:#CFAE4D;margin-bottom:8px;"><i class="fa-solid fa-bullhorn"></i></div>
+        <h4 style="margin:0 0 8px;font-size:1.05rem;">Promoción y clips</h4>
+        <p style="margin:0;font-size:0.95rem;opacity:0.95;">Compartimos tus mejores clips en nuestras redes y canales aliados.</p>
+      </div>
+
+      <div class="diff-card" data-aos="zoom-in" data-aos-delay="220" style="background:var(--card-bg,#0b1220);padding:22px;border-radius:12px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
+        <div style="font-size:28px;color:#CFAE4D;margin-bottom:8px;"><i class="fa-solid fa-hands-helping"></i></div>
+        <h4 style="margin:0 0 8px;font-size:1.05rem;">Mentoría</h4>
+        <p style="margin:0;font-size:0.95rem;opacity:0.95;">Sesiones periódicas con creadores veteranos para crecer juntos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: Beneficios y plan -->
+  <section id="beneficios" class="section section--dark">
+    <div class="container">
+      <h2 class="section__title" data-aos="fade-up">¿Qué ofrecemos?</h2>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;align-items:center;">
+        <div data-aos="fade-right" data-aos-delay="120">
+          <ul style="margin:0;padding-left:18px;">
+            <li>Difusión semanal en nuestros canales.</li>
+            <li>Acceso a concursos y patrocinios.</li>
+            <li>Soporte técnico en transmisiones.</li>
+            <li>Herramientas creativas y assets.</li>
+          </ul>
+        </div>
+        <div data-aos="fade-left" data-aos-delay="180" style="text-align:center;">
+          <img src="img/SMART_MOCKUP.png" alt="Mockup" style="max-width:360px;width:100%;height:auto;display:inline-block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN: Cómo aplicar -->
+  <section id="aplicar" class="section container">
+    <h2 class="section__title" data-aos="fade-up">¿Cómo participar?</h2>
+    <div style="margin-top:14px;" data-aos="fade-up" data-aos-delay="120">
+      <p>Envía una muestra de tu contenido en nuestro canal de creadores en Discord. Valoramos consistencia, calidad y actitud comunitaria.</p>
+      <a href="https://discord.gg/TU_INVITACION" class="btn btn--secondary" style="margin-top:14px;display:inline-block;">Obtener mas información</a>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="cta" data-aos="zoom-in">
+    <div class="container">
+      <h2 class="cta__title">Únete como creador</h2>
+      <p>Forma parte de un grupo que impulsa tu contenido y te da oportunidades reales.</p>
+      <a href="https://discord.gg/TU_INVITACION" class="btn btn--primary btn--large"><i class="fa-brands fa-discord"></i> Ir al canal de creadores</a>
+    </div>
+  </section>
+
+  <!-- FOOTER dinámico -->
+  <div id="foot-home-container"></div>
+
+  <!-- Scripts: cargar nav y footer, AOS init -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Cargar nav y footer dinámicamente (mismo patrón que index.html)
+    fetch('nav_bar_home.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).catch(()=>{});
+    fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).catch(()=>{});
+
+    AOS.init({ once:true, duration:800 });
+  </script>
+</body>
+</html>
