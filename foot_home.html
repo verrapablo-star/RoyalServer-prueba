@@ -1,31 +1,24 @@
 <footer class="footer">
-  <div class="container footer__inner" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding:12px 14px;">
-    <div style="flex:0 0 auto;display:flex;align-items:center;gap:10px;">
-  <img src="img/RS_LOGO.png" alt="RoyalServers" style="width:72px;height:auto;display:block;">
-  <p style="color:var(--text-color);opacity:0.9;max-width:160px;font-size:0.82rem;margin:0;line-height:1.05;">Aquí no solo jugamos, creamos recuerdos. RoyalServers, tu experiencia gamer definitiva.</p>
-    </div>
+  <div class="container footer__inner">
+    <div class="footer__cols">
+      <div class="footer__col footer__col--left">
+        <a href="index.html" class="footer__logo">
+          <img src="img/RS_LOGO.png" alt="RoyalServers">
+        </a>
+      </div>
 
-    <div style="flex:1;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;align-items:center;">
-      <div style="min-width:140px;">
-        <h4 style="color:var(--primary-color);margin-bottom:12px;">Enlaces rápidos</h4>
-        <ul style="list-style:none;padding:0;margin:0;color:var(--text-color);opacity:0.9;">
-          <li><a href="index.html" style="color:inherit;text-decoration:none;">Inicio</a></li>
-          <li><a href="ase_home.html" style="color:inherit;text-decoration:none;">Servidores</a></li>
-          <li><a href="shop.html" style="color:inherit;text-decoration:none;">Tienda</a></li>
+      <div class="footer__col footer__col--center">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#juegos">Juegos</a></li>
+          <li><a href="index.html#creadores">Creadores de Contenido</a></li>
         </ul>
       </div>
 
-      <div style="min-width:140px;">
-        <h4 style="color:var(--primary-color);margin-bottom:12px;">Legal</h4>
-        <ul style="list-style:none;padding:0;margin:0;color:var(--text-color);opacity:0.9;">
-          <li><a href="#" style="color:inherit;text-decoration:none;">Términos y condiciones</a></li>
-          <li><a href="#" style="color:inherit;text-decoration:none;">Política de privacidad</a></li>
-        </ul>
-      </div>
-
-      <div style="min-width:140px;">
-        <h4 style="color:var(--primary-color);margin-bottom:12px;">Síguenos</h4>
-        <div style="display:flex;gap:10px;align-items:center;">
+      <div class="footer__col footer__col--right">
+        <h4>Redes</h4>
+        <div class="social-icons">
           <a href="#" aria-label="Discord" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#5865F2;color:#fff;text-decoration:none;"><i class="fa-brands fa-discord"></i></a>
           <a href="#" aria-label="Twitter" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#1DA1F2;color:#fff;text-decoration:none;"><i class="fa-brands fa-twitter"></i></a>
           <a href="#" aria-label="Facebook" style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:999px;background:#1877F2;color:#fff;text-decoration:none;"><i class="fa-brands fa-facebook"></i></a>
@@ -34,7 +27,15 @@
       </div>
     </div>
   </div>
-  <div style="border-top:1px solid rgba(255,255,255,0.03);padding:6px 12px;text-align:center;color:rgba(255,255,255,0.6);font-size:0.82rem;">
-  &copy; 2025 RoyalServers. Todos los derechos reservados.
+
+  <div class="footer__divider" role="separator" aria-hidden="true"></div>
+
+  <div class="footer__bottom container">
+    <div class="bottom__left"></div>
+    <div class="bottom__center">&copy; 2025 RoyalServers. Todos los derechos reservados.</div>
+    <div class="bottom__right">
+  <a href="tyc.html">Términos y condiciones</a>
+  <a href="privacy.html">Políticas de privacidad</a>
+    </div>
   </div>
 </footer>

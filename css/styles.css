@@ -211,6 +211,40 @@
 .creators__image img.zoom:hover{transform:scale(1.08)}
 .creators__text{padding-left:0}
 
+/* Mockup fuchsia glow behind SMART_MOCKUP.png */
+.mockup-glow-wrap{position:relative;display:inline-block;padding:18px}
+.mockup-image{position:relative;z-index:3;display:block;max-width:100%;height:auto}
+.mockup-glow{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width: 420px; /* base size of glow */
+  height: 420px;
+  border-radius:50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,0,255,0.95) 0%, rgba(255,0,255,0.85) 10%, rgba(255,0,255,0.55) 28%, rgba(255,0,255,0.18) 50%, rgba(255,0,255,0.06) 75%, transparent 100%);
+  filter: blur(28px) saturate(140%);
+  z-index:1;
+  pointer-events:none;
+  mix-blend-mode: screen;
+  animation: mockup-pulse 2200ms ease-in-out infinite;
+}
+
+@keyframes mockup-pulse{
+  0%{transform:translate(-50%,-50%) scale(0.95);opacity:0.9;filter:blur(22px) saturate(150%)}
+  50%{transform:translate(-50%,-50%) scale(1.06);opacity:1;filter:blur(36px) saturate(200%)}
+  100%{transform:translate(-50%,-50%) scale(0.95);opacity:0.9;filter:blur(22px) saturate(150%)}
+}
+
+/* Responsive adjustments for the glow so it remains proportional */
+@media(max-width:1024px){
+  .mockup-glow{width:360px;height:360px}
+}
+@media(max-width:768px){
+  .mockup-glow{width:260px;height:260px;filter:blur(22px);opacity:0.95}
+  .mockup-glow-wrap{padding:8px}
+}
+
 /* small info cards placed above the CTA */
 .creators__mini-cards{display:flex;flex-direction:column;gap:12px;margin-top:12px;align-items:stretch}
 .mini-card{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;display:flex;gap:12px;align-items:center;width:100%;box-shadow:0 6px 16px rgba(0,0,0,0.28)}
@@ -411,10 +445,90 @@ body {
   font-size: 10rem;
 }
 
+/* ======== FOOTER (3-column layout) ======== */
+.footer{
+  background: linear-gradient(180deg, rgba(10,14,26,0.95), rgba(10,14,26,0.98));
+  color: var(--text-color);
+  padding-top:14px; /* slightly reduced height */
+  padding-bottom:10px;
+}
+.footer__inner{padding:14px 12px}
+.footer__cols{display:grid;grid-template-columns:20% 60% 20%;gap:24px;align-items:center}
+.footer__col{min-width:0}
+.footer__col--left{display:flex;align-items:center;justify-content:center}
+.footer__logo img{width:96px;height:auto;display:block}
+.footer__col h4{color:var(--primary-color);margin-bottom:10px;font-size:1rem}
+.footer__col--center{padding-left:12px;text-align:left}
+.footer__col--center ul{display:flex;flex-direction:row;gap:28px;align-items:center;padding:0;margin:0;list-style:none;}
+.footer__col--center ul li{margin:0}
+.footer__col--right{display:flex;flex-direction:column;align-items:center}
+.footer__col ul{list-style:none;padding:0;margin:0;color:var(--text-color);opacity:0.95}
+.footer__col ul li{margin-bottom:8px}
+.footer__col a{color:inherit;text-decoration:none;opacity:0.95}
+.social-icons{display:flex;gap:10px;align-items:center;justify-content:center}
+
+.footer__divider{height:1px;background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04), rgba(255,255,255,0.02));margin:12px 0}
+
+.footer__bottom.container{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;font-size:0.9rem;color:rgba(255,255,255,0.65)}
+.footer__bottom .bottom__center{flex:1;text-align:center}
+.footer__bottom .bottom__right{display:flex;gap:16px;align-items:center}
+.footer__bottom a{color:inherit;text-decoration:none;opacity:0.85}
+
+@media(max-width:768px){
+  .footer__cols{flex-direction:column;gap:18px}
+  .footer__col--left{flex:0 0 auto}
+  .footer__bottom.container{flex-direction:column;gap:8px}
+  .footer__bottom .bottom__center{text-align:center}
+  .footer__bottom .bottom__right{order:3}
+  .footer__col--center ul{flex-direction:column;gap:12px;align-items:flex-start}
+}
+
+/* Subtle hover 'illuminate' animation for footer links */
+.footer__col a,
+.footer__bottom a{
+  transition: color 180ms ease, text-shadow 220ms ease, transform 180ms ease, opacity 180ms ease;
+  display: inline-block;
+}
+.footer__col a:hover,
+.footer__bottom a:hover{
+  color: var(--primary-color);
+  opacity: 1;
+  text-shadow: 0 6px 18px rgba(207,174,77,0.12), 0 0 8px rgba(207,174,77,0.06);
+  transform: translateY(-2px);
+}
+.footer__col a:focus-visible,
+.footer__bottom a:focus-visible{
+  outline: 2px solid rgba(207,174,77,0.14);
+  outline-offset: 3px;
+}
+
+/* social icons use inline styles in the fragment to preserve original appearance */
+
 .about__text h3,
 .creators__text h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
+}
+
+/* Privacy page specific styles */
+.privacy__content h2{
+  color: var(--primary-color); /* dorado */
+  margin-top:18px;
+  margin-bottom:12px;
+}
+.privacy__content p,
+.privacy__content ul{
+  text-indent: 18px; /* sangría */
+  margin-bottom:12px;
+  line-height:1.6;
+}
+.privacy__content ul{padding-left:6px}
+.privacy__content ul li{margin-bottom:8px}
+
+/* Add spacing between enumerated headings */
+.privacy__content h2 + p,
+.privacy__content h2 + ul{
+  margin-top:6px;
 }
 
 /* ======== JUEGOS SOPORTADOS ======== */

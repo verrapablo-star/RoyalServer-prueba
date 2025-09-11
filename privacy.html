@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Políticas de Privacidad - RoyalServers</title>
+  <meta name="description" content="Políticas de privacidad de RoyalServers">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div id="nav-bar-home-container"></div>
+  </header>
+
+  <main class="section container" style="padding-top:120px;padding-bottom:60px;">
+    <h1 class="section__title" data-aos="fade-up">Política de Privacidad</h1>
+    <div class="privacy__content" data-aos="fade-up" data-aos-delay="120" style="max-width:900px;margin:0 auto;color:var(--text-color);">
+      <p>En <strong>RoyalServers</strong> respetamos la privacidad de nuestros usuarios y asumimos el compromiso de proteger la información personal que se recolecta durante el uso de nuestros servicios. Al acceder a nuestra página y utilizar nuestros servidores de juegos, aceptás esta política de privacidad.</p>
+
+      <h2>1. Información que recolectamos</h2>
+      <p>RoyalServers únicamente recolecta los siguientes datos:</p>
+      <ul>
+        <li>Información básica de perfil de Discord (usuario, correo, ID) utilizada para el registro e inicio de sesión.</li>
+        <li>Identificadores de juego (Steam ID / Epic Games ID) para vincular al usuario con nuestros servidores.</li>
+        <li>Registros de compras de pases e ítems asociados a la cuenta.</li>
+  </ul>
+  <p><strong>No solicitamos ni almacenamos datos financieros o de tarjeta.</strong></p>
+
+      <h2>2. Cómo se recolecta la información</h2>
+      <ul>
+        <li>A través del inicio de sesión mediante Discord.</li>
+        <li>Durante el proceso de adquisición de pases o ítems de pago, mediante integración con plataformas externas: PayPal, Mercado Pago o transferencia bancaria.</li>
+  </ul>
+  <p><strong>La información de pagos es gestionada exclusivamente por dichas plataformas. RoyalServers no almacena números de tarjeta ni información bancaria.</strong></p>
+
+      <h2>3. Uso de la información</h2>
+      <p>La información recolectada se utiliza únicamente para:</p>
+      <ul>
+        <li>Identificar al usuario dentro de la comunidad.</li>
+        <li>Administrar pases, ítems y beneficios en los servidores de juegos.</li>
+        <li>Brindar soporte en caso de consultas o inconvenientes.</li>
+  </ul>
+  <p><strong>RoyalServers no utiliza la información con fines de marketing, publicidad o promociones.</strong></p>
+
+      <h2>4. Compartición de la información</h2>
+      <p>RoyalServers no comparte datos con terceros, salvo en los siguientes casos indispensables para el funcionamiento del servicio:</p>
+      <ul>
+        <li><strong>Discord:</strong> para la autenticación e inicio de sesión.</li>
+        <li><strong>Plataformas de pago</strong> (PayPal, Mercado Pago, bancos): para procesar las transacciones de manera segura.</li>
+      </ul>
+      <p>Fuera de estas integraciones necesarias, RoyalServers no vende, cede ni transfiere información personal a otras empresas o individuos.</p>
+
+      <h2>5. Derechos de los usuarios</h2>
+      <p>Los usuarios tienen derecho a:</p>
+      <ul>
+        <li>Solicitar el acceso a la información almacenada sobre ellos.</li>
+        <li>Pedir la corrección de datos inexactos.</li>
+        <li>Solicitar la eliminación de su cuenta y de los datos asociados (Discord ID, Steam/Epic ID, registros de pases).</li>
+      </ul>
+      <p>Para ejercer estos derechos, el usuario deberá contactar al equipo de administración a través de los canales oficiales de soporte de RoyalServers.</p>
+
+      <h2>6. Medidas de seguridad</h2>
+      <p>RoyalServers limita el acceso a la información únicamente a administradores autorizados. No almacenamos contraseñas, ni datos financieros sensibles.</p>
+      <p>La seguridad de la información vinculada al inicio de sesión corresponde a Discord, y la seguridad de los pagos depende de PayPal, Mercado Pago o la entidad bancaria utilizada.</p>
+
+      <h2>7. Edad mínima</h2>
+      <p>El uso de RoyalServers está permitido exclusivamente a mayores de 18 años. Al registrarse y utilizar nuestros servicios, el usuario declara cumplir con este requisito.</p>
+
+      <h2>8. Uso de cookies</h2>
+      <p>Actualmente, RoyalServers no utiliza cookies de seguimiento ni herramientas de analítica externa.</p>
+
+      <h2>9. Cambios en la política de privacidad</h2>
+      <p>RoyalServers se reserva el derecho de modificar la presente política en cualquier momento. Las actualizaciones se publicarán en este mismo apartado, siendo responsabilidad del usuario revisarlas periódicamente.</p>
+
+      <p style="margin-top:18px;font-weight:600">📌 Última actualización: 11 de Septiembre de 2025</p>
+
+      <div style="margin-top:24px;text-align:center;">
+        <a href="index.html" class="btn btn--secondary">Volver al Inicio</a>
+      </div>
+    </div>
+  </main>
+
+  <div id="foot-home-container"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true,duration:700});
+    fetch('nav_bar_home.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).then(()=>AOS.refresh());
+    fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).then(()=>AOS.refresh());
+  </script>
+</body>
+</html>
