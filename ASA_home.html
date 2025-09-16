@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ASA - RoyalServers</title>
+  <meta name="description" content="Servidores ASA (ARK) en RoyalServers - En desarrollo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="header"><div id="nav-bar-home-container"></div></header>
+
+  <section class="hero" style="position:relative;overflow:hidden;">
+    <img src="img/FONDO_WEB_NUEVO.png" alt="Fondo Gamer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.35;pointer-events:none;" loading="lazy">
+    <div class="hero__content container" data-aos="fade-up" data-aos-duration="900" style="position:relative;z-index:2;">
+      <h1 class="hero__title">ASA / ARK en RoyalServers</h1>
+      <p class="hero__subtitle">Servidores ARK: Survival Ascended y Evolved — actualmente en desarrollo. Pronto mayor información.</p>
+      <a href="https://discord.gg/TU_INVITACION" class="btn btn--primary btn--large"><i class="fa-brands fa-discord"></i> Unirme a Discord</a>
+    </div>
+  </section>
+
+  <main class="section container" style="padding-top:48px;padding-bottom:48px;max-width:1100px;margin:0 auto;">
+    <h2 class="section__title" data-aos="fade-up">Estado del servidor</h2>
+    <p data-aos="fade-up" data-aos-delay="80">Estamos preparando la apertura de los servidores de ARK. Aquí encontrarás:</p>
+    <ul data-aos="fade-up" data-aos-delay="120">
+      <li>Servidores de ARK: Survival y Ascended.</li>
+      <li>Eventos PvE y PvP temáticos.</li>
+      <li>Sistema de donaciones y recompensas (próximamente).</li>
+    </ul>
+
+    <div data-aos="fade-up" data-aos-delay="160" style="margin-top:18px;background:var(--card-bg);padding:18px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
+      <h3>En desarrollo</h3>
+      <p>Esta sección está en proceso de construcción. Si querés enterarte primero, uníte a nuestro Discord y activa las notificaciones en el canal de anuncios.</p>
+      <p style="margin-top:8px;font-weight:600">📌 Última actualización: 11 de Septiembre de 2025</p>
+    </div>
+
+    <div style="margin-top:24px;text-align:center;"><a href="index.html" class="btn btn--secondary">Volver</a></div>
+  </main>
+
+  <div id="foot-home-container"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true,duration:700});
+  fetch('nav_bar_home.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).then(()=>AOS.refresh()).then(()=>{if(!window.__main_js_loaded){var s=document.createElement('script');s.src='js/main.js';s.onload=function(){window.__main_js_loaded=true};document.body.appendChild(s);}});
+    fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).then(()=>AOS.refresh());
+  </script>
+</body>
+</html>

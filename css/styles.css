@@ -102,6 +102,18 @@
   padding-right: 3vw;
   min-width: 0;
 }
+/* Ensure hero content clears the navbar so the nav doesn't visually cut the hero image */
+.hero{
+  padding-top:72px; /* space for navbar */
+}
+@media (max-width:900px){
+  /* mobile/tablet nav wraps and can be taller */
+  .hero{padding-top:92px}
+}
+@media (max-width:600px){
+  /* on small screens the nav may stack, provide extra spacing */
+  .hero{padding-top:110px}
+}
 .nav__logo {
   display: flex;
   align-items: center;

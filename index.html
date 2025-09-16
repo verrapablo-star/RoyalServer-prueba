@@ -90,17 +90,21 @@
   <section id="juegos" class="section section--dark" style="position:relative;overflow:hidden;">
     <div class="container" style="position:relative;z-index:2;">
       <style>
-        /* Scoped adjustments to align game cards without changing panel size */
+        /* Grid layout: 4 columns desktop, 2 columns tablet, 1 column mobile */
+        .games__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+
         /* Make each card a vertical flex column and push the actions to the bottom so buttons align horizontally */
-        .games__grid .game-card{display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;gap:8px;padding:20px;min-height:260px;} 
+        .games__grid .game-card{display:flex;flex-direction:column;justify-content:space-between;align-items:center;text-align:center;gap:8px;padding:20px;min-height:260px;border-radius:10px}
         .games__grid .game-card__img{width:110px !important;height:110px !important;object-fit:contain;border-radius:6px;margin-bottom:8px}
         .games__grid .game-card__title{margin:6px 0 4px;font-size:1.1rem}
         .games__grid .game-card p{margin:0 0 8px;opacity:0.95}
         /* Override inline margin-top on individual cards so spacing is controlled by the card layout */
         .games__grid .game-card__actions{width:100%;display:flex;justify-content:center;margin-top:0 !important}
         .game-card__actions .btn{min-width:150px;padding:8px 14px}
-        /* Keep smaller spacing on very small screens and reduce min-height */
-        @media(max-width:600px){ .games__grid .game-card{padding:14px;min-height:220px} .games__grid .game-card__img{width:90px;height:90px !important} .game-card__actions .btn{min-width:120px} }
+
+        /* Responsive: 2 columns for medium screens, 1 column for small screens */
+        @media(max-width:900px){ .games__grid{grid-template-columns:repeat(2,1fr)} }
+        @media(max-width:600px){ .games__grid{grid-template-columns:repeat(1,1fr)} .games__grid .game-card{padding:14px;min-height:220px} .games__grid .game-card__img{width:90px;height:90px !important} .game-card__actions .btn{min-width:120px} }
       </style>
       <div class="section-title-wrap" style="position:relative;display:block;padding:8px 0;">
   <img src="img/SMOKE_EFFECT.png" alt="" class="title-bg-img" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:100vw;height:auto;max-height:360px;opacity:0.65;filter:brightness(1.05) saturate(1.08);pointer-events:none;z-index:1;display:block;" />
@@ -112,31 +116,16 @@
           <h3 class="game-card__title">Minecraft</h3>
           <p>Survival, Creativo y eventos únicos.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="minecraft_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
-        <div class="game-card" data-aos="zoom-in" data-aos-delay="200">
-          <img src="img/VALORANT_LOGO.png" alt="Valorant" class="game-card__img" style="width:90px;height:90px;object-fit:contain;">
-          <h3 class="game-card__title">Valorant</h3>
-          <p>Torneos organizados y equipos competitivos.</p>
-          <div class="game-card__actions" style="margin-top:10px;">
-            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
-          </div>
-        </div>
-        <div class="game-card" data-aos="zoom-in" data-aos-delay="300">
-          <img src="img/CS_2.jpg" alt="Counter-Strike 2" class="game-card__img" style="width:90px;height:90px;object-fit:contain;">
-          <h3 class="game-card__title">Counter-Strike 2</h3>
-          <p>Prácticas, retakes y comunidad activa.</p>
-          <div class="game-card__actions" style="margin-top:10px;">
-            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
-          </div>
-        </div>
+        
         <div class="game-card" data-aos="zoom-in" data-aos-delay="400">
           <img src="img/RUST.png" alt="Rust" class="game-card__img" style="width:90px;height:90px;object-fit:contain;">
           <h3 class="game-card__title">Rust</h3>
           <p>Vanilla y modificado, alianzas y guerra.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="rust_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
         <div class="game-card" data-aos="zoom-in" data-aos-delay="500" style="text-decoration:none;color:inherit;">
@@ -152,7 +141,7 @@
           <h3 class="game-card__title">ARK: Survival Ascended</h3>
           <p>La nueva generación de supervivencia en ARK.</p>
           <div class="game-card__actions" style="margin-top:10px;">
-            <a href="ase_home.html" class="btn btn--secondary">VER SERVIDORES</a>
+            <a href="ASA_home.html" class="btn btn--secondary">VER SERVIDORES</a>
           </div>
         </div>
       </div>
@@ -394,5 +383,6 @@
       duration: 800,
     });
   </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

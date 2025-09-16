@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minecraft - RoyalServers</title>
+  <meta name="description" content="Servidores de Minecraft en RoyalServers - En desarrollo">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Page-specific hero adjustments: place the hero image in normal flow so
+       the top of the image naturally sits below the navbar and the section
+       height matches the image height. Content remains overlaid via z-index. */
+    .minecraft-hero{
+      /* give space for the game bar above so the image is not cut */
+      padding-top:40px !important; /* height of the game-bar */
+      position:relative;
+      overflow:hidden;
+    }
+
+    .minecraft-hero .hero-bg{
+      display:block;
+      position:relative; /* keep in normal flow so parent height includes it */
+      width:100vw; /* span the full viewport width */
+      height:auto; /* natural height, so the image is fully visible */
+      object-fit:cover;
+      object-position:center center; /* center the focal point */
+      transform:none;
+      z-index:0;
+      opacity:0.95;
+      pointer-events:none;
+      max-width:none; /* remove constraint */
+      /* center the full-bleed image (offset because width:100vw ignores parent padding) */
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+    }
+    /* Estado del servidor: fondo full-bleed (de borde a borde) */
+    .estado-bg{
+      background-color: #1B1035; /* actualizado según solicitud */
+      width: 100vw;
+      margin-left: calc(50% - 50vw); /* full-bleed centering trick */
+      margin-right: calc(50% - 50vw);
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+    .estado-section .container{ padding-top:48px;padding-bottom:48px; }
+    @media (max-width:900px){
+      /* responsive tweaks: keep image full width and let it determine height */
+      .minecraft-hero{ padding-top:48px }
+      .minecraft-hero .hero-bg{ object-position:center 16%; }
+    }
+    @media (max-width:600px){
+      .minecraft-hero{ padding-top:56px }
+      .minecraft-hero .hero-bg{ object-position:center 12%; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div id="nav-bar-home-container"></div>
+    <div style="height:40px; display:flex; align-items:center; background:#181818; padding-left:24px;">
+      <img src="img/MINECRAFT.jpg" alt="Minecraft" style="height:28px;vertical-align:middle;">
+      <h1 style="margin-left:12px;color:var(--primary-color);font-size:1.1rem;font-family:'Montserrat',sans-serif;">Minecraft</h1>
+    </div>
+  </header>
+
+  <section class="hero minecraft-hero" style="position:relative;overflow:hidden;text-align:center;">
+    <img src="img/MINECRAFT_RS.png" alt="Fondo Minecraft" class="hero-bg" loading="lazy">
+  </section>
+
+  <!-- =================================================== -->
+  <!-- Sección: Estado del servidor (separada del hero)     -->
+  <!-- - Archivo: minecraft_home.html                        -->
+  <!-- - ID: estado-servidor                                 -->
+  <!-- Comentarios: Aquí se encuentra el contenido informativo -->
+  <!-- y el panel "En desarrollo"; para editar el título,      -->
+  <!-- el texto o la fecha, buscar dentro de esta sección.     -->
+  <!-- =================================================== -->
+    <main id="estado-servidor" class="section estado-section">
+      <div class="estado-bg">
+        <div class="container" style="max-width:1100px;margin:0 auto;">
+    <!-- Título de la sección -->
+    <h2 class="section__title" data-aos="fade-up">Estado del servidor</h2>
+
+    <!-- Párrafo introductorio: editar el texto directamente aquí -->
+    <p data-aos="fade-up" data-aos-delay="80">Estamos preparando la apertura de nuestros mundos. Aquí encontrarás:</p>
+
+    <!-- Lista de puntos: añadir o eliminar <li> según sea necesario -->
+    <ul data-aos="fade-up" data-aos-delay="120">
+      <li>Survival clásico con eventos semanales.</li>
+      <li>Mundos Creativos para tu contenido y construcciones.</li>
+      <li>Sistema de donaciones y rangos (próximamente).</li>
+    </ul>
+
+    <!-- Panel informativo (En desarrollo): modificar contenido o fecha aquí -->
+    <div data-aos="fade-up" data-aos-delay="160" style="margin-top:18px;background:var(--card-bg);padding:18px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
+      <h3>En desarrollo</h3>
+      <p>Esta sección está en proceso de construcción. Si querés enterarte primero, uníte a nuestro Discord y activa las notificaciones en el canal de anuncios.</p>
+      <!-- Fecha de última actualización: actualizar manualmente aquí -->
+      <p style="margin-top:8px;font-weight:600">📌 Última actualización: 11 de Septiembre de 2025</p>
+    </div>
+
+    <!-- Botón de volver: cambiar enlace si se desea otra ruta -->
+    <div style="margin-top:24px;text-align:center;"><a href="index.html" class="btn btn--secondary">Volver</a></div>
+        </div>
+      </div>
+  </main>
+
+  <div id="foot-home-container"></div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({once:true,duration:700});
+  fetch('nav_bar_home.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).then(()=>AOS.refresh()).then(()=>{if(!window.__main_js_loaded){var s=document.createElement('script');s.src='js/main.js';s.onload=function(){window.__main_js_loaded=true};document.body.appendChild(s);}});
+    fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).then(()=>AOS.refresh());
+  </script>
+</body>
+</html>

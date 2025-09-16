@@ -8,11 +8,55 @@
   </a>
   <ul class="nav__list">
   <li><a href="index.html#quienes-somos" class="nav__link">Quiénes Somos</a></li>
-  <li><a href="index.html#juegos" class="nav__link">Juegos</a></li>
+  <li class="nav__item nav__dropdown">
+    <button class="nav__link nav__dropdown-toggle nav__link--bold" aria-haspopup="true" aria-expanded="false">Juegos ▾</button>
+    <ul class="nav__submenu" role="menu" aria-label="Lista de juegos">
+      <li role="none"><a role="menuitem" href="minecraft_home.html" class="nav__link">Minecraft</a></li>
+      <li role="none"><a role="menuitem" href="rust_home.html" class="nav__link">Rust</a></li>
+      <li role="none"><a role="menuitem" href="ase_home.html" class="nav__link">ARK Survival Evolved</a></li>
+      <li role="none"><a role="menuitem" href="ASA_home.html" class="nav__link">ARK Survival Ascended</a></li>
+    </ul>
+  </li>
   <li><a href="index.html#creadores" class="nav__link">Creadores</a></li>
   <li><a href="index.html#testimonios" class="nav__link">Opiniones</a></li>
   <li><a href="shop.html" class="nav__link">Shop</a></li>
   </ul>
+
+  <!-- Minimal styles scoped to this fragment for the dropdown -->
+  <style>
+    /* Dropdown base */
+    .nav__dropdown{position:relative}
+    .nav__submenu{display:none;position:absolute;top:100%;left:0;background:#181818;border-radius:8px;padding:6px 0;min-width:220px;box-shadow:0 8px 20px rgba(0,0,0,0.45);z-index:220}
+    .nav__submenu li{list-style:none}
+    .nav__submenu a{display:block;padding:10px 16px;color:var(--text-color);text-decoration:none;font-weight:500}
+    .nav__submenu a:hover{background:rgba(255,255,255,0.02);color:var(--primary-color)}
+    .nav__dropdown.open > .nav__submenu{display:block}
+
+    /* Style the dropdown toggle so it visually matches links and doesn't show a box */
+    .nav__dropdown-toggle{
+      background:transparent !important;
+      border:0 !important;
+      color:var(--text-color) !important;
+      padding:6px 8px;
+      font:inherit;
+      cursor:pointer;
+      -webkit-appearance:none;
+      -moz-appearance:none;
+      appearance:none;
+    }
+    .nav__dropdown-toggle:hover{color:var(--primary-color)}
+    /* Remove default focus rectangle/inner focus; keep element focusable for keyboard users */
+    .nav__dropdown-toggle:focus{outline:none !important;box-shadow:none !important;background:transparent !important}
+    .nav__dropdown-toggle::-moz-focus-inner{border:0}
+  /* Force bold to match other nav links */
+  .nav__link--bold{font-weight:700}
+
+    /* Mobile: when the main nav list is stacked, make submenu flow with the list */
+    @media (max-width:700px){
+      .nav__submenu{position:relative;top:auto;left:auto;box-shadow:none;padding-left:12px;padding-right:12px}
+      .nav__submenu a{padding:10px 0}
+    }
+  </style>
   <!-- Mobile hamburger toggle (styled via CSS, shown on small screens) -->
   <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
 
@@ -54,6 +98,53 @@
         list.classList.remove('active');
         toggle.setAttribute('aria-expanded', 'false');
       }
+    });
+  })();
+</script>
+<script>
+  // Dropdown for 'Juegos' (works on desktop and mobile)
+  (function(){
+    var navRoot = document.querySelector('.nav.container');
+    if(!navRoot) return;
+    var dropdown = navRoot.querySelector('.nav__dropdown');
+    if(!dropdown) return;
+    var btn = dropdown.querySelector('.nav__dropdown-toggle');
+
+    // Toggle function
+    function toggleDropdown(open){
+      var isOpen = dropdown.classList.contains('open');
+      var shouldOpen = typeof open === 'boolean' ? open : !isOpen;
+      dropdown.classList.toggle('open', shouldOpen);
+      btn.setAttribute('aria-expanded', String(shouldOpen));
+    }
+
+    // click opens/closes
+    btn.addEventListener('click', function(e){
+      e.stopPropagation();
+      toggleDropdown();
+    });
+
+    // close when clicking outside
+    document.addEventListener('click', function(e){
+      if(!dropdown.contains(e.target) && dropdown.classList.contains('open')){
+        toggleDropdown(false);
+      }
+    });
+
+    // keyboard: Escape closes
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && dropdown.classList.contains('open')){
+        toggleDropdown(false);
+        btn.focus();
+      }
+    });
+
+    // Ensure submenu links close the dropdown on click (mobile friendliness)
+    var submenuLinks = dropdown.querySelectorAll('.nav__submenu a');
+    submenuLinks.forEach(function(a){
+      a.addEventListener('click', function(){
+        toggleDropdown(false);
+      });
     });
   })();
 </script>

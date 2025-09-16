@@ -105,3 +105,39 @@ if (btnRuleta && ruletaModal && cerrarRuleta && girarRuleta && canvas) {
 	// Cerrar al clickear fuera
 	ruletaModal.querySelector('.ruleta-overlay').addEventListener('click', ocultarRuleta);
 }
+
+/* ======= Dropdown init for injected nav fragment ======= */
+function initGamesDropdown(){
+	try{
+		var navRoot = document.querySelector('.nav.container');
+		if(!navRoot) return false;
+		var dropdown = navRoot.querySelector('.nav__dropdown');
+		if(!dropdown) return false;
+		var btn = dropdown.querySelector('.nav__dropdown-toggle');
+		if(!btn) return false;
+
+		function toggleDropdown(open){
+			var isOpen = dropdown.classList.contains('open');
+			var shouldOpen = typeof open === 'boolean' ? open : !isOpen;
+			dropdown.classList.toggle('open', shouldOpen);
+			btn.setAttribute('aria-expanded', String(shouldOpen));
+		}
+
+		btn.addEventListener('click', function(e){ e.stopPropagation(); toggleDropdown(); });
+		document.addEventListener('click', function(e){ if(!dropdown.contains(e.target) && dropdown.classList.contains('open')) toggleDropdown(false); });
+		document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && dropdown.classList.contains('open')){ toggleDropdown(false); btn.focus(); } });
+		dropdown.querySelectorAll('.nav__submenu a').forEach(function(a){ a.addEventListener('click', function(){ toggleDropdown(false); }); });
+		return true;
+	}catch(err){ return false; }
+}
+
+// Try to init immediately (for pages where nav is already in DOM)
+if(!initGamesDropdown()){
+	// If the nav is injected later, observe the body for the nav element
+	var observer = new MutationObserver(function(mutations, obs){
+		if(initGamesDropdown()){
+			obs.disconnect();
+		}
+	});
+	observer.observe(document.body, {childList:true, subtree:true});
+}

@@ -100,7 +100,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     // Cargar nav y footer dinámicamente (mismo patrón que index.html)
-    fetch('nav_bar_home.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).catch(()=>{});
+  fetch('nav_bar_home.html').then(r=>r.text()).then(html=>document.getElementById('nav-bar-home-container').innerHTML=html).catch(()=>{}).then(()=>{if(!window.__main_js_loaded){var s=document.createElement('script');s.src='js/main.js';s.onload=function(){window.__main_js_loaded=true};document.body.appendChild(s);}});
     fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).catch(()=>{});
 
     AOS.init({ once:true, duration:800 });
