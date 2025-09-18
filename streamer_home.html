@@ -22,66 +22,133 @@
   </header>
 
   <!-- HERO para creadores -->
-  <section class="hero" style="position:relative;overflow:hidden;">
-    <img src="img/FONDO_GAMER.png" alt="Fondo Gamer" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0.28;pointer-events:none;" loading="lazy">
-    <div class="hero__content container" data-aos="fade-up" data-aos-duration="1000" style="position:relative;z-index:2;">
-      <h1 class="hero__title">Herramientas y apoyo para creadores</h1>
-      <p class="hero__subtitle">Recursos, difusión y comunidad para que tu contenido crezca. Accede a plantillas, eventos patrocinados y asesoría técnica.</p>
+  <section class="hero streamer-hero">
+    <img src="img/FONDO_STREAM2.png" alt="Fondo Stream" class="hero-bg-image" loading="lazy">
+    <div class="hero__content container" data-aos="fade-up" data-aos-duration="1000">
+  <h1 class="hero__title">Un espacio donde tu contenido y nuestra comunidad evolucionan juntos.</h1>
+  <p class="hero__subtitle">Forma parte de un proyecto que impulsa streamers y creadores hacia nuevas oportunidades.</p>
       <a href="https://discord.gg/TU_INVITACION" class="btn btn--primary btn--large"><i class="fa-brands fa-discord"></i> Unirte a la comunidad</a>
     </div>
   </section>
 
   <!-- SECCIÓN: Recursos rápidos -->
   <section id="recursos" class="section container">
-    <h2 class="section__title" data-aos="fade-up">Recursos rápidos</h2>
-    <div class="diff__grid" data-aos="fade-up" data-aos-delay="120" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px;">
-      <div class="diff-card" data-aos="zoom-in" data-aos-delay="140" style="background:var(--card-bg,#0b1220);padding:22px;border-radius:12px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
-        <div style="font-size:28px;color:#CFAE4D;margin-bottom:8px;"><i class="fa-solid fa-file-video"></i></div>
-        <h4 style="margin:0 0 8px;font-size:1.05rem;">Overlays y escenas</h4>
-        <p style="margin:0;font-size:0.95rem;opacity:0.95;">Plantillas editables para OBS/Streamlabs listas para usar.</p>
-      </div>
+    <div class="recursos__inner" data-aos="fade-up">
+      <h2 class="section__title">Únete como creador - ¿Quiénes pueden inscribirse?</h2>
 
-      <div class="diff-card" data-aos="zoom-in" data-aos-delay="180" style="background:var(--card-bg,#0b1220);padding:22px;border-radius:12px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
-        <div style="font-size:28px;color:#CFAE4D;margin-bottom:8px;"><i class="fa-solid fa-bullhorn"></i></div>
-        <h4 style="margin:0 0 8px;font-size:1.05rem;">Promoción y clips</h4>
-        <p style="margin:0;font-size:0.95rem;opacity:0.95;">Compartimos tus mejores clips en nuestras redes y canales aliados.</p>
-      </div>
+      <div class="recursos-grid">
+        <div class="recursos-left">
+          <p class="lead">RoyalServers da la bienvenida a creadores de contenido de todas las plataformas: streamers de Twitch o Kick, creadores de YouTube, colaboradores en TikTok, y cualquier persona con un canal o perfil activo que produzca contenido con regularidad.</p>
 
-      <div class="diff-card" data-aos="zoom-in" data-aos-delay="220" style="background:var(--card-bg,#0b1220);padding:22px;border-radius:12px;text-align:left;box-shadow:0 8px 20px rgba(0,0,0,0.45);">
-        <div style="font-size:28px;color:#CFAE4D;margin-bottom:8px;"><i class="fa-solid fa-hands-helping"></i></div>
-        <h4 style="margin:0 0 8px;font-size:1.05rem;">Mentoría</h4>
-        <p style="margin:0;font-size:0.95rem;opacity:0.95;">Sesiones periódicas con creadores veteranos para crecer juntos.</p>
+          <h3 class="subtle">Cómo aplicar</h3>
+          <p>Hay dos vías sencillas para postularte:</p>
+          <ul class="checklist">
+            <li>Unirte al canal de creadores en Discord (recomendado).<br><a class="btn btn--primary" href="https://discord.gg/TU_INVITACION"><i class="fa-brands fa-discord"></i> Ir al Discord de creadores</a></li>
+            <li>Rellenar el formulario rápido abajo y enviarlo (resumen por correo interno):</li>
+          </ul>
+
+          <form class="apply-form" action="#" method="get" data-aos="fade-up" data-aos-delay="80" aria-labelledby="apply-form-title">
+            <fieldset>
+              <legend id="apply-form-title" class="visually-hidden">Formulario de postulación - RoyalServers</legend>
+
+              <label for="input-nombre">Nombre o alias
+                <input id="input-nombre" type="text" name="nombre" placeholder="Tu nombre o canal" required aria-required="true" aria-describedby="help-nombre">
+              </label>
+              <div id="help-nombre" class="visually-hidden">Introduce el nombre de tu canal o tu alias público.</div>
+
+              <label for="input-plataforma">Plataforma
+                <select id="input-plataforma" name="plataforma" aria-describedby="help-plataforma">
+                  <option>Twitch</option>
+                  <option>YouTube</option>
+                  <option>TikTok</option>
+                  <option>Kick</option>
+                  <option>Otro</option>
+                </select>
+              </label>
+              <div id="help-plataforma" class="visually-hidden">Selecciona la plataforma principal donde publicas.</div>
+
+              <label for="input-link">Link a tu canal
+                <input id="input-link" type="url" name="link" placeholder="https://" required aria-required="true" aria-describedby="help-link">
+              </label>
+              <div id="help-link" class="visually-hidden">Incluye la URL completa de tu canal o perfil.</div>
+
+              <label for="input-frecuencia">Publicaciones/stream mensuales
+                <input id="input-frecuencia" type="number" name="frecuencia" min="0" placeholder="Ej: 8" aria-describedby="help-frecuencia">
+              </label>
+              <div id="help-frecuencia" class="visually-hidden">Número aproximado de publicaciones o streams al mes.</div>
+
+              <label class="checkbox" for="input-acepta"><input id="input-acepta" type="checkbox" name="acepta" required aria-required="true"> Acepto las reglas y términos del servidor</label>
+
+              <div class="apply-actions">
+                <button type="submit" class="btn btn--secondary" aria-label="Enviar formulario de postulación">Enviar formulario</button>
+                <a href="https://discord.gg/TU_INVITACION" class="btn btn--primary" role="button" aria-label="Enviar la postulación por Discord">Enviar por Discord</a>
+              </div>
+
+              <p class="note" id="apply-note">Nota: Este formulario es informativo. Para completar la postulación comunícate en nuestro canal de creadores en Discord.</p>
+              <div aria-live="polite" aria-atomic="true" class="visually-hidden" id="apply-feedback">Form feedback aparecerá aquí.</div>
+            </fieldset>
+          </form>
+
+          <h3 class="subtle" style="margin-top:18px;">Requisitos mínimos</h3>
+          <ul class="requirements">
+            <li>Tener un canal o perfil activo (contenido publicado en los últimos 3 meses).</li>
+            <li>Publicar al menos <strong>4</strong> veces al mes o mantener 2 emisiones semanales (según plataforma).</li>
+            <li>Respetar las normas de la comunidad y el código de conducta del servidor.</li>
+            <li>Contenidos originales o con permisos para compartir (no infringir derechos de autor).</li>
+          </ul>
+        </div>
+
+        <aside class="recursos-right">
+          <h4 class="levels-title">Categorías</h4>
+          <div class="levels-grid">
+            <div class="level-card" data-aos="zoom-in" data-aos-delay="120" role="group" aria-label="Emergente">
+              <div class="level-top">
+                <div class="level-icon" aria-hidden="true"><i class="fa-solid fa-user"></i></div>
+                <div class="level-badge">Emergente</div>
+              </div>
+              <div class="level-bottom">
+                <p>Creadores en crecimiento. <em>0 - 1k seguidores</em>. Soporte básico, recomendaciones y oportunidades iniciales.</p>
+              </div>
+            </div>
+
+            <div class="level-card" data-aos="zoom-in" data-aos-delay="160" role="group" aria-label="Colaborador">
+              <div class="level-top">
+                <div class="level-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
+                <div class="level-badge">Colaborador</div>
+              </div>
+              <div class="level-bottom">
+                <p>Actividad constante y comunidad activa. <em>1k - 10k seguidores</em>. Acceso a campañas, cross-posting y mentorías.</p>
+              </div>
+            </div>
+
+            <div class="level-card" data-aos="zoom-in" data-aos-delay="200" role="group" aria-label="Aliado">
+              <div class="level-top">
+                <div class="level-icon" aria-hidden="true"><i class="fa-solid fa-star"></i></div>
+                <div class="level-badge">Aliado</div>
+              </div>
+              <div class="level-bottom">
+                <p>Creadores consolidados. <em>10k+ seguidores</em>. Posibles patrocinios, features y colaboraciones destacadas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reqs-box" data-aos="fade-left" data-aos-delay="220">
+            <h5>Evaluación</h5>
+            <p>La revisión de candidaturas combina métricas (alcance, frecuencia) y criterios cualitativos (comunidad, calidad de contenido). Las decisiones se comunican por Discord.</p>
+          </div>
+        </aside>
       </div>
     </div>
   </section>
 
   <!-- SECCIÓN: Beneficios y plan -->
   <section id="beneficios" class="section section--dark">
-    <div class="container">
-      <h2 class="section__title" data-aos="fade-up">¿Qué ofrecemos?</h2>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px;align-items:center;">
-        <div data-aos="fade-right" data-aos-delay="120">
-          <ul style="margin:0;padding-left:18px;">
-            <li>Difusión semanal en nuestros canales.</li>
-            <li>Acceso a concursos y patrocinios.</li>
-            <li>Soporte técnico en transmisiones.</li>
-            <li>Herramientas creativas y assets.</li>
-          </ul>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="180" style="text-align:center;">
-          <img src="img/SMART_MOCKUP.png" alt="Mockup" style="max-width:360px;width:100%;height:auto;display:inline-block;">
-        </div>
-      </div>
-    </div>
+    <!-- contenido eliminado para redefinir: Beneficios y plan -->
   </section>
 
   <!-- SECCIÓN: Cómo aplicar -->
   <section id="aplicar" class="section container">
-    <h2 class="section__title" data-aos="fade-up">¿Cómo participar?</h2>
-    <div style="margin-top:14px;" data-aos="fade-up" data-aos-delay="120">
-      <p>Envía una muestra de tu contenido en nuestro canal de creadores en Discord. Valoramos consistencia, calidad y actitud comunitaria.</p>
-      <a href="https://discord.gg/TU_INVITACION" class="btn btn--secondary" style="margin-top:14px;display:inline-block;">Obtener mas información</a>
-    </div>
+    <!-- contenido eliminado para redefinir: Cómo aplicar -->
   </section>
 
   <!-- CTA Final -->
@@ -104,6 +171,43 @@
     fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).catch(()=>{});
 
     AOS.init({ once:true, duration:800 });
+  </script>
+  <script>
+    // Validación simple: requerir checkbox de aceptación antes de permitir envío
+    (function(){
+      var form = document.querySelector('.apply-form');
+      if(!form) return;
+      var checkbox = document.getElementById('input-acepta');
+      var feedback = document.getElementById('apply-feedback');
+      var submitBtn = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', function(e){
+        // Si checkbox no está marcado, prevenir envío y mostrar feedback
+        if(!checkbox || !checkbox.checked){
+          e.preventDefault();
+          // agregar clase de error visual al checkbox
+          checkbox && checkbox.closest('label').classList.add('input-error');
+          // mostrar mensaje accesible
+          if(feedback){
+            feedback.textContent = 'Debes aceptar las reglas y términos del servidor para enviar la postulación.';
+            // temporalmente mostrar feedback visual si está oculto
+            feedback.classList.remove('visually-hidden');
+            feedback.classList.add('error-text');
+          }
+          // enfocar el checkbox para que el usuario lo vea
+          checkbox && checkbox.focus();
+        }
+      });
+
+      // limpiar estado de error cuando el usuario marca la casilla
+      checkbox && checkbox.addEventListener('change', function(){
+        if(checkbox.checked){
+          var lab = checkbox.closest('label');
+          lab && lab.classList.remove('input-error');
+          if(feedback){ feedback.textContent = ''; feedback.classList.add('visually-hidden'); feedback.classList.remove('error-text'); }
+        }
+      });
+    })();
   </script>
 </body>
 </html>
