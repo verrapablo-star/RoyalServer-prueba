@@ -5,13 +5,351 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Comandos ARK - RoyalServers</title>
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <style>
-    /* Reset mínimo y seguridad contra scroll horizontal */
-    html,body{margin:0;padding:0;overflow-x:hidden;background:#080710;color:#fff;font-family: Poppins, system-ui, -apple-system, 'Segoe UI', Roboto}
-   /* Espacio superior para que el contenido no quede oculto detrás del nav fijo */
-   :root{--ase-nav-offset:72px}
-   body{padding-top:var(--ase-nav-offset)}
-   @media(max-width:640px){ :root{--ase-nav-offset:56px} body{padding-top:var(--ase-nav-offset)} }
+    /* Variables CSS para consistencia */
+    :root {
+      --ark-primary: #5865F2;
+      --ark-secondary: #5B73F0;
+      --ark-danger: #FF6B6B;
+      --ark-warning: #FFD166;
+      --ark-success: #4ECDC4;
+      --ark-dark: #080710;
+      --ark-darker: #0A0E27;
+      --ark-card-bg: rgba(255, 255, 255, 0.05);
+      --ark-border: rgba(255, 255, 255, 0.1);
+      --ark-text-muted: rgba(255, 255, 255, 0.7);
+      --ase-nav-offset: 72px;
+    }
+
+    /* Reset y estilos base */
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      background: var(--ark-dark);
+      color: #fff;
+      font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    body {
+      padding-top: var(--ase-nav-offset);
+    }
+
+    @media(max-width: 640px) {
+      :root {
+        --ase-nav-offset: 56px;
+      }
+      body {
+        padding-top: var(--ase-nav-offset);
+      }
+    }
+
+    /* Contenedor principal */
+    .commands-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 2rem;
+    }
+
+    /* Header del módulo */
+    .commands-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      background: linear-gradient(135deg, var(--ark-primary) 0%, var(--ark-secondary) 100%);
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(88, 101, 242, 0.2);
+    }
+
+    .commands-title {
+      font-size: 2.5rem;
+      margin: 0 0 1rem 0;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .commands-subtitle {
+      font-size: 1.1rem;
+      margin: 0;
+      opacity: 0.9;
+      font-weight: 400;
+    }
+
+    /* Grid de secciones */
+    .commands-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 1000px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Tarjetas de comandos */
+    .command-section {
+      background: var(--ark-card-bg);
+      border: 1px solid var(--ark-border);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .command-section:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      border-color: var(--ark-primary);
+    }
+
+    /* Headers de sección */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.75rem 2rem;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .section-header:hover {
+      background: linear-gradient(135deg, rgba(88, 101, 242, 0.2) 0%, rgba(91, 115, 240, 0.1) 100%);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .section-icon {
+      margin-right: 0.75rem;
+      font-size: 1.5rem;
+      width: 2rem;
+      text-align: center;
+    }
+
+    .section-arrow {
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+
+    .section-header.active .section-arrow {
+      transform: rotate(180deg);
+    }
+
+    /* Contenido de sección */
+    .section-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    }
+
+    .section-content.active {
+      max-height: 2000px;
+      padding: 2rem;
+    }
+
+    /* Comandos individuales */
+    .command-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .command-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .command-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateX(4px);
+    }
+
+    .command-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ark-primary);
+      margin-bottom: 0.5rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    .command-description {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 0.5rem;
+      color: var(--ark-text-muted);
+    }
+
+    .command-cost {
+      display: inline-block;
+      background: var(--ark-warning);
+      color: var(--ark-dark);
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-right: 0.5rem;
+    }
+
+    .command-restriction {
+      display: inline-block;
+      background: var(--ark-danger);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .command-example {
+      background: rgba(88, 101, 242, 0.1);
+      border-left: 3px solid var(--ark-primary);
+      padding: 0.75rem;
+      margin-top: 0.75rem;
+      border-radius: 0 6px 6px 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+
+    /* Listas de pasos */
+    .steps-list {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+    }
+
+    .steps-list li {
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 4px solid var(--ark-primary);
+      padding: 1rem;
+      margin-bottom: 0.75rem;
+      border-radius: 0 8px 8px 0;
+      position: relative;
+    }
+
+    .steps-list li::before {
+      content: counter(step-counter);
+      counter-increment: step-counter;
+      position: absolute;
+      left: -2rem;
+      top: 1rem;
+      background: var(--ark-primary);
+      color: white;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+
+    .steps-list {
+      counter-reset: step-counter;
+    }
+
+    /* Tablas de referencia */
+    .reference-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .reference-table th,
+    .reference-table td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .reference-table th {
+      background: var(--ark-primary);
+      font-weight: 600;
+    }
+
+    .reference-table td {
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+
+    /* Enlaces de referencia */
+    .reference-link {
+      color: var(--ark-warning);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .reference-link:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Alertas */
+    .alert {
+      padding: 1rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      border-left: 4px solid;
+    }
+
+    .alert-info {
+      background: rgba(88, 101, 242, 0.1);
+      border-color: var(--ark-primary);
+      color: #fff;
+    }
+
+    .alert-warning {
+      background: rgba(255, 209, 102, 0.1);
+      border-color: var(--ark-warning);
+      color: #fff;
+    }
+
+    .alert-danger {
+      background: rgba(255, 107, 107, 0.1);
+      border-color: var(--ark-danger);
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .commands-container {
+        padding: 1rem;
+      }
+
+      .commands-grid {
+        gap: 1rem;
+        max-width: 100%;
+      }
+
+      .commands-title {
+        font-size: 2rem;
+      }
+
+      .section-header {
+        padding: 1.25rem 1rem;
+      }
+
+      .section-content.active {
+        padding: 1.5rem;
+      }
+
+      .steps-list li::before {
+        left: -1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -19,26 +357,541 @@
     <div id="nav-bar-home-container"></div>
     <div style="height:40px; display:flex; align-items:center; background:#181818; padding-left:24px;">
       <img src="img/ARK_EVOLVED.png" alt="ARK" style="height:28px;vertical-align:middle;">
-      <h1 style="margin-left:12px;color:var(--primary-color);font-size:1.1rem;font-family:'Montserrat',sans-serif;">ARK: Survival Evolved - Comandos</h1>
+      <h1 style="margin-left:12px;color:var(--ark-warning);font-size:1.1rem;font-family:'Montserrat',sans-serif;">ARK: Survival Evolved - Comandos</h1>
     </div>
   </header>
 
-  <main class="container" style="margin-top:8px;">
-    <h2>Comandos ARK</h2>
-    <p>Contenido random de comandos. (Se definirá luego)</p>
+  <main class="commands-container">
+    <!-- Header del módulo -->
+    <div class="commands-header">
+      <h1 class="commands-title">
+        <i class="fas fa-terminal" style="margin-right: 1rem;"></i>
+        Comandos del Servidor ARK
+      </h1>
+      <p class="commands-subtitle">
+        Guía completa de comandos disponibles en RoyalServers ARK: Survival Evolved
+      </p>
+    </div>
+
+    <!-- Grid de secciones de comandos -->
+    <div class="commands-grid">
+      
+      <!-- SHOP INGAME Section -->
+      <div class="command-section">
+        <div class="section-header" onclick="toggleSection('shop-section')">
+          <h2 class="section-title">
+            <i class="fas fa-store section-icon" style="color: var(--ark-primary);"></i>
+            SHOP INGAME
+          </h2>
+          <i class="fas fa-chevron-down section-arrow"></i>
+        </div>
+        <div class="section-content" id="shop-section">
+          <!-- El contenido se agregará aquí -->
+        </div>
+      </div>
+
+      <!-- PINTAR DINOS Section -->
+      <div class="command-section">
+        <div class="section-header" onclick="toggleSection('paint-section')">
+          <h2 class="section-title">
+            <i class="fas fa-palette section-icon" style="color: var(--ark-secondary);"></i>
+            PINTAR DINOS
+          </h2>
+          <i class="fas fa-chevron-down section-arrow"></i>
+        </div>
+        <div class="section-content" id="paint-section">
+          <!-- El contenido se agregará aquí -->
+        </div>
+      </div>
+
+      <!-- COMANDOS VARIOS Section -->
+      <div class="command-section">
+        <div class="section-header" onclick="toggleSection('misc-section')">
+          <h2 class="section-title">
+            <i class="fas fa-cogs section-icon" style="color: var(--ark-success);"></i>
+            COMANDOS VARIOS
+          </h2>
+          <i class="fas fa-chevron-down section-arrow"></i>
+        </div>
+        <div class="section-content" id="misc-section">
+          <!-- El contenido se agregará aquí -->
+        </div>
+      </div>
+
+      <!-- TELEPORTS Section -->
+      <div class="command-section">
+        <div class="section-header" onclick="toggleSection('teleport-section')">
+          <h2 class="section-title">
+            <i class="fas fa-location-arrow section-icon" style="color: var(--ark-warning);"></i>
+            SISTEMAS DE TELEPORTS
+          </h2>
+          <i class="fas fa-chevron-down section-arrow"></i>
+        </div>
+        <div class="section-content" id="teleport-section">
+          <!-- El contenido se agregará aquí -->
+        </div>
+      </div>
+
+      <!-- COMANDOS DE DINOS Section -->
+      <div class="command-section">
+        <div class="section-header" onclick="toggleSection('dino-section')">
+          <h2 class="section-title">
+            <i class="fas fa-dragon section-icon" style="color: var(--ark-danger);"></i>
+            COMANDOS DE DINOS
+          </h2>
+          <i class="fas fa-chevron-down section-arrow"></i>
+        </div>
+        <div class="section-content" id="dino-section">
+          <!-- El contenido se agregará aquí -->
+        </div>
+      </div>
+
+      <!-- TRANSFERENCIA Section -->
+      <div class="command-section">
+        <div class="section-header" onclick="toggleSection('transfer-section')">
+          <h2 class="section-title">
+            <i class="fas fa-exchange-alt section-icon" style="color: var(--ark-secondary);"></i>
+            TRANSFERENCIA DE TRIBUTOS
+          </h2>
+          <i class="fas fa-chevron-down section-arrow"></i>
+        </div>
+        <div class="section-content" id="transfer-section">
+          <!-- El contenido se agregará aquí -->
+        </div>
+      </div>
+
+    </div>
   </main>
 
   <div id="foot-home-container"></div>
+
+  <!-- Scripts -->
+  <script>
+    // Función para alternar secciones de acordeón
+    function toggleSection(sectionId) {
+      const content = document.getElementById(sectionId);
+      const header = content.previousElementSibling;
+      
+      // Cerrar otras secciones (opcional - comentar para permitir múltiples abiertas)
+      // document.querySelectorAll('.section-content').forEach(section => {
+      //   if (section.id !== sectionId) {
+      //     section.classList.remove('active');
+      //     section.previousElementSibling.classList.remove('active');
+      //   }
+      // });
+      
+      // Alternar sección actual
+      content.classList.toggle('active');
+      header.classList.toggle('active');
+    }
+
+    // Cargar navegación
+    fetch('ASE_nav_bar.html')
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('nav-bar-home-container').innerHTML = html;
+      });
+
+    // Cargar footer
+    fetch('foot_home.html')
+      .then(r => r.text())
+      .then(html => document.getElementById('foot-home-container').innerHTML = html)
+      .catch(() => {});
+
+    // Inicializar contenido de secciones al cargar la página
+    document.addEventListener('DOMContentLoaded', function() {
+      initializeSections();
+    });
+
+    // Función para inicializar el contenido de todas las secciones
+    function initializeSections() {
+      initializeShopSection();
+      initializePaintSection();
+      initializeMiscSection();
+      initializeTeleportSection();
+      initializeDinoSection();
+      initializeTransferSection();
+    }
+
+    // SHOP INGAME Section Content
+    function initializeShopSection() {
+      const shopContent = `
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle" style="margin-right: 0.5rem;"></i>
+          En nuestro servidor contamos con una tienda dentro del juego, donde se pueden comprar dinos, ítems o recursos, y vender lo que tengas de sobra para ganar puntos.
+        </div>
+
+        <h3 style="color: var(--ark-primary); margin-bottom: 1rem; border-bottom: 2px solid var(--ark-primary); padding-bottom: 0.5rem;">
+          <i class="fas fa-coins" style="margin-right: 0.5rem;"></i>
+          Comandos Principales de la Tienda
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/puntos</div>
+          <div class="command-description">Muestra la cantidad de puntos disponibles.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/enviar 'Nombre' Cantidad</div>
+          <div class="command-description">Permite transferir puntos a otro jugador.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /enviar 'JugadorAmigo' 500
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/buscartienda Nombre</div>
+          <div class="command-description">Busca si un ítem o dino está disponible en la tienda, junto con su costo y nivel.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /buscartienda Rex
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/comprar ID Cantidad</div>
+          <div class="command-description">Compra el ítem o dino que quieras, usando el ID correspondiente.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /comprar 123 1
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/venta 1-5</div>
+          <div class="command-description">Muestra las páginas con los ítems que se pueden vender para obtener puntos.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/vender ID Cantidad</div>
+          <div class="command-description">Vende los ítems de tu inventario a la tienda.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /vender 456 10
+          </div>
+        </div>
+
+        <h3 style="color: var(--ark-secondary); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-secondary); padding-bottom: 0.5rem;">
+          <i class="fas fa-gift" style="margin-right: 0.5rem;"></i>
+          Kits
+        </h3>
+
+        <div class="alert alert-info">
+          Además de la compra y venta de ítems, también se pueden adquirir kits completos con ítems personalizados.
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/kit</div>
+          <div class="command-description">Muestra los kits disponibles.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/comprarkit ID Cantidad</div>
+          <div class="command-description">Compra el kit de tu elección.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /comprarkit 1 1
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/kit ID</div>
+          <div class="command-description">Reclamá los ítems del kit comprado.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /kit 1
+          </div>
+        </div>
+      `;
+      document.getElementById('shop-section').innerHTML = shopContent;
+    }
+
+    // PINTAR DINOS Section Content
+    function initializePaintSection() {
+      const paintContent = `
+        <div class="alert alert-info">
+          <i class="fas fa-info-circle" style="margin-right: 0.5rem;"></i>
+          Todos los jugadores tienen acceso a estos comandos, no es necesario ser VIP.
+        </div>
+
+        <ol class="steps-list">
+          <li>
+            <h4 style="color: var(--ark-primary); margin: 0 0 0.5rem 0;">Comprar el token</h4>
+            <div class="command-item" style="margin: 0.5rem 0;">
+              <div class="command-name">/comprar pintura</div>
+              <div class="command-description">Primero hay que comprar el token de pintura. Asegurarse de tener suficientes puntos.</div>
+            </div>
+          </li>
+
+          <li>
+            <h4 style="color: var(--ark-primary); margin: 0 0 0.5rem 0;">Pintar al dino</h4>
+            <div class="command-item" style="margin: 0.5rem 0;">
+              <div class="command-name">/pintar &lt;zona&gt; &lt;color&gt;</div>
+              <div class="command-description">Mirando al dino, escribir este comando:</div>
+              <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                <li>Reemplazar <code>&lt;zona&gt;</code> por la ID de la zona (varía entre 0 y 6)</li>
+                <li>Reemplazar <code>&lt;color&gt;</code> por la ID del color que quieras usar</li>
+              </ul>
+              <div class="command-example">
+                <strong>Ejemplo:</strong> /pintar 0 1<br>
+                <em>Se puede seguir cambiando los colores de todas las zonas mientras no te alejes del dino. Un solo token alcanza para pintar todas las zonas del mismo dino y probar distintos colores hasta que quede como se desea.</em>
+              </div>
+            </div>
+
+            <div class="alert alert-warning" style="margin-top: 1rem;">
+              <strong>Para consultar las IDs:</strong><br>
+              <a href="https://ark.fandom.com/wiki/Color_IDs" target="_blank" class="reference-link">
+                <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>
+                Tabla de colores
+              </a><br>
+              <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=542363537" target="_blank" class="reference-link">
+                <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i>
+                Tabla de zonas
+              </a>
+            </div>
+          </li>
+
+          <li>
+            <h4 style="color: var(--ark-primary); margin: 0 0 0.5rem 0;">Revisar tus tokens</h4>
+            <div class="command-item" style="margin: 0.5rem 0;">
+              <div class="command-name">/pinturarestante</div>
+              <div class="command-description">Muestra la cantidad de tokens de pintura disponibles.</div>
+            </div>
+          </li>
+        </ol>
+      `;
+      document.getElementById('paint-section').innerHTML = paintContent;
+    }
+
+    // COMANDOS VARIOS Section Content
+    function initializeMiscSection() {
+      const miscContent = `
+        <h3 style="color: var(--ark-primary); margin-bottom: 1rem; border-bottom: 2px solid var(--ark-primary); padding-bottom: 0.5rem;">
+          <i class="fas fa-info" style="margin-right: 0.5rem;"></i>
+          Información
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/rates</div>
+          <div class="command-description">Muestra los rates de juego que se aplican al pase.</div>
+        </div>
+
+        <h3 style="color: var(--ark-success); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-success); padding-bottom: 0.5rem;">
+          <i class="fas fa-user" style="margin-right: 0.5rem;"></i>
+          Personaje
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/muere &nbsp;o&nbsp; /morir &nbsp;o&nbsp; /suicide</div>
+          <div class="command-description">Hace que el personaje muera de inmediato. Útil si estás en apuros o necesitás desbugearte.</div>
+        </div>
+
+        <h3 style="color: var(--ark-secondary); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-secondary); padding-bottom: 0.5rem;">
+          <i class="fas fa-search" style="margin-right: 0.5rem;"></i>
+          Búsqueda de dinos
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/buscar NombreDelDino</div>
+          <div class="command-description">Devuelve las coordenadas del dino dentro de un radio de 50.000 unidades Ark. Se puede buscar por nombre personalizado o por especie.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /buscar Rex<br>
+            <strong>Ejemplo:</strong> /buscar MiDinoFavorito
+          </div>
+        </div>
+
+        <h3 style="color: var(--ark-warning); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-warning); padding-bottom: 0.5rem;">
+          <i class="fas fa-skull" style="margin-right: 0.5rem;"></i>
+          Cuerpos e inventario
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/cuerpos</div>
+          <div class="command-description">Muestra una lista con las coordenadas de los últimos cuerpos en el mapa.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/traercuerpo N°Cuerpo</div>
+          <div class="command-description">Permite recuperar el inventario del cuerpo. Para saber el número de cada cuerpo, primero usar /cuerpos.</div>
+          <div class="command-restriction">Solo VIP: @REX, @GIGA, @TITAN</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /traercuerpo 1
+          </div>
+        </div>
+
+        <h3 style="color: var(--ark-danger); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-danger); padding-bottom: 0.5rem;">
+          <i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>
+          Coordenadas cartesianas (comando de ARK)
+        </h3>
+
+        <div class="alert alert-info">
+          Usado para conocer las coordenadas exactas del jugador.
+        </div>
+
+        <ol class="steps-list">
+          <li>Abrir la consola (por defecto con la tecla <strong>TAB</strong>)</li>
+          <li>Escribir <code>CopyCoordsToClipBoard</code> y presionar Enter</li>
+          <li>Las coordenadas quedarán copiadas al portapapeles para enviarlas donde se necesite</li>
+        </ol>
+      `;
+      document.getElementById('misc-section').innerHTML = miscContent;
+    }
+
+    // TELEPORTS Section Content
+    function initializeTeleportSection() {
+      const teleportContent = `
+        <h3 style="color: var(--ark-primary); margin-bottom: 1rem; border-bottom: 2px solid var(--ark-primary); padding-bottom: 0.5rem;">
+          <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+          Teleports personales
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/agregarhome nombre</div>
+          <div class="command-description">Guarda un punto personal de teleport.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /agregarhome base
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/listahome</div>
+          <div class="command-description">Muestra los puntos de teleport personal guardados.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/borrarhome nombre</div>
+          <div class="command-description">Elimina un teleport personal de la lista.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /borrarhome base
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/home nombre</div>
+          <div class="command-description">Teletransporta al punto personal.</div>
+          <div class="command-cost">Costo: 20 puntos</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /home base
+          </div>
+        </div>
+
+        <h3 style="color: var(--ark-secondary); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-secondary); padding-bottom: 0.5rem;">
+          <i class="fas fa-globe" style="margin-right: 0.5rem;"></i>
+          Teleports públicos
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/listatp</div>
+          <div class="command-description">Muestra la lista de teleports públicos definidos por los administradores.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/tp nombre</div>
+          <div class="command-description">Teletransporta a un punto público. Sin costo.</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /tp tienda
+          </div>
+        </div>
+      `;
+      document.getElementById('teleport-section').innerHTML = teleportContent;
+    }
+
+    // COMANDOS DE DINOS Section Content
+    function initializeDinoSection() {
+      const dinoContent = `
+        <h3 style="color: var(--ark-primary); margin-bottom: 1rem; border-bottom: 2px solid var(--ark-primary); padding-bottom: 0.5rem;">
+          <i class="fas fa-dragon" style="margin-right: 0.5rem;"></i>
+          Comandos disponibles
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/cg</div>
+          <div class="command-description">Cambia el género del dino.</div>
+          <div class="command-cost">Costo: 1500 puntos</div>
+          <div class="command-restriction">Solo @GIGA y @TITAN</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/reclamarbebes</div>
+          <div class="command-description">Reclama todos los dinos bebés dentro de un rango (máx. 20).</div>
+          <div class="command-cost">Costo: 50 puntos</div>
+          <div class="alert alert-info" style="margin-top: 0.5rem;">
+            Para pases @GIGA y @TITAN, los bebés se guardan automáticamente en criopods si se tienen vacías en el inventario.
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/crio</div>
+          <div class="command-description">Guarda el dino que estés mirando en una criopod. Debe haber una criopod vacía en el inventario. Sin costo. También aplica al Stryder.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/criodinos nombre</div>
+          <div class="command-description">Guarda hasta 20 dinos en criopods dentro de un rango. Debe haber criopods en el inventario. Sin costo.</div>
+          <div class="command-restriction">Disponible para: @RAPTOR, @REX, @GIGA, @TITAN</div>
+          <div class="command-example">
+            <strong>Ejemplo:</strong> /criodinos MisTrex
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/completargestacion</div>
+          <div class="command-description">Completa al 100% la gestación del dino que estés mirando.</div>
+          <div class="command-cost">Costo: 5000 puntos</div>
+          <div class="command-restriction">Solo @TITAN</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/noaparear</div>
+          <div class="command-description">Desactiva la reproducción de todos los dinos en el área. Sin costo.</div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/dinomw</div>
+          <div class="command-description">Reinicia los puntos del dino que estés mirando. Requiere tener un mindwipe en el inventario.</div>
+          <div class="command-cost">Costo: 1000 puntos</div>
+        </div>
+      `;
+      document.getElementById('dino-section').innerHTML = dinoContent;
+    }
+
+    // TRANSFERENCIA DE TRIBUTOS Section Content
+    function initializeTransferSection() {
+      const transferContent = `
+        <h3 style="color: var(--ark-success); margin-bottom: 1rem; border-bottom: 2px solid var(--ark-success); padding-bottom: 0.5rem;">
+          <i class="fas fa-check" style="margin-right: 0.5rem;"></i>
+          Items transferibles
+        </h3>
+
+        <div class="alert alert-info">
+          Se pueden transferir garras de Argentavis, dientes de Megalodon, brazos de Rex, cabezas de bosses, entre otros tributos similares.
+        </div>
+
+        <h3 style="color: var(--ark-danger); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-danger); padding-bottom: 0.5rem;">
+          <i class="fas fa-times" style="margin-right: 0.5rem;"></i>
+          Items NO transferibles
+        </h3>
+
+        <div class="alert alert-danger">
+          Elemento, fragmento de elemento, artefactos.
+        </div>
+
+        <h3 style="color: var(--ark-primary); margin: 2rem 0 1rem 0; border-bottom: 2px solid var(--ark-primary); padding-bottom: 0.5rem;">
+          <i class="fas fa-terminal" style="margin-right: 0.5rem;"></i>
+          Comandos
+        </h3>
+
+        <div class="command-item">
+          <div class="command-name">/cargar</div>
+          <div class="command-description">Carga los tributos a la nube para descargarlos luego. Permanecen en la nube durante 60 minutos.</div>
+          <div class="alert alert-warning" style="margin-top: 0.5rem;">
+            <i class="fas fa-exclamation-triangle" style="margin-right: 0.5rem;"></i>
+            Debe estar cerca de una terminal (obelisco, drop, terminal de cueva, transmitter, etc.) para que funcione.
+          </div>
+        </div>
+
+        <div class="command-item">
+          <div class="command-name">/descargar</div>
+          <div class="command-description">Descarga los tributos desde la nube al inventario.</div>
+        </div>
+      `;
+      document.getElementById('transfer-section').innerHTML = transferContent;
+    }
+  </script>
 </body>
-<script>
-fetch('ASE_nav_bar.html')
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById('nav-bar-home-container').innerHTML = html;
-  });
-</script>
-<script>
-// Cargar footer dinámicamente
-fetch('foot_home.html').then(r=>r.text()).then(html=>document.getElementById('foot-home-container').innerHTML=html).catch(()=>{});
-</script>
 </html>
