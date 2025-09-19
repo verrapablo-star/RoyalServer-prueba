@@ -9,10 +9,11 @@
   <!-- Fuentes y estilos (misma paleta) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/requisitos.css?v=2">
 </head>
 <body>
 
@@ -31,10 +32,12 @@
     </div>
   </section>
 
+  <!-- SECCIÓN: Requisitos mínimos (movida debajo del formulario) -->
+
   <!-- SECCIÓN: Recursos rápidos -->
   <section id="recursos" class="section container">
     <div class="recursos__inner" data-aos="fade-up">
-      <h2 class="section__title">Únete como creador - ¿Quiénes pueden inscribirse?</h2>
+      <h2 class="section__title">¿Quiénes pueden inscribirse?</h2>
 
       <div class="recursos-grid">
         <div class="recursos-left">
@@ -89,13 +92,7 @@
             </fieldset>
           </form>
 
-          <h3 class="subtle" style="margin-top:18px;">Requisitos mínimos</h3>
-          <ul class="requirements">
-            <li>Tener un canal o perfil activo (contenido publicado en los últimos 3 meses).</li>
-            <li>Publicar al menos <strong>4</strong> veces al mes o mantener 2 emisiones semanales (según plataforma).</li>
-            <li>Respetar las normas de la comunidad y el código de conducta del servidor.</li>
-            <li>Contenidos originales o con permisos para compartir (no infringir derechos de autor).</li>
-          </ul>
+          <!-- Requisitos mínimos (moved out to full-width section) -->
         </div>
 
         <aside class="recursos-right">
@@ -142,13 +139,165 @@
   </section>
 
   <!-- SECCIÓN: Beneficios y plan -->
+  <!-- SECCIÓN: Requisitos mínimos para aplicar (ubicada después de 'recursos') -->
+  <section id="requisitos" class="section">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section__title">Requisitos mínimos para aplicar</h2>
+
+      <div class="requisitos-inner">
+        <div class="requisitos-left">
+          <div class="reqs-grid" role="list">
+            <article class="req-card" role="listitem" data-aos="fade-up" data-aos-delay="80" tabindex="0">
+              <div class="req-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></div>
+              <div class="req-content">
+                <h3>Tener un canal activo</h3>
+                <p>Tener un canal o perfil activo (contenido publicado en los últimos 30 días).</p>
+              </div>
+            </article>
+
+            <article class="req-card" role="listitem" data-aos="fade-up" data-aos-delay="120" tabindex="0">
+              <div class="req-icon" aria-hidden="true"><i class="fa-solid fa-calendar-days"></i></div>
+              <div class="req-content">
+                <h3>Frecuencia mínima</h3>
+                <p>Publicar al menos 4 veces al mes o mantener 2 emisiones semanales (según plataforma).</p>
+              </div>
+            </article>
+
+            <article class="req-card" role="listitem" data-aos="fade-up" data-aos-delay="160" tabindex="0">
+              <div class="req-icon" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="req-content">
+                <h3>Normas y conducta</h3>
+                <p>Respetar las normas de la comunidad y el código de conducta del servidor.</p>
+              </div>
+            </article>
+
+            <article class="req-card" role="listitem" data-aos="fade-up" data-aos-delay="200" tabindex="0">
+              <div class="req-icon" aria-hidden="true"><i class="fa-solid fa-file-lines"></i></div>
+              <div class="req-content">
+                <h3>Contenido original</h3>
+                <p>Contenidos originales o con permisos para compartir (no infringir derechos de autor).</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="requisitos-right" data-aos="fade-left" aria-hidden="false">
+          <img src="img/LOGOS_PLATAFORMAS.png" alt="Logos de plataformas" class="requisitos-image" loading="lazy">
+        </aside>
+      </div>
+    </div>
+  </section>
   <section id="beneficios" class="section section--dark">
-    <!-- contenido eliminado para redefinir: Beneficios y plan -->
+    <div class="container" data-aos="fade-up">
+      <h2 class="section__title">Beneficios según tu rango de creador</h2>
+
+      <!-- Beneficios: 3 cards (Emergente / Colaborador / Aliado) -->
+      <div class="beneficios-grid">
+        <!-- Card Emergente -->
+        <article class="beneficio-card card-emergente" role="article" aria-label="Beneficios Emergente">
+          <!-- Tag / franja superior -->
+            <div class="beneficio-head">
+                <div class="beneficio-tag">Emergente</div>
+                <!-- Icon SVG: replace with your preferred SVG or sprite if needed -->
+                <div class="beneficio-icon" aria-hidden="true">
+                  <!-- simple pixel-style controller icon (inline SVG) -->
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="2" y="6" width="20" height="12" rx="3" fill="currentColor" />
+                    <circle cx="8" cy="12" r="1.6" fill="#0b0b0c" />
+                    <rect x="15" y="11" width="1.6" height="1.6" rx="0.3" fill="#0b0b0c" />
+                    <rect x="17.6" y="9" width="1.6" height="1.6" rx="0.3" fill="#0b0b0c" />
+                  </svg>
+                </div>
+            </div>
+            <div class="beneficio-body">
+              <h3 class="beneficio-title">Emergente</h3>
+              <ul class="beneficio-list">
+                <li>Etiqueta y rol dentro de Discord y ARK como streamer.</li>
+                <li>Publicación de directo y reels en redes sociales oficiales (Discord, Facebook, etc).</li>
+              </ul>
+            </div>
+        </article>
+
+        <!-- Card Colaborador -->
+        <article class="beneficio-card card-colaborador" role="article" aria-label="Beneficios Colaborador">
+          <!-- Tag / franja superior -->
+            <div class="beneficio-head">
+                <div class="beneficio-tag">Colaborador</div>
+                <!-- Icon SVG: replace with your preferred SVG or sprite if needed -->
+                <div class="beneficio-icon" aria-hidden="true">
+                  <!-- simple microphone icon inline SVG -->
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="9" y="3" width="6" height="10" rx="3" fill="currentColor" />
+                    <rect x="10.6" y="14" width="2.8" height="5" rx="1" fill="currentColor" />
+                    <path d="M5 11v1a7 7 0 0 0 14 0v-1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </div>
+            </div>
+            <div class="beneficio-body">
+              <h3 class="beneficio-title">Colaborador</h3>
+              <ul class="beneficio-list">
+                <li>Todos los beneficios de "Emergente".</li>
+                <li>Disponibilidad de admins para eventos personalizados, con premios o sorteos.</li>
+                <li>Ayuda en creación de escenas para OBS (fondos, alertas, overlays).</li>
+              </ul>
+            </div>
+        </article>
+
+        <!-- Card Aliado -->
+        <article class="beneficio-card card-aliado" role="article" aria-label="Beneficios Aliado">
+          <!-- Tag / franja superior -->
+            <div class="beneficio-head">
+                <div class="beneficio-tag">Aliado</div>
+                <!-- Icon SVG: replace with your preferred SVG or sprite if needed -->
+                <div class="beneficio-icon" aria-hidden="true">
+                  <!-- simple star / trophy icon inline SVG -->
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2l2.6 5.3L20 8l-4 3.6L17 18l-5-2.6L7 18l1-6.4L4 8l5.4-.7L12 2z" fill="currentColor" />
+                  </svg>
+                </div>
+            </div>
+            <div class="beneficio-body">
+              <h3 class="beneficio-title">Aliado</h3>
+              <ul class="beneficio-list">
+                <li>Todos los beneficios de "Colaborador".</li>
+                <li>Pase VIP gratuito.</li>
+              </ul>
+            </div>
+        </article>
+      </div>
+    </div>
   </section>
 
-  <!-- SECCIÓN: Cómo aplicar -->
-  <section id="aplicar" class="section container">
-    <!-- contenido eliminado para redefinir: Cómo aplicar -->
+  <!-- SECCIÓN: Eventos -->
+  <section id="eventos" class="section container">
+    <div class="container" data-aos="fade-up">
+      <h2 class="section__title">Momentos épicos en RoyalServers</h2>
+      <p class="section__subtitle">Galería de recuerdos de los mejores eventos de la comunidad</p>
+
+      <div class="events-gallery" aria-label="Galería de eventos">
+        <button class="eg-arrow eg-prev" aria-label="Anterior">‹</button>
+        <div class="eg-track" tabindex="0">
+          <!-- Images from img_eventos directory -->
+          <div class="eg-slide"><img src="img_eventos/evento1.png" alt="Evento 1"></div>
+          <div class="eg-slide"><img src="img_eventos/evento2.png" alt="Evento 2"></div>
+          <div class="eg-slide"><img src="img_eventos/evento3.png" alt="Evento 3"></div>
+          <div class="eg-slide"><img src="img_eventos/evento4.png" alt="Evento 4"></div>
+          <div class="eg-slide"><img src="img_eventos/evento4.jpg" alt="Evento 4 (jpg)"></div>
+          <div class="eg-slide"><img src="img_eventos/evento5.png" alt="Evento 5"></div>
+          <div class="eg-slide"><img src="img_eventos/evento6.png" alt="Evento 6"></div>
+          <div class="eg-slide"><img src="img_eventos/evento7.png" alt="Evento 7"></div>
+          <div class="eg-slide"><img src="img_eventos/evento8.png" alt="Evento 8"></div>
+          <div class="eg-slide"><img src="img_eventos/evento9.png" alt="Evento 9"></div>
+          <div class="eg-slide"><img src="img_eventos/evento10.png" alt="Evento 10"></div>
+          <div class="eg-slide"><img src="img_eventos/evento11.jpg" alt="Evento 11"></div>
+          <div class="eg-slide"><img src="img_eventos/evento12.png" alt="Evento 12"></div>
+          <div class="eg-slide"><img src="img_eventos/evento13.png" alt="Evento 13"></div>
+          <div class="eg-slide"><img src="img_eventos/evento14.png" alt="Evento 14"></div>
+        </div>
+        <button class="eg-arrow eg-next" aria-label="Siguiente">›</button>
+      </div>
+
+    </div>
   </section>
 
   <!-- CTA Final -->
@@ -172,6 +321,11 @@
 
     AOS.init({ once:true, duration:800 });
   </script>
+  <!-- Lightbox modal (top-level so overlay can cover viewport) -->
+  <div id="eg-lightbox" class="eg-lightbox" aria-hidden="true">
+    <button class="eg-lightbox-close" aria-label="Cerrar">×</button>
+    <img class="eg-lightbox-img" src="" alt="">
+  </div>
   <script>
     // Validación simple: requerir checkbox de aceptación antes de permitir envío
     (function(){
@@ -207,6 +361,69 @@
           if(feedback){ feedback.textContent = ''; feedback.classList.add('visually-hidden'); feedback.classList.remove('error-text'); }
         }
       });
+    })();
+  </script>
+  <script>
+    // Eventos - Carousel autoplay + lightbox (vanilla JS)
+    (function(){
+      var track = document.querySelector('.eg-track');
+      if(!track) return;
+      var slides = Array.from(track.querySelectorAll('.eg-slide'));
+      var prev = document.querySelector('.eg-prev');
+      var next = document.querySelector('.eg-next');
+      var lightbox = document.getElementById('eg-lightbox');
+      var lightboxImg = document.querySelector('.eg-lightbox-img');
+      var closeBtn = document.querySelector('.eg-lightbox-close');
+
+      // Helper: scroll to slide index
+      function scrollToIndex(i){
+        var s = slides[i % slides.length];
+        if(!s) return;
+        track.scrollLeft = s.offsetLeft - track.offsetLeft;
+        updateDots(i);
+        current = i;
+      }
+
+      // Dots (optional)
+      var dotsContainer = document.createElement('div');
+      dotsContainer.className = 'eg-dots';
+      slides.forEach(function(_, idx){
+        var d = document.createElement('span'); d.className='eg-dot'; if(idx===0) d.classList.add('active'); dotsContainer.appendChild(d);
+      });
+      track.parentNode.appendChild(dotsContainer);
+      var dots = Array.from(dotsContainer.children);
+
+      function updateDots(i){ dots.forEach(function(dd, idx){ dd.classList.toggle('active', idx=== (i%slides.length)); }); }
+
+      var current = 0;
+      var autoplay = true;
+      var autoplayDelay = 3500; // ms
+      var autoplayTimer = null;
+
+      function startAutoplay(){ if(autoplayTimer) clearInterval(autoplayTimer); autoplayTimer = setInterval(function(){ scrollToIndex((current+1)%slides.length); }, autoplayDelay); }
+      function stopAutoplay(){ if(autoplayTimer) clearInterval(autoplayTimer); autoplayTimer = null; }
+
+      // Prev/Next handlers
+      prev && prev.addEventListener('click', function(){ stopAutoplay(); scrollToIndex((current-1+slides.length)%slides.length); if(autoplay) startAutoplay(); });
+      next && next.addEventListener('click', function(){ stopAutoplay(); scrollToIndex((current+1)%slides.length); if(autoplay) startAutoplay(); });
+
+      // Click image -> lightbox
+      slides.forEach(function(s, idx){ var img = s.querySelector('img'); img && img.addEventListener('click', function(){ lightbox.setAttribute('aria-hidden','false'); lightboxImg.src = img.src; lightboxImg.alt = img.alt || ''; stopAutoplay(); }); });
+
+      // Close lightbox
+      closeBtn && closeBtn.addEventListener('click', function(){ lightbox.setAttribute('aria-hidden','true'); lightboxImg.src=''; if(autoplay) startAutoplay(); });
+      lightbox && lightbox.addEventListener('click', function(e){ if(e.target===lightbox){ lightbox.setAttribute('aria-hidden','true'); lightboxImg.src=''; if(autoplay) startAutoplay(); } });
+      document.addEventListener('keydown', function(e){ if(e.key==='Escape' && lightbox && lightbox.getAttribute('aria-hidden')==='false'){ lightbox.setAttribute('aria-hidden','true'); lightboxImg.src=''; if(autoplay) startAutoplay(); } });
+
+      // Pause autoplay on hover/focus
+      track.addEventListener('mouseenter', stopAutoplay);
+      track.addEventListener('mouseleave', function(){ if(autoplay) startAutoplay(); });
+      track.addEventListener('focusin', stopAutoplay);
+      track.addEventListener('focusout', function(){ if(autoplay) startAutoplay(); });
+
+      // Initialize
+      scrollToIndex(0);
+      startAutoplay();
     })();
   </script>
 </body>

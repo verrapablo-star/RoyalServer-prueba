@@ -1,0 +1,342 @@
+/* Styles for Requisitos mínimos section */
+/* Nota: layout actualizado por petición del cliente - columnas 50/50 y tarjetas en cuadrícula 2x2 */
+:root{
+  --req-card-bg: rgba(255,255,255,0.02);
+  --req-card-border: rgba(255,255,255,0.03);
+  --req-icon-bg: linear-gradient(135deg, rgba(203,174,77,0.14), rgba(142,45,226,0.06));
+}
+
+/* Cards grid: 2 columns (2x2) on desktop inside the left column */
+#requisitos .reqs-grid{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 columns */
+  gap:18px 20px; /* row gap, column gap */
+  align-items:start;
+  width:100%;
+  max-width:760px; /* keep cards from stretching too wide */
+  justify-content:start;
+  margin:0 auto;
+}
+
+/* Two-column layout wrapper: left (fluid) and right (fixed 300px) to guarantee image containment */
+.requisitos-inner{
+  display:grid;
+  grid-template-columns: 1fr 1fr; /* 50% / 50% columns */
+  gap:32px;
+  align-items:stretch; /* ensure both columns match height */
+  align-content:start;
+  max-width:1200px;
+  margin:0 auto;
+}
+.requisitos-left{width:100%;min-width:0;position:relative;z-index:1000;display:flex;flex-direction:column}
+.requisitos-right{display:flex;align-items:flex-end;justify-content:center;min-width:0;position:relative;overflow:visible;padding-left:18px;align-self:stretch;background:transparent;box-shadow:none}
+/* position image absolutely so its bottom can be pinned to the column bottom */
+.requisitos-image{position:absolute;bottom:0;left:50%;transform:translateX(-50%);max-height:100%;width:auto;max-width:90%;border-radius:0;box-shadow:none;background:transparent;display:block;z-index:1;object-fit:contain}
+
+/* ensure no pseudo-element behind the image creates a dark panel */
+.requisitos-right::before, .requisitos-right::after{background:transparent;box-shadow:none;content:''}
+
+/* Allow image to scale to the container height so its bottom aligns with cards */
+/* .requisitos-inner uses align-items:stretch so the taller column defines height */
+
+/* ensure cards render above image in any stacking context */
+.req-card{position:relative;z-index:9999}
+
+/* ===== Sección: Beneficios para Creadores ===== */
+.beneficios-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:24px;
+  align-items:start;
+  margin-top:18px;
+}
+.beneficio-card{
+  background: rgba(255,255,255,0.02);
+  padding:20px;
+  border-radius:14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+  color:var(--text-color);
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  min-height:220px;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  transform-origin:center center;
+}
+
+/* Make card clip the head background and keep rounded corners */
+.beneficio-card{overflow:hidden}
+
+/* Top area with background image */
+.beneficio-head{
+  background-image: url('../img/FONDO_STREAM2.png');
+  background-size: cover;
+  background-position: center center;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:12px;
+  min-height:110px; /* height of the head area */
+}
+
+/* Body area keeps the existing dark translucent background */
+.beneficio-body{
+  background: transparent; /* body inherits card bg */
+  padding:12px 6px 18px 6px;
+  display:block;
+}
+
+/* Ensure tag and icon contrast over the background image */
+.beneficio-head .beneficio-tag{color:#071018;box-shadow:0 6px 18px rgba(0,0,0,0.45)}
+.beneficio-head .beneficio-icon{background: #000; box-shadow: 0 8px 24px rgba(0,0,0,0.5)}
+.beneficio-icon{
+  font-size:42px;
+  width:64px;
+  height:64px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background: #000; /* solid black circular background as requested */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+
+/* Hide duplicated textual elements that were accidentally placed inside the head */
+.beneficio-head .beneficio-title,
+.beneficio-head .beneficio-list{
+  display:none !important;
+}
+
+/* Ensure tag sits above the icon area and the icon sits to the left */
+.beneficio-head{position:relative}
+.beneficio-head .beneficio-tag{position:absolute;top:12px;right:12px;z-index:6}
+.beneficio-head .beneficio-icon{margin:0;position:relative;z-index:4}
+.beneficio-title{margin:0;font-size:1.15rem;color:var(--primary-color);font-weight:700}
+
+/* Títulos por rango: colores distintivos */
+.card-emergente .beneficio-title{color:#00ff7a /* verde brillante/neón */}
+.card-colaborador .beneficio-title{color:#00b0ff /* azul eléctrico */}
+.card-aliado .beneficio-title{color:#ffc542 /* dorado */}
+.beneficio-list{margin:0;padding-left:18px;color:var(--text-color);line-height:1.4}
+
+/* Colores por rango */
+.card-emergente{border:1px solid rgba(64,214,109,0.12)}
+.card-emergente .beneficio-icon{background: #000; color:#00ff7a}
+
+.card-colaborador{border:1px solid rgba(66,133,244,0.10)}
+.card-colaborador .beneficio-icon{background: #000; color:#00b0ff}
+
+.card-aliado{border:1px solid rgba(255,197,66,0.12)}
+.card-aliado .beneficio-icon{background: #000; color:#ffc542}
+
+/* ensure svg icons inherit currentColor */
+.beneficio-icon svg{display:block;width:40px;height:40px;color:inherit}
+
+/* Responsive: 1 columna en móvil */
+@media (max-width: 900px){
+  .beneficios-grid{grid-template-columns:1fr;gap:18px}
+}
+
+/* Tag / franja superior que indica el rango */
+.beneficio-tag{
+  position: absolute;
+  top: 12px;
+  right: 12px; /* moved to top-right */
+  padding:6px 10px;
+  border-radius:8px;
+  font-size:0.85rem;
+  font-weight:700;
+  color:#071018;
+  z-index:6;
+}
+
+/* Positioning context for the tag */
+.beneficio-card{position:relative}
+.beneficio-icon{margin-top:6px}
+
+/* Tag colors by rank */
+.card-emergente .beneficio-tag{background:#00ff7a}
+.card-colaborador .beneficio-tag{background:#00b0ff}
+.card-aliado .beneficio-tag{background:#ffc542}
+
+/* Background gamer con gradiente y texturas sutiles para la sección de beneficios */
+/* target the section by id and descendant class to increase specificity */
+#beneficios.section, section#beneficios.section--dark, section#beneficios{
+  position:relative !important;
+  padding:64px 0 !important;
+  /* diagonal dark gamer gradient - forced */
+  background: linear-gradient(135deg, #1a1033 0%, #0d0a1f 100%) !important;
+  overflow:hidden !important;
+}
+
+/* thin diagonal line pattern (very subtle) */
+section#beneficios::before, #beneficios::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.02) 0 1px, rgba(255,255,255,0.00) 1px 36px) !important;
+  opacity:0.06 !important;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* soft radial highlight / vignette to add depth */
+section#beneficios::after, #beneficios::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background: radial-gradient( at 10% 20%, rgba(255,255,255,0.03), rgba(255,255,255,0) 20% ), radial-gradient( at 90% 80%, rgba(0,0,0,0.18), rgba(0,0,0,0) 40% ) !important;
+  mix-blend-mode: overlay !important;
+  opacity:0.85 !important;
+  pointer-events:none;
+  z-index:2;
+}
+
+/* Ensure content sits above the decorative layers */
+#beneficios .container, section#beneficios .container{position:relative;z-index:3}
+
+/* Tipografía para la sección Beneficios */
+section#beneficios .section__title,
+#beneficios .section__title{
+  font-family: var(--font-family); /* match the global section title font (Poppins) */
+  font-weight:700;
+  letter-spacing:0.6px;
+  text-transform:none;
+}
+
+/* For readability, ensure card titles and lists use Poppins (already loaded) */
+#beneficios .beneficio-card,
+#beneficios .beneficio-title,
+#beneficios .beneficio-list{
+  font-family: 'Poppins', sans-serif;
+}
+
+/* comment: adjust pattern opacity or spacing above if you want stronger/weaker texture */
+
+/* Hover / Focus interactions: subtle glow and scale */
+.beneficio-card:hover,
+.beneficio-card:focus,
+.beneficio-card:focus-within{
+  transform: scale(1.03);
+  z-index: 5; /* raise above siblings */
+}
+
+/* Rank-specific glows */
+.card-emergente:hover, .card-emergente:focus{box-shadow: 0 18px 50px rgba(0,255,122,0.08), 0 0 18px rgba(0,255,122,0.06); border-color: rgba(0,255,122,0.18)}
+.card-colaborador:hover, .card-colaborador:focus{box-shadow: 0 18px 50px rgba(0,176,255,0.08), 0 0 18px rgba(0,176,255,0.06); border-color: rgba(0,176,255,0.16)}
+.card-aliado:hover, .card-aliado:focus{box-shadow: 0 18px 50px rgba(255,197,66,0.09), 0 0 18px rgba(255,197,66,0.06); border-color: rgba(255,197,66,0.18)}
+
+/* Accessible focus-visible for keyboard users */
+.beneficio-card:focus-visible{outline: 3px solid rgba(255,255,255,0.06); outline-offset:6px}
+
+
+@media (max-width: 1000px){
+  /* Tablet: stack columns, keep cards as 2 columns if space allows */
+  .requisitos-inner{grid-template-columns: 1fr;gap:18px}
+  #requisitos .reqs-grid{grid-template-columns: repeat(2, minmax(180px, 1fr));max-width:860px}
+  .requisitos-right{order:2}
+}
+
+@media (max-width: 600px){
+  /* Mobile: single column for both layout and cards */
+  .requisitos-inner{grid-template-columns:1fr}
+  #requisitos .reqs-grid{grid-template-columns:1fr}
+  .requisitos-image{max-width:220px}
+}
+
+.req-card{
+  background:var(--req-card-bg);
+  border:1px solid var(--req-card-border);
+  padding:14px 16px;
+  border-radius:12px;
+  display:flex;
+  flex-direction:column; /* stack icon above text */
+  gap:10px;
+  align-items:center;
+  min-height:180px; /* shorter cards */
+  max-height:260px;
+  box-shadow:0 8px 24px rgba(0,0,0,0.35);
+  transition:transform .28s cubic-bezier(.2,.9,.2,1), box-shadow .28s ease, background-color .28s ease, filter .28s ease;
+}
+
+.req-card:focus,
+.req-card:hover{
+  transform:translateY(-8px) scale(1.01);
+  box-shadow:0 28px 60px rgba(0,0,0,0.55);
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+  filter:brightness(1.03);
+  outline: none;
+}
+
+.req-icon{
+  flex:0 0 auto;
+  width:64px;
+  height:64px;
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  color:var(--primary-color);
+  background:var(--req-icon-bg);
+  box-shadow:0 6px 18px rgba(142,45,226,0.08);
+  transition:transform .28s ease, box-shadow .28s ease, filter .28s ease;
+}
+
+.req-card:hover .req-icon,
+.req-card:focus .req-icon{
+  transform:translateY(-4px) scale(1.04);
+  box-shadow:0 18px 44px rgba(142,45,226,0.14);
+}
+
+.req-content h3{
+  margin:0;
+  font-size:0.98rem;
+  color:var(--primary-color);
+  text-align:center;
+}
+.req-content p{
+  margin:0;
+  color:var(--text-color);
+  opacity:0.95;
+  font-size:0.9rem;
+  text-align:center;
+  line-height:1.36;
+  max-width:220px; /* avoid very narrow columns creating long vertical paragraphs */
+}
+
+/* Responsive: collapse to two columns then single column */
+/* (responsive rules are defined above) */
+@media (max-width: 600px){
+  #requisitos .reqs-grid{grid-template-columns: 1fr}
+  .req-card{align-items:center;min-height:auto;padding:14px}
+  .req-icon{width:52px;height:52px;font-size:18px}
+}
+
+/* ===== Eventos: gallery / carousel / lightbox ===== */
+.events-gallery{display:flex;align-items:center;gap:12px;margin-top:18px;position:relative;padding-bottom:40px}
+.eg-arrow{background:rgba(0,0,0,0.6);color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-size:20px}
+.eg-arrow:focus{outline:3px solid rgba(255,255,255,0.06)}
+.eg-track{display:flex;overflow:hidden;scroll-behavior:smooth;gap:12px;width:100%;padding:6px 0}
+.eg-slide{flex:0 0 320px;display:flex;align-items:center;justify-content:center;border-radius:10px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+.eg-slide img{display:block;width:100%;height:200px;object-fit:cover;cursor:pointer;transition:transform .24s ease}
+.eg-slide img:hover{transform:scale(1.03)}
+
+/* Responsive slide sizes */
+@media (max-width: 1000px){.eg-slide{flex:0 0 48%}.eg-slide img{height:180px}}
+@media (max-width: 600px){.eg-slide{flex:0 0 90%}.eg-slide img{height:160px}}
+
+/* Lightbox */
+.eg-lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.88);z-index:99999;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.eg-lightbox[aria-hidden="false"]{opacity:1;pointer-events:auto}
+.eg-lightbox-img{max-width:95%;max-height:92%;object-fit:contain;border-radius:6px;box-shadow:0 18px 60px rgba(0,0,0,0.7)}
+.eg-lightbox-close{position:absolute;top:18px;right:18px;background:rgba(255,255,255,0.06);color:#fff;border:none;padding:8px 12px;border-radius:8px;font-size:22px;cursor:pointer}
+
+/* autoplay indicator (optional small dot strip) */
+.eg-dots{display:flex;gap:8px;justify-content:center;position:absolute;left:50%;transform:translateX(-50%);bottom:8px;z-index:5}
+.eg-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.08)}
+.eg-dot.active{background:#fff}
+
+@media (max-width: 800px){ .events-gallery{padding-bottom:32px} }
+@media (max-width: 600px){.eg-slide{flex:0 0 90%}.eg-slide img{height:160px}.events-gallery{padding-bottom:28px}}
