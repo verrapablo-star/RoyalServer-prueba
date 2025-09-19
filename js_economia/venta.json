@@ -1,0 +1,506 @@
+[
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Aleta de Megalodon Alpha",
+    "PUNTOS": 100,
+    "CANT.": 1,
+    "ID": "aaa"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Brazo de carno de Alpha",
+    "PUNTOS": 100,
+    "CANT.": 1,
+    "ID": "bca"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Colmillo Basilisco Alpha",
+    "PUNTOS": 300,
+    "CANT.": 1,
+    "ID": "cba"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Diente de Mosasaurio Alpha",
+    "PUNTOS": 100,
+    "CANT.": 1,
+    "ID": "dma"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Colmillo de Rex Alpha",
+    "PUNTOS": 20,
+    "CANT.": 1,
+    "ID": "cra"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Garra de Cristal Alpha",
+    "PUNTOS": 300,
+    "CANT.": 1,
+    "ID": "gca"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Garra de raptor alpha",
+    "PUNTOS": 100,
+    "CANT.": 1,
+    "ID": "gra"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Grasa de Ballena Alpha",
+    "PUNTOS": 300,
+    "CANT.": 1,
+    "ID": "gba"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Ojo de Tusoteutis Alpha",
+    "PUNTOS": 100,
+    "CANT.": 1,
+    "ID": "ota"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A- Pinza Karkinos Alpha",
+    "PUNTOS": 300,
+    "CANT.": 1,
+    "ID": "pka"
+  },
+  {
+    "CAT": "ALPHA",
+    "NOMBRE": "A -Pua Rey Segador",
+    "PUNTOS": 300,
+    "CANT.": 1,
+    "ID": "pra"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Brazo de rex",
+    "PUNTOS": 5,
+    "CANT.": 1,
+    "ID": "brr"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Cerebro de alo",
+    "PUNTOS": 15,
+    "CANT.": 1,
+    "ID": "cea"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Corazon de giga",
+    "PUNTOS": 30,
+    "CANT.": 1,
+    "ID": "cog"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Cresta de espino",
+    "PUNTOS": 15,
+    "CANT.": 1,
+    "ID": "crs"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Cristal Prime",
+    "PUNTOS": 5,
+    "CANT.": 1,
+    "ID": "crp"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Diente de megalodon",
+    "PUNTOS": 3,
+    "CANT.": 1,
+    "ID": "dim"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Escama de basilisco",
+    "PUNTOS": 15,
+    "CANT.": 1,
+    "ID": "esb"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Estomago de gasbag",
+    "PUNTOS": 20,
+    "CANT.": 1,
+    "ID": "esg"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Feromona de reaper",
+    "PUNTOS": 15,
+    "CANT.": 1,
+    "ID": "fer"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Garra de argentavis",
+    "PUNTOS": 5,
+    "CANT.": 1,
+    "ID": "gaa"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Garra de crystal",
+    "PUNTOS": 15,
+    "CANT.": 1,
+    "ID": "gac"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Garra de dragon de fuego",
+    "PUNTOS": 5,
+    "CANT.": 1,
+    "ID": "gdf"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Garra de dragon de rayo",
+    "PUNTOS": 10,
+    "CANT.": 1,
+    "ID": "gdr"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Garra de dragon de veneno",
+    "PUNTOS": 10,
+    "CANT.": 1,
+    "ID": "gdv"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Garra de terizino",
+    "PUNTOS": 10,
+    "CANT.": 1,
+    "ID": "gat"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Garra de thylacoleo",
+    "PUNTOS": 20,
+    "CANT.": 1,
+    "ID": "gth"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Grasa de basilo",
+    "PUNTOS": 20,
+    "CANT.": 1,
+    "ID": "grb"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Piel de sarco",
+    "PUNTOS": 25,
+    "CANT.": 1,
+    "ID": "pis"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Pluma de rockdrake",
+    "PUNTOS": 10,
+    "CANT.": 1,
+    "ID": "plr"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Pulmon de yuty",
+    "PUNTOS": 25,
+    "CANT.": 1,
+    "ID": "puy"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Tentaculo de tuso",
+    "PUNTOS": 3,
+    "CANT.": 1,
+    "ID": "tet"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Toxina de megalania",
+    "PUNTOS": 3,
+    "CANT.": 1,
+    "ID": "tom"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Veneno de titanoboa",
+    "PUNTOS": 30,
+    "CANT.": 1,
+    "ID": "vet"
+  },
+  {
+    "CAT": "TRIBUTO",
+    "NOMBRE": "B- Vertebra de Sauro",
+    "PUNTOS": 15,
+    "CANT.": 1,
+    "ID": "ves"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Arana 1 - Gamma",
+    "PUNTOS": 500,
+    "CANT.": 1,
+    "ID": "arg"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Arana 2 - Betta",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "arb"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Arana 3- Alpha",
+    "PUNTOS": 1000,
+    "CANT.": 1,
+    "ID": "ara"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Dragon 1 - Gamma",
+    "PUNTOS": 500,
+    "CANT.": 1,
+    "ID": "drg"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Dragon 2 - Betta",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "drb"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Dragon 3 - Alpha",
+    "PUNTOS": 1500,
+    "CANT.": 1,
+    "ID": "dra"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de King Titan 1 - Gamma",
+    "PUNTOS": 2000,
+    "CANT.": 1,
+    "ID": "ktg"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de King Titan 2 - Betta",
+    "PUNTOS": 6000,
+    "CANT.": 1,
+    "ID": "ktb"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de King Titan 3 - Alpha",
+    "PUNTOS": 30000,
+    "CANT.": 1,
+    "ID": "kta"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Manticora 1 - Gamma",
+    "PUNTOS": 500,
+    "CANT.": 1,
+    "ID": "mag"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Manticora 2 - Betta",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "mab"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Manticora 3 - Alpha",
+    "PUNTOS": 1200,
+    "CANT.": 1,
+    "ID": "maa"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Master Controler Genesis",
+    "PUNTOS": 1500,
+    "CANT.": 1,
+    "ID": "mcg"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Moeder - Alpha",
+    "PUNTOS": 400,
+    "CANT.": 1,
+    "ID": "mga"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Moeder - Betta",
+    "PUNTOS": 300,
+    "CANT.": 1,
+    "ID": "mgb"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Moeder - Gamma",
+    "PUNTOS": 200,
+    "CANT.": 1,
+    "ID": "mgg"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Mono 1 - Gamma",
+    "PUNTOS": 500,
+    "CANT.": 1,
+    "ID": "mog"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Mono 2 - Betta",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "mob"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Mono 3 - Alpha",
+    "PUNTOS": 1000,
+    "CANT.": 1,
+    "ID": "moa"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Queen Wyvern 1 - Gamma",
+    "PUNTOS": 1000,
+    "CANT.": 1,
+    "ID": "qwg"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Queen Wyvern 2 - Betta",
+    "PUNTOS": 1500,
+    "CANT.": 1,
+    "ID": "qwb"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Queen Wyvern 3 - Alpha",
+    "PUNTOS": 3000,
+    "CANT.": 1,
+    "ID": "qwa"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Rockwell Abe 1 - Gamma",
+    "PUNTOS": 250,
+    "CANT.": 1,
+    "ID": "rag"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Rockwell Abe 2 - Betta",
+    "PUNTOS": 500,
+    "CANT.": 1,
+    "ID": "rab"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Rockwell Abe 3 - Alpha",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "raa"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Rockwell Gen2 - Alpha",
+    "PUNTOS": 3000,
+    "CANT.": 1,
+    "ID": "rga"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Rockwell gen2 - Betta",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "rgb"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Rockwell Gen2 - Gamma",
+    "PUNTOS": 500,
+    "CANT.": 1,
+    "ID": "rgg"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza de Titan del Bosque",
+    "PUNTOS": 1000,
+    "CANT.": 1,
+    "ID": "tbo"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza del Titan del Desierto",
+    "PUNTOS": 1000,
+    "CANT.": 1,
+    "ID": "tde"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza del Titan del Hielo",
+    "PUNTOS": 1000,
+    "CANT.": 1,
+    "ID": "thi"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza Dinopitecus (Lost) - Alpha",
+    "PUNTOS": 3000,
+    "CANT.": 1,
+    "ID": "dia"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza Dinopitecus (Lost) - Betta",
+    "PUNTOS": 1500,
+    "CANT.": 1,
+    "ID": "dib"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza Dinopitecus (Lost) - Gamma",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "dig"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza Fenrir - Alpha",
+    "PUNTOS": 3000,
+    "CANT.": 1,
+    "ID": "fea"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza Fenrir - Betta",
+    "PUNTOS": 1500,
+    "CANT.": 1,
+    "ID": "feb"
+  },
+  {
+    "CAT": "TROFEO",
+    "NOMBRE": "Cabeza Fenrir - Gamma",
+    "PUNTOS": 750,
+    "CANT.": 1,
+    "ID": "feg"
+  }
+]

@@ -1,46 +1,107 @@
-/* Styles for Requisitos mínimos section */
-/* Nota: layout actualizado por petición del cliente - columnas 50/50 y tarjetas en cuadrícula 2x2 */
+/* ===== VARIABLES CSS OPTIMIZADAS ===== */
 :root{
+  /* Colores principales */
+  --primary-color: #cfae4d;
+  --text-color: #f0f0f0;
+  --primary-gold: #cfae4d;
+  --secondary-blue: #78b4ff;
+  --accent-green: #00ff7a;
+  --accent-blue: #00b0ff;
+  --accent-gold: #ffc542;
+  
+  /* Backgrounds y overlays */
   --req-card-bg: rgba(255,255,255,0.02);
   --req-card-border: rgba(255,255,255,0.03);
+  --card-bg-hover: rgba(255,255,255,0.06);
+  --dark-gradient: linear-gradient(135deg, rgba(42, 42, 46, 0.8) 0%, rgba(33, 33, 37, 0.9) 100%);
+  --gold-gradient: linear-gradient(135deg, rgba(207, 174, 77, 0.08) 0%, rgba(147, 131, 86, 0.12) 100%);
+  
+  /* Iconos y efectos */
   --req-icon-bg: linear-gradient(135deg, rgba(203,174,77,0.14), rgba(142,45,226,0.06));
+  --gold-border: rgba(207, 174, 77, 0.15);
+  --gold-shadow: rgba(207, 174, 77, 0.1);
+  
+  /* Espaciados comunes */
+  --section-padding: 4rem 0;
+  --card-padding: 3rem 2.5rem;
+  --card-border-radius: 20px;
+  --small-border-radius: 12px;
+  --transition-fast: 0.3s ease;
+  --transition-smooth: .28s cubic-bezier(.2,.9,.2,1);
 }
 
-/* Cards grid: 2 columns (2x2) on desktop inside the left column */
+/* ===== LAYOUT PRINCIPAL REQUISITOS ===== */
 #requisitos .reqs-grid{
   display:grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr)); /* 2 columns */
-  gap:18px 20px; /* row gap, column gap */
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap:18px 20px;
   align-items:start;
   width:100%;
-  max-width:760px; /* keep cards from stretching too wide */
+  max-width:760px;
   justify-content:start;
   margin:0 auto;
 }
 
-/* Two-column layout wrapper: left (fluid) and right (fixed 300px) to guarantee image containment */
+/* Two-column layout wrapper: left (fluid) and right (fixed) */
 .requisitos-inner{
   display:grid;
-  grid-template-columns: 1fr 1fr; /* 50% / 50% columns */
+  grid-template-columns: 1fr 1fr;
   gap:32px;
-  align-items:stretch; /* ensure both columns match height */
+  align-items:stretch;
   align-content:start;
   max-width:1200px;
   margin:0 auto;
 }
-.requisitos-left{width:100%;min-width:0;position:relative;z-index:1000;display:flex;flex-direction:column}
-.requisitos-right{display:flex;align-items:flex-end;justify-content:center;min-width:0;position:relative;overflow:visible;padding-left:18px;align-self:stretch;background:transparent;box-shadow:none}
-/* position image absolutely so its bottom can be pinned to the column bottom */
-.requisitos-image{position:absolute;bottom:0;left:50%;transform:translateX(-50%);max-height:100%;width:auto;max-width:90%;border-radius:0;box-shadow:none;background:transparent;display:block;z-index:1;object-fit:contain}
 
-/* ensure no pseudo-element behind the image creates a dark panel */
-.requisitos-right::before, .requisitos-right::after{background:transparent;box-shadow:none;content:''}
+.requisitos-left{
+  width:100%;
+  min-width:0;
+  position:relative;
+  z-index:1000;
+  display:flex;
+  flex-direction:column;
+}
 
-/* Allow image to scale to the container height so its bottom aligns with cards */
-/* .requisitos-inner uses align-items:stretch so the taller column defines height */
+.requisitos-right{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  min-width:0;
+  position:relative;
+  overflow:visible;
+  padding-left:18px;
+  align-self:stretch;
+  background:transparent;
+  box-shadow:none;
+}
 
-/* ensure cards render above image in any stacking context */
-.req-card{position:relative;z-index:9999}
+.requisitos-image{
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  max-height:100%;
+  width:auto;
+  max-width:90%;
+  border-radius:0;
+  box-shadow:none;
+  background:transparent;
+  display:block;
+  z-index:1;
+  object-fit:contain;
+}
+
+.requisitos-right::before, 
+.requisitos-right::after{
+  background:transparent;
+  box-shadow:none;
+  content:'';
+}
+
+.req-card{
+  position:relative;
+  z-index:9999;
+}
 
 /* ===== Sección: Beneficios para Creadores ===== */
 .beneficios-grid{
@@ -115,28 +176,23 @@
 .beneficio-title{margin:0;font-size:1.15rem;color:var(--primary-color);font-weight:700}
 
 /* Títulos por rango: colores distintivos */
-.card-emergente .beneficio-title{color:#00ff7a /* verde brillante/neón */}
-.card-colaborador .beneficio-title{color:#00b0ff /* azul eléctrico */}
-.card-aliado .beneficio-title{color:#ffc542 /* dorado */}
+.card-emergente .beneficio-title{color: var(--accent-green);}
+.card-colaborador .beneficio-title{color: var(--accent-blue);}
+.card-aliado .beneficio-title{color: var(--accent-gold);}
 .beneficio-list{margin:0;padding-left:18px;color:var(--text-color);line-height:1.4}
 
 /* Colores por rango */
 .card-emergente{border:1px solid rgba(64,214,109,0.12)}
-.card-emergente .beneficio-icon{background: #000; color:#00ff7a}
+.card-emergente .beneficio-icon{background: #000; color: var(--accent-green);}
 
 .card-colaborador{border:1px solid rgba(66,133,244,0.10)}
-.card-colaborador .beneficio-icon{background: #000; color:#00b0ff}
+.card-colaborador .beneficio-icon{background: #000; color: var(--accent-blue);}
 
 .card-aliado{border:1px solid rgba(255,197,66,0.12)}
-.card-aliado .beneficio-icon{background: #000; color:#ffc542}
+.card-aliado .beneficio-icon{background: #000; color: var(--accent-gold);}
 
 /* ensure svg icons inherit currentColor */
 .beneficio-icon svg{display:block;width:40px;height:40px;color:inherit}
-
-/* Responsive: 1 columna en móvil */
-@media (max-width: 900px){
-  .beneficios-grid{grid-template-columns:1fr;gap:18px}
-}
 
 /* Tag / franja superior que indica el rango */
 .beneficio-tag{
@@ -156,9 +212,9 @@
 .beneficio-icon{margin-top:6px}
 
 /* Tag colors by rank */
-.card-emergente .beneficio-tag{background:#00ff7a}
-.card-colaborador .beneficio-tag{background:#00b0ff}
-.card-aliado .beneficio-tag{background:#ffc542}
+.card-emergente .beneficio-tag{background: var(--accent-green);}
+.card-colaborador .beneficio-tag{background: var(--accent-blue);}
+.card-aliado .beneficio-tag{background: var(--accent-gold);}
 
 /* Background gamer con gradiente y texturas sutiles para la sección de beneficios */
 /* target the section by id and descendant class to increase specificity */
@@ -230,21 +286,133 @@ section#beneficios .section__title,
 /* Accessible focus-visible for keyboard users */
 .beneficio-card:focus-visible{outline: 3px solid rgba(255,255,255,0.06); outline-offset:6px}
 
-
-@media (max-width: 1000px){
-  /* Tablet: stack columns, keep cards as 2 columns if space allows */
-  .requisitos-inner{grid-template-columns: 1fr;gap:18px}
-  #requisitos .reqs-grid{grid-template-columns: repeat(2, minmax(180px, 1fr));max-width:860px}
-  .requisitos-right{order:2}
+/* ====== SECCIÓN: ¿QUÉ PEDIMOS A CAMBIO? ====== */
+#que-pedimos {
+  padding: var(--section-padding);
+  background: var(--dark-gradient);
 }
 
-@media (max-width: 600px){
-  /* Mobile: single column for both layout and cards */
-  .requisitos-inner{grid-template-columns:1fr}
-  #requisitos .reqs-grid{grid-template-columns:1fr}
-  .requisitos-image{max-width:220px}
+.que-pedimos-card {
+  background: var(--gold-gradient);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 0 auto;
+  max-width: 900px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 
+              0 8px 30px var(--gold-shadow);
+  border: 1px solid var(--gold-border);
+  position: relative;
+  overflow: hidden;
 }
 
+.que-pedimos-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(207, 174, 77, 0.6), transparent);
+}
+
+.que-pedimos-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-gold);
+  margin-bottom: 1.5rem;
+  font-family: 'Orbitron', monospace;
+  text-shadow: 0 4px 15px rgba(207, 174, 77, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sparkle-icon {
+  font-size: 2rem;
+  animation: sparkle 2s ease-in-out infinite alternate;
+}
+
+@keyframes sparkle {
+  0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
+  100% { transform: scale(1.1) rotate(10deg); opacity: 1; }
+}
+
+.que-pedimos-intro {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.que-pedimos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem 0;
+}
+
+.que-pedimos-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: var(--req-card-bg);
+  border-radius: var(--small-border-radius);
+  border-left: 3px solid rgba(207, 174, 77, 0.5);
+  transition: all var(--transition-fast);
+}
+
+.que-pedimos-item:hover {
+  background: var(--card-bg-hover);
+  border-left-color: var(--primary-gold);
+  transform: translateX(5px);
+}
+
+.que-pedimos-item.optional {
+  border-left-color: rgba(120, 180, 255, 0.5);
+}
+
+.que-pedimos-item.optional:hover {
+  border-left-color: var(--secondary-blue);
+}
+
+.check-icon {
+  font-size: 1.2rem;
+  min-width: 1.5rem;
+  margin-top: 0.1rem;
+}
+
+.que-pedimos-item span:last-child {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.que-pedimos-item strong {
+  color: var(--secondary-blue);
+  font-weight: 600;
+}
+
+.que-pedimos-footer {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--primary-gold);
+  font-weight: 500;
+  margin: 0;
+  padding: 1.5rem 0 0 0;
+  border-top: 1px solid var(--gold-border);
+}
+
+.que-pedimos-footer em {
+  font-style: italic;
+  text-shadow: 0 2px 8px rgba(207, 174, 77, 0.3);
+}
+
+/* ===== TARJETAS DE REQUISITOS ===== */
 .req-card{
   background:var(--req-card-bg);
   border:1px solid var(--req-card-border);
@@ -323,20 +491,146 @@ section#beneficios .section__title,
 .eg-slide img{display:block;width:100%;height:200px;object-fit:cover;cursor:pointer;transition:transform .24s ease}
 .eg-slide img:hover{transform:scale(1.03)}
 
-/* Responsive slide sizes */
-@media (max-width: 1000px){.eg-slide{flex:0 0 48%}.eg-slide img{height:180px}}
-@media (max-width: 600px){.eg-slide{flex:0 0 90%}.eg-slide img{height:160px}}
-
 /* Lightbox */
 .eg-lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.88);z-index:99999;opacity:0;pointer-events:none;transition:opacity .2s ease}
 .eg-lightbox[aria-hidden="false"]{opacity:1;pointer-events:auto}
 .eg-lightbox-img{max-width:95%;max-height:92%;object-fit:contain;border-radius:6px;box-shadow:0 18px 60px rgba(0,0,0,0.7)}
 .eg-lightbox-close{position:absolute;top:18px;right:18px;background:rgba(255,255,255,0.06);color:#fff;border:none;padding:8px 12px;border-radius:8px;font-size:22px;cursor:pointer}
 
-/* autoplay indicator (optional small dot strip) */
+/* Autoplay indicator dots */
 .eg-dots{display:flex;gap:8px;justify-content:center;position:absolute;left:50%;transform:translateX(-50%);bottom:8px;z-index:5}
 .eg-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.08)}
 .eg-dot.active{background:#fff}
 
-@media (max-width: 800px){ .events-gallery{padding-bottom:32px} }
-@media (max-width: 600px){.eg-slide{flex:0 0 90%}.eg-slide img{height:160px}.events-gallery{padding-bottom:28px}}
+/* ===== RESPONSIVE: ¿QUÉ PEDIMOS A CAMBIO? ===== */
+@media (max-width: 768px) {
+  .que-pedimos-card {
+    padding: 2rem 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .que-pedimos-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .sparkle-icon {
+    font-size: 1.5rem;
+  }
+  
+  .que-pedimos-intro {
+    font-size: 1.1rem;
+  }
+  
+  .que-pedimos-item {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  
+  .check-icon {
+    align-self: flex-start;
+  }
+  
+  .que-pedimos-footer {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .que-pedimos-title {
+    font-size: 1.7rem;
+  }
+  
+  .que-pedimos-card {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* ===== RESPONSIVE DESIGN CONSOLIDADO ===== */
+
+/* Desktop Large (1000px+) */
+@media (max-width: 1000px) {
+  /* Requisitos: stack columns, keep cards as 2 columns if space allows */
+  .requisitos-inner {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  
+  #requisitos .reqs-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    max-width: 860px;
+  }
+  
+  .requisitos-right {
+    order: 2;
+  }
+  
+  /* Eventos: responsive slide sizes */
+  .eg-slide {
+    flex: 0 0 48%;
+  }
+  
+  .eg-slide img {
+    height: 180px;
+  }
+}
+
+/* Tablet (900px) */
+@media (max-width: 900px) {
+  /* Beneficios: 1 columna en móvil */
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
+/* Mobile Large (800px) */
+@media (max-width: 800px) {
+  .events-gallery {
+    padding-bottom: 32px;
+  }
+}
+
+/* Mobile Medium (600px) */
+@media (max-width: 600px) {
+  /* Requisitos: single column for both layout and cards */
+  .requisitos-inner {
+    grid-template-columns: 1fr;
+  }
+  
+  #requisitos .reqs-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .requisitos-image {
+    max-width: 220px;
+  }
+  
+  /* Tarjetas de requisitos: mobile adjustments */
+  .req-card {
+    align-items: center;
+    min-height: auto;
+    padding: 14px;
+  }
+  
+  .req-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+  }
+  
+  /* Eventos: mobile slide sizes */
+  .eg-slide {
+    flex: 0 0 90%;
+  }
+  
+  .eg-slide img {
+    height: 160px;
+  }
+  
+  .events-gallery {
+    padding-bottom: 28px;
+  }
+}

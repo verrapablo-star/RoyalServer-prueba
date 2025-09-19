@@ -7,10 +7,55 @@
     </span>
   </a>
   <ul class="nav__list">
-  <li><a href="#mapas" class="nav__link">Mapas</a></li>
-  <li><a href="ASE_economia.html" class="nav__link">Economia</a></li>
+  <li><a href="index.html" class="nav__link">Inicio</a></li>
+  <li><a href="ase_home.html#mapas" class="nav__link">Mapas</a></li>
+  <li><a href="ase_config.html" class="nav__link">Configuración</a></li>
+  <li><a href="ASE_economia.html" class="nav__link">Economía</a></li>
   <li><a href="ASE_comandos.html" class="nav__link">Comandos</a></li>
-  <li><a href="ASE_shop.html" class="nav__link">Shop</a></li>
+  <li><a href="ase_shop.html" class="nav__link">Tienda</a></li>
   </ul>
-  <a href="https://dsc.gg/royalserver" target="_blank" class="btn btn--primary nav__btn">Únete a Discord</a>
+
+  <!-- Mobile hamburger toggle (styled via CSS, shown on small screens) -->
+  <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+
+  <div class="nav__actions" style="display:flex;align-items:center;gap:10px;">
+    <a href="https://dsc.gg/royalserver" target="_blank" class="btn btn--primary nav__btn">Únete a Discord</a>
+    <a href="login.html" class="btn btn--secondary nav__btn">Login</a>
+  </div>
 </nav>
+
+<script>
+  // Toggle mobile nav list: keeps desktop behavior unchanged
+  (function(){
+    // Find this nav fragment's root element
+    var scriptEl = document.currentScript;
+    var navRoot = scriptEl && scriptEl.previousElementSibling;
+    // If previousElementSibling is not the nav (depends on placement), fallback to searching
+    if(!navRoot || !navRoot.classList || !navRoot.classList.contains('nav')){
+      navRoot = document.querySelector('.nav.container');
+    }
+    if(!navRoot) return;
+    var toggle = navRoot.querySelector('.nav__toggle');
+    var list = navRoot.querySelector('.nav__list');
+    if(!toggle || !list) return;
+    toggle.addEventListener('click', function(e){
+      var expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      list.classList.toggle('active');
+    });
+    // Close when clicking outside
+    document.addEventListener('click', function(e){
+      if(!navRoot.contains(e.target) && list.classList.contains('active')){
+        list.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+    // Close on Escape
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && list.classList.contains('active')){
+        list.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+</script>

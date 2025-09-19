@@ -1,0 +1,1938 @@
+[
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Abeja Reina",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "abeja"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Achatina",
+    "LEVEL": 435,
+    "PRECIO": 700,
+    "CANT.": 1,
+    "ID": "achatina"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Achatina Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "achatinaabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Alosaurus",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "alo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Alosaurus R",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "alor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Alosaurus X",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "alox"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Andrewsarchus",
+    "LEVEL": 435,
+    "PRECIO": 3500,
+    "CANT.": 1,
+    "ID": "andre"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Anglerfish",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "angler"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Anglerfish Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 2200,
+    "CANT.": 1,
+    "ID": "anglerabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Anguila",
+    "LEVEL": 435,
+    "PRECIO": 300,
+    "CANT.": 1,
+    "ID": "anguila"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Anguila Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 500,
+    "CANT.": 1,
+    "ID": "anguilaabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ankylo Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "ankyabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ankylosaurus",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "anky"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ankylosaurus X",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "ankyx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Araneo",
+    "LEVEL": 435,
+    "PRECIO": 600,
+    "CANT.": 1,
+    "ID": "araneo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Araneo Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 700,
+    "CANT.": 1,
+    "ID": "araneoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Argentavis",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "argen"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Argentavis X",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "argenx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Arqueopteris",
+    "LEVEL": 435,
+    "PRECIO": 500,
+    "CANT.": 1,
+    "ID": "arqueo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Artropluera",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "artro"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Artropluera Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1700,
+    "CANT.": 1,
+    "ID": "artroabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Asolador",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "asolador"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Astrodelphis",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "astro"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Baryonyx",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "baryo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Baryonyx Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "baryoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Basilisco",
+    "LEVEL": 435,
+    "PRECIO": 3000,
+    "CANT.": 1,
+    "ID": "basilisco"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Basilosaurus",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "basilo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Basilosaurus X",
+    "LEVEL": 435,
+    "PRECIO": 3000,
+    "CANT.": 1,
+    "ID": "basilox"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Beelzebufo",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "sapo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Beelzebufo Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "sapoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Bloodstalker",
+    "LEVEL": 435,
+    "PRECIO": 3000,
+    "CANT.": 1,
+    "ID": "blood"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Buho de las Nieves",
+    "LEVEL": 435,
+    "PRECIO": 4200,
+    "CANT.": 1,
+    "ID": "buho"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Buho de las Nieves R",
+    "LEVEL": 435,
+    "PRECIO": 4800,
+    "CANT.": 1,
+    "ID": "buhor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Bulldog",
+    "LEVEL": 435,
+    "PRECIO": 400,
+    "CANT.": 1,
+    "ID": "perroluz"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Cabra de luz",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "cabraluz"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Calicoterio",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "calicoterio"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Carbonemys",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "carbo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Carbonemys Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "carboabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Carbonemys R",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "carbor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Carcharodontosaurus",
+    "LEVEL": 435,
+    "PRECIO": 7000,
+    "CANT.": 1,
+    "ID": "carcha"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Carnotauro Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "carnoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Carnotaurus",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "carno"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Carnotaurus R",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "carnor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Castoroides",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "castor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Compy",
+    "LEVEL": 435,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "compy"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Daeodon",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "daeodon"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Daeodon R",
+    "LEVEL": 435,
+    "PRECIO": 2200,
+    "CANT.": 1,
+    "ID": "daeodonr"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Deinonychus",
+    "LEVEL": 290,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "deino"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Desmodus",
+    "LEVEL": 435,
+    "PRECIO": 3000,
+    "CANT.": 1,
+    "ID": "desmo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Diablo Espinoso",
+    "LEVEL": 435,
+    "PRECIO": 500,
+    "CANT.": 1,
+    "ID": "diablo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Diente de sable",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "dientesable"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dilo",
+    "LEVEL": 435,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "dilo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dilo R",
+    "LEVEL": 435,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "dilor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dimetrodon",
+    "LEVEL": 435,
+    "PRECIO": 700,
+    "CANT.": 1,
+    "ID": "dimetrodon"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dimetrodon Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 750,
+    "CANT.": 1,
+    "ID": "dimetrodonabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dimorphodon",
+    "LEVEL": 435,
+    "PRECIO": 500,
+    "CANT.": 1,
+    "ID": "dimorfodon"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dimorphodon Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 550,
+    "CANT.": 1,
+    "ID": "dimorfodonabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dinophitecus",
+    "LEVEL": 435,
+    "PRECIO": 6000,
+    "CANT.": 1,
+    "ID": "dinopitecus"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Diplocaulus",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "diplocaulus"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Diplocaulus Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1600,
+    "CANT.": 1,
+    "ID": "diplocaulusabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Diplodocus",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "diplo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Diplodocus Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1100,
+    "CANT.": 1,
+    "ID": "diploabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dodo",
+    "LEVEL": 435,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "dodo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dodo aberrante",
+    "LEVEL": 435,
+    "PRECIO": 300,
+    "CANT.": 1,
+    "ID": "dodoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Doedicurus",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "doe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Doedicurus Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "doeabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon de Fuego",
+    "LEVEL": 370,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "dragonfuego"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon de Hielo",
+    "LEVEL": 370,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "dragonhielo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon de Rayo",
+    "LEVEL": 370,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "dragonrayo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon de Sangre",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "dragonsangre"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon de Veneno",
+    "LEVEL": 370,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "dragonveneno"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon Ember",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "dragonember"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon Tek",
+    "LEVEL": 560,
+    "PRECIO": 5500,
+    "CANT.": 1,
+    "ID": "dragontek"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dragon Tropical",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "dragontropical"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dunkleosteus",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "dunkleo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Dunkleosteus X",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "dunkleox"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Equus",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "equs"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Equus Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "equsabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Equus R",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "equsr"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Escarabajo",
+    "LEVEL": 435,
+    "PRECIO": 500,
+    "CANT.": 1,
+    "ID": "escarabajo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Escarabajo Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 550,
+    "CANT.": 1,
+    "ID": "escarabajoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Fenix",
+    "LEVEL": 435,
+    "PRECIO": 40000,
+    "CANT.": 1,
+    "ID": "fenix"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ferox",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "ferox"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Gacha",
+    "LEVEL": 435,
+    "PRECIO": 1700,
+    "CANT.": 1,
+    "ID": "gacha"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Gasbag",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "gasbag"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Gasbag R",
+    "LEVEL": 435,
+    "PRECIO": 2800,
+    "CANT.": 1,
+    "ID": "gasbagr"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Giganotosaurus",
+    "LEVEL": 435,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "giga"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Giganotosaurus R",
+    "LEVEL": 435,
+    "PRECIO": 5500,
+    "CANT.": 1,
+    "ID": "gigar"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Gigantopithecus",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "mono"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Golem",
+    "LEVEL": 435,
+    "PRECIO": 4000,
+    "CANT.": 1,
+    "ID": "golem"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Golem X",
+    "LEVEL": 435,
+    "PRECIO": 4500,
+    "CANT.": 1,
+    "ID": "golemx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Griffo",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "grifo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Hesperornis",
+    "LEVEL": 435,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "hesper"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Hyaenodon",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "hiena"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ichthyornis",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "ichty"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ichthyosaurus",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "delfin"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ichthyosaurus X",
+    "LEVEL": 435,
+    "PRECIO": 1600,
+    "CANT.": 1,
+    "ID": "delfinx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Iguanodon",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "iguanodon"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Iguanodon Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "iguanodonabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Jerboa",
+    "LEVEL": 435,
+    "PRECIO": 500,
+    "CANT.": 1,
+    "ID": "jerbo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Kaprosuchus",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "kapro"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Karkinos",
+    "LEVEL": 435,
+    "PRECIO": 4000,
+    "CANT.": 1,
+    "ID": "karkinos"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Kentrosaurio",
+    "LEVEL": 435,
+    "PRECIO": 1300,
+    "CANT.": 1,
+    "ID": "kentro"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Lobo",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "lobo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Lobo R",
+    "LEVEL": 435,
+    "PRECIO": 1600,
+    "CANT.": 1,
+    "ID": "lobor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Lumigeco",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "lumicego"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Lymantria",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "lymantria"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Lystrosaurio",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "listro"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Lytrosaurio Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "listroabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Maewing",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "mae"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Magmasaurio",
+    "LEVEL": 290,
+    "PRECIO": 6500,
+    "CANT.": 1,
+    "ID": "magma"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Mamut",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "mamut"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Managarm",
+    "LEVEL": 435,
+    "PRECIO": 6000,
+    "CANT.": 1,
+    "ID": "mana"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Manta",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "manta"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Manta Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "mantaabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Mantis",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "mantis"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megalania",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "megalania"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megalania Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 2200,
+    "CANT.": 1,
+    "ID": "megalaniaabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megaloceros",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "megaloceros"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megalodon",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "megalodon"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megalodon X",
+    "LEVEL": 435,
+    "PRECIO": 2200,
+    "CANT.": 1,
+    "ID": "megalodonx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megalosaurio Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 2700,
+    "CANT.": 1,
+    "ID": "megaloabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megalosaurus",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "megalo"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megaterio",
+    "LEVEL": 435,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "megaterio"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Megaterio R",
+    "LEVEL": 435,
+    "PRECIO": 5400,
+    "CANT.": 1,
+    "ID": "megaterior"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Mek",
+    "LEVEL": 200,
+    "PRECIO": 7000,
+    "CANT.": 1,
+    "ID": "mek"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Mesopitecus",
+    "LEVEL": 435,
+    "PRECIO": 300,
+    "CANT.": 1,
+    "ID": "mesopitecus"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Microraptor",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "microraptor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Morellatops",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "morelatops"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Mosasaurio",
+    "LEVEL": 435,
+    "PRECIO": 4000,
+    "CANT.": 1,
+    "ID": "mosa"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Mosasaurio X",
+    "LEVEL": 435,
+    "PRECIO": 4500,
+    "CANT.": 1,
+    "ID": "mosax"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Moschops",
+    "LEVEL": 435,
+    "PRECIO": 3000,
+    "CANT.": 1,
+    "ID": "moschop"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Moschops Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 3200,
+    "CANT.": 1,
+    "ID": "moschopabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Noglin",
+    "LEVEL": 435,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "noglin"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Nutria",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "nutria"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Nutria Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "nutriaabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Nutria X",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "nutriax"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Onix",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "onix"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Oso",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "oso"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Oso Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "osoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Oviraptor",
+    "LEVEL": 435,
+    "PRECIO": 1600,
+    "CANT.": 1,
+    "ID": "oviraptor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ovis",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "ovis"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Ovis Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "ovisabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Paracer",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "paracer"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Paracer Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "paracerabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Paracer X",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "paracerx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Parasaurio",
+    "LEVEL": 435,
+    "PRECIO": 600,
+    "CANT.": 1,
+    "ID": "para"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Parasaurio Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 600,
+    "CANT.": 1,
+    "ID": "paraabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Parasaurio R",
+    "LEVEL": 435,
+    "PRECIO": 600,
+    "CANT.": 1,
+    "ID": "parar"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Parasaurio X",
+    "LEVEL": 435,
+    "PRECIO": 600,
+    "CANT.": 1,
+    "ID": "parax"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Pegomastax",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "pego"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Pelagornis",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "pelagornis"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Phiomia",
+    "LEVEL": 435,
+    "PRECIO": 600,
+    "CANT.": 1,
+    "ID": "phiomia"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Pinguino",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "pinguino"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Plesiosaurio",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "plesio"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Pluminoso",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "pluminoso"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Procoptodon",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "canguro"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Procoptodon R",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "canguror"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Pteranodon",
+    "LEVEL": 435,
+    "PRECIO": 800,
+    "CANT.": 1,
+    "ID": "ptera"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Pulmonoscorpius",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "escorpion"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Pulmonoscorpius Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "escorpionabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Purlovia",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "purlovia"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Purlovia Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "purloviaabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Quetzal",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "quetzal"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Quetzal R",
+    "LEVEL": 435,
+    "PRECIO": 2400,
+    "CANT.": 1,
+    "ID": "quetzalr"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Quetzal tek   525",
+    "LEVEL": 438,
+    "PRECIO": 3500,
+    "CANT.": 1,
+    "ID": "quetzaltek"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Raptor",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "raptor"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Raptor Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "raptorabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Raptor tek  525",
+    "LEVEL": 438,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "raptortek"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Raptor X",
+    "LEVEL": 435,
+    "PRECIO": 1200,
+    "CANT.": 1,
+    "ID": "raptorx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Rex",
+    "LEVEL": 435,
+    "PRECIO": 6000,
+    "CANT.": 1,
+    "ID": "rex"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Rex Tek 525",
+    "LEVEL": 438,
+    "PRECIO": 7000,
+    "CANT.": 1,
+    "ID": "rextek"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Rex X",
+    "LEVEL": 435,
+    "PRECIO": 6500,
+    "CANT.": 1,
+    "ID": "rexx"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Rhino",
+    "LEVEL": 435,
+    "PRECIO": 4500,
+    "CANT.": 1,
+    "ID": "rino"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Rhino X",
+    "LEVEL": 435,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "rinox"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Rhyniognatha",
+    "LEVEL": 435,
+    "PRECIO": 20000,
+    "CANT.": 1,
+    "ID": "rhynio"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Rockdrake",
+    "LEVEL": 370,
+    "PRECIO": 7000,
+    "CANT.": 1,
+    "ID": "dragonroca"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Roto rata",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "rotorata"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Sarco",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "sarco"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Sarco aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1400,
+    "CANT.": 1,
+    "ID": "sarcoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Shadowmane",
+    "LEVEL": 435,
+    "PRECIO": 7000,
+    "CANT.": 1,
+    "ID": "shadow"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Sinomacrops",
+    "LEVEL": 435,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "sinoma"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Spino",
+    "LEVEL": 435,
+    "PRECIO": 2500,
+    "CANT.": 1,
+    "ID": "spino"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Spino aberrante",
+    "LEVEL": 435,
+    "PRECIO": 2700,
+    "CANT.": 1,
+    "ID": "spinoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Spino X",
+    "LEVEL": 435,
+    "PRECIO": 3000,
+    "CANT.": 1,
+    "ID": "spinox"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Stego",
+    "LEVEL": 435,
+    "PRECIO": 2000,
+    "CANT.": 1,
+    "ID": "stego"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Stego Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 2100,
+    "CANT.": 1,
+    "ID": "stegoabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Stego tek 525",
+    "LEVEL": 438,
+    "PRECIO": 2600,
+    "CANT.": 1,
+    "ID": "stegotek"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Stryder de farmeo",
+    "LEVEL": 100,
+    "PRECIO": 15000,
+    "CANT.": 1,
+    "ID": "stryder"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Tapejara",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "tapejara"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Tapejara X",
+    "LEVEL": 435,
+    "PRECIO": 2200,
+    "CANT.": 1,
+    "ID": "tapejarax"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Therizinosaur",
+    "LEVEL": 435,
+    "PRECIO": 5500,
+    "CANT.": 1,
+    "ID": "theri"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Thylacoleo",
+    "LEVEL": 435,
+    "PRECIO": 2200,
+    "CANT.": 1,
+    "ID": "thyla"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Thylacoleo R",
+    "LEVEL": 435,
+    "PRECIO": 2400,
+    "CANT.": 1,
+    "ID": "thylar"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Titanoboa",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "boa"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Titanoboa Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "boaabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Triceratops",
+    "LEVEL": 435,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "trike"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Triceratops Tek 525",
+    "LEVEL": 438,
+    "PRECIO": 1600,
+    "CANT.": 1,
+    "ID": "triketek"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Triceratops X",
+    "LEVEL": 435,
+    "PRECIO": 1500,
+    "CANT.": 1,
+    "ID": "trikex"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Trike Aberrante",
+    "LEVEL": 435,
+    "PRECIO": 1800,
+    "CANT.": 1,
+    "ID": "trikeabe"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Tropeognathus",
+    "LEVEL": 435,
+    "PRECIO": 4000,
+    "CANT.": 1,
+    "ID": "trope"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Tusoteuthis",
+    "LEVEL": 435,
+    "PRECIO": 6000,
+    "CANT.": 1,
+    "ID": "tuso"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Unicorn",
+    "LEVEL": 435,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "unicornio"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Velonasaur",
+    "LEVEL": 435,
+    "PRECIO": 4000,
+    "CANT.": 1,
+    "ID": "velona"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Velonasaur R",
+    "LEVEL": 435,
+    "PRECIO": 3800,
+    "CANT.": 1,
+    "ID": "velonar"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Yutyrannus",
+    "LEVEL": 435,
+    "PRECIO": 4000,
+    "CANT.": 1,
+    "ID": "yuty"
+  },
+  {
+    "CAT": "DINO",
+    "NOMBRE": "Yutyrannus X",
+    "LEVEL": 435,
+    "PRECIO": 4500,
+    "CANT.": 1,
+    "ID": "yutyx"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Antidoto",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "antidoto"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Ballesta",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "ballesta"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Carne Cocida",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 50,
+    "ID": "carne"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Cartuchos de escopeta",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 50,
+    "ID": "cartucho"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Catalejo",
+    "LEVEL": 1,
+    "PRECIO": 10,
+    "CANT.": 1,
+    "ID": "catalejo"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Cerveza",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "cerveza"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Chili Picante",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "chili"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Criopod",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "crio"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Dardos",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 50,
+    "ID": "dardo"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Dedicada",
+    "LEVEL": 1,
+    "PRECIO": 5000,
+    "CANT.": 1,
+    "ID": "dedicada"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Elemento",
+    "LEVEL": 1,
+    "PRECIO": 500,
+    "CANT.": 1,
+    "ID": "elemento"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Estimulantes",
+    "LEVEL": 1,
+    "PRECIO": 20,
+    "CANT.": 10,
+    "ID": "estimulante"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Feromona de Rygnyo",
+    "LEVEL": 1,
+    "PRECIO": 1000,
+    "CANT.": 1,
+    "ID": "feromona"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Gancho",
+    "LEVEL": 1,
+    "PRECIO": 10,
+    "CANT.": 1,
+    "ID": "gancho"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Gasolina",
+    "LEVEL": 1,
+    "PRECIO": 200,
+    "CANT.": 50,
+    "ID": "gasolina"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "GPS",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "gps"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Hacha de metal",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "hacha"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Kibble Basico",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "kgris"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Kibble Excepcional",
+    "LEVEL": 1,
+    "PRECIO": 200,
+    "CANT.": 1,
+    "ID": "kamarillo"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Kibble Extraordinario",
+    "LEVEL": 1,
+    "PRECIO": 300,
+    "CANT.": 1,
+    "ID": "kceleste"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Kibble Regular",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "kazul"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Kibble Simple",
+    "LEVEL": 1,
+    "PRECIO": 75,
+    "CANT.": 1,
+    "ID": "kverde"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Kibble Superior",
+    "LEVEL": 1,
+    "PRECIO": 150,
+    "CANT.": 1,
+    "ID": "kmorado"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Leche de Wyvern",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "leche"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Mascara de gas",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "mascara"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Mindwipe",
+    "LEVEL": 1,
+    "PRECIO": 200,
+    "CANT.": 1,
+    "ID": "mindwipe"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Mutageno",
+    "LEVEL": 1,
+    "PRECIO": 300,
+    "CANT.": 1,
+    "ID": "mutageno"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Narcoticos",
+    "LEVEL": 1,
+    "PRECIO": 20,
+    "CANT.": 10,
+    "ID": "narcotico"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Paracaidas",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 10,
+    "ID": "paracaida"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Pastel Vegetal",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "pastel"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Pico de metal",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "pico"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Pocion Salud",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 10,
+    "ID": "salud"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Saco de dormir",
+    "LEVEL": 1,
+    "PRECIO": 50,
+    "CANT.": 1,
+    "ID": "saco"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Sopa de Cactus",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "cactus"
+  },
+  {
+    "CAT": "ITEM",
+    "NOMBRE": "Tanque de oxigeno",
+    "LEVEL": 1,
+    "PRECIO": 100,
+    "CANT.": 1,
+    "ID": "tanque"
+  }
+]

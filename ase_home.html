@@ -173,7 +173,7 @@
       const totalMaps = maps.length;
       const totalPlayers = maps.reduce((s,m)=> s + (m.players||0), 0);
       return (
-        e('section', {className:'max-w-6xl mx-auto my-8 px-4'},
+        e('section', {id:'mapas', className:'max-w-6xl mx-auto my-8 px-4'},
           e('div', {className:'flex items-center justify-between mb-4'},
             e('h3', {className:'text-2xl text-white font-semibold'}, 'Mapas'),
             e('div', {className:'text-sm text-gray-300'}, `${totalMaps} mapas — ${totalPlayers} jugadores en total`)
@@ -191,15 +191,16 @@
         e('section', {id:'crossplay', className:'section section--dark py-12', 'data-aos':'fade-up'},
           e('div', {className:'container'},
             e('h2', {className:'section__title', 'data-aos':'fade-up'}, 'CrossPlay para PC'),
-            e('div', {className:'creators__grid', style:{display:'flex', alignItems:'center', gap:'24px', marginTop:'16px'}},
-              e('div', {className:'creators__image', 'data-aos':'fade-right', 'data-aos-delay':'100', style:{flex:'0 0 140px', display:'flex', justifyContent:'center', alignItems:'center'}},
-                // Usar logo existente como imagen representativa
-                e('img', {src:'img/RS_LOGO.png', alt:'RoyalServers', style:{width:'110px',height:'110px',objectFit:'contain'}})
-              ),
-              e('div', {className:'creators__text', 'data-aos':'fade-left', 'data-aos-delay':'200', style:{flex:'1'}},
+            e('div', {className:'creators__grid', style:{display:'flex', alignItems:'center', gap:'32px', marginTop:'24px'}},
+              // Columna izquierda - Contenido textual (65%)
+              e('div', {className:'creators__text', 'data-aos':'fade-right', 'data-aos-delay':'100', style:{flex:'0 0 65%'}},
                 e('h3', null, 'Compatible con las plataformas de Epic y Steam'),
                 e('p', null, 'Compatible con las plataformas de Epic y Steam, disfruta de nuestro servidor desde tu plataforma preferida. ¡Únete ahora y comienza tu aventura!'),
-                e('a', {href:'https://discord.gg/TU_INVITACION', className:'btn btn--secondary', style:{marginTop:'10px', display:'inline-block'}}, 'Unirse a la comunidad')
+                e('a', {href:'https://discord.gg/TU_INVITACION', className:'btn btn--secondary', style:{marginTop:'16px', display:'inline-block'}}, 'Unirse a la comunidad')
+              ),
+              // Columna derecha - Imagen de plataformas (35%)
+              e('div', {className:'creators__image', 'data-aos':'fade-left', 'data-aos-delay':'200', style:{flex:'0 0 35%', display:'flex', justifyContent:'center', alignItems:'center'}},
+                e('img', {src:'img/PLATAFORMAS_LOGO.png', alt:'Plataformas compatibles', style:{maxWidth:'100%', height:'auto', objectFit:'contain'}})
               )
             )
           )
