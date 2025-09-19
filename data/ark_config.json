@@ -1,0 +1,161 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "last_updated": "2025-09-19",
+    "server_name": "RoyalServers ARK",
+    "description": "Configuraciones del servidor ARK: Survival Evolved"
+  },
+  "general": {
+    "permanent_diseases": true,
+    "unlimited_mindwipe": true,
+    "gamma_config": true,
+    "third_person": true,
+    "floating_damage": true,
+    "tribute_transfer": true,
+    "tribute_transfer_note": "No elemento",
+    "cave_flyers": false,
+    "third_party_imprinting": true,
+    "tribe_warfare": true,
+    "flyer_speed_leveling": true,
+    "world_buffs": false,
+    "ragnarok_volcano": true,
+    "ragnarok_volcano_note": "erupción del volcán"
+  },
+  "tribes": {
+    "max_members": 10,
+    "max_alliances": 2,
+    "tribes_per_alliance": 4
+  },
+  "dinos": {
+    "levels": {
+      "max_wild_level": 300,
+      "max_tek_level": 360,
+      "wyvern_egg_level": 380,
+      "rockdrake_egg_level": 380,
+      "crystal_wyvern_level": 450,
+      "deino_magma_level": 300
+    },
+    "breeding": {
+      "hatching_speed": 6,
+      "maturation_speed": 6,
+      "imprint_scale": 1.3
+    },
+    "banned": [
+      "Bronto",
+      "Bronto R",
+      "Megachelón",
+      "Astrocetus",
+      "Fjordhawk",
+      "Terrorbird"
+    ]
+  },
+  "engrams": {
+    "banned": [
+      "Clonadora",
+      "Jaula",
+      "Esposas"
+    ]
+  },
+  "player_stats": {
+    "experience": 2,
+    "weight": 2,
+    "speed": 1.2,
+    "craft_speed": 1.2,
+    "taming_speed": 5,
+    "player_harvest": 4,
+    "dino_harvest": 4
+  },
+  "taming_limits": {
+    "aberration": 300,
+    "crystal_isles": 250,
+    "extinction": 300,
+    "fjordur": 200,
+    "genesis_2": 200,
+    "genesis": 300,
+    "the_island": 200,
+    "the_center": 350,
+    "scorched_earth": 350,
+    "lost_island": 350,
+    "ragnarok": 250,
+    "valguero": 250
+  },
+  "structures": {
+    "settings": {
+      "collision_disabled": true,
+      "pickup_enabled": true,
+      "cave_building_disabled": true,
+      "spawn_building_disabled": true
+    },
+    "decay_times": {
+      "thatch": 6,
+      "adobe": 12,
+      "wood": 12,
+      "stone": 18,
+      "metal": 24,
+      "tek": 30
+    },
+    "limits": {
+      "aberration": 3000,
+      "crystal_isles": 2000,
+      "extinction": 3000,
+      "fjordur": 2000,
+      "genesis_2": 2000,
+      "genesis": 4000,
+      "the_island": 2000,
+      "the_center": 3000,
+      "scorched_earth": 3000,
+      "lost_island": 3000,
+      "ragnarok": 2000,
+      "valguero": 2000
+    }
+  },
+  "player_levels": {
+    "max_total": 205,
+    "base_max": 105,
+    "ascensions": {
+      "the_island": {
+        "boss": "Overseer",
+        "location": "cueva Tek",
+        "levels": 15,
+        "total": 120
+      },
+      "scorched_earth": {
+        "boss": "Mantícora",
+        "levels": 15,
+        "total": 135
+      },
+      "aberration": {
+        "boss": "Rockwell",
+        "levels": 15,
+        "total": 150
+      },
+      "genesis_1": {
+        "boss": "Corrupter Master Controller",
+        "levels": 15,
+        "total": 165
+      },
+      "genesis_2": {
+        "boss": "Rockwell Terminus",
+        "levels": 15,
+        "total": 180
+      }
+    },
+    "additional_levels": {
+      "chibi": {
+        "levels": 5,
+        "description": "equipándote un chibi y matando alphas",
+        "total": 185
+      },
+      "fjordur_runes": {
+        "levels": 10,
+        "description": "encontrando TODAS (200) las runas en Fjordur",
+        "total": 195
+      },
+      "explorer_notes": {
+        "levels": 10,
+        "description": "consiguiendo TODAS las notas de explorador de los mapas de historia (más de 1000)",
+        "total": 205
+      }
+    }
+  }
+}
