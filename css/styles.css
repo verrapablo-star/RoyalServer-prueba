@@ -148,6 +148,11 @@
 .nav__link:hover {
   color: #f1c40f;
 }
+
+/* Make nav links bold on the commands page to match other pages */
+.ark-commands-page .nav__link {
+  font-weight: 700;
+}
 .nav__btn {
   margin-left: 1.5rem;
 }
@@ -1177,5 +1182,613 @@ input:focus, select:focus, textarea:focus, button:focus, a[role="button"]:focus 
 .input-error{border-color:rgba(231,76,60,0.9) !important;box-shadow:0 6px 18px rgba(231,76,60,0.06)}
 .error-text{color:#ff7c7c;background:rgba(255,124,124,0.03);padding:8px 10px;border-radius:8px;margin-top:8px;font-size:0.95rem}
 .apply-form .checkbox.input-error{padding:6px;border-radius:6px}
+
+
+/* ========================================
+   ARK COMMANDS MODULE STYLES
+   ======================================== */
+
+/* Variables CSS para el módulo de comandos ARK */
+.ark-commands-page {
+  --ark-primary: #5865F2;
+  --ark-secondary: #5B73F0;
+  --ark-danger: #FF6B6B;
+  --ark-warning: #FFD166;
+  --ark-success: #4ECDC4;
+  --ark-dark: #080710;
+  --ark-darker: #0A0E27;
+  --ark-card-bg: rgba(255, 255, 255, 0.05);
+  --ark-border: rgba(255, 255, 255, 0.1);
+  --ark-text-muted: rgba(255, 255, 255, 0.7);
+  --ase-nav-offset: 72px;
+}
+
+/* Contenedor principal del módulo */
+.ark-commands-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+}
+
+/* Header del módulo de comandos */
+.ark-commands-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, var(--ark-primary) 0%, var(--ark-secondary) 100%);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(88, 101, 242, 0.2);
+}
+
+.ark-commands-title {
+  font-size: 2.5rem;
+  margin: 0 0 1rem 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ark-commands-subtitle {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+/* Grid de secciones de comandos */
+.ark-commands-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Tarjetas de secciones de comandos */
+.ark-command-section {
+  background: var(--ark-card-bg);
+  border: 1px solid var(--ark-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.ark-command-section:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  border-color: var(--ark-primary);
+}
+
+/* Headers de sección */
+
+.ark-commands-page .ark-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 1.75rem 2rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ark-commands-page .ark-section-header:hover {
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.2) 0%, rgba(91, 115, 240, 0.1) 100%);
+}
+
+.ark-commands-page .ark-section-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ark-commands-page .ark-section-icon {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+  width: 2rem;
+  text-align: center;
+}
+
+.ark-commands-page .ark-section-arrow {
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Keep the arrow/fold indicator visually at the end of the header */
+.ark-commands-page .ark-section-header .ark-section-arrow,
+.ark-commands-page .ark-section-header .ark-accordion-icon {
+  margin-left: auto;
+}
+
+.ark-section-header.active .ark-section-arrow {
+  transform: rotate(180deg);
+}
+
+/* Contenido de sección */
+.ark-section-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.ark-section-content.active {
+  max-height: 2000px;
+  padding: 2rem;
+}
+
+/* Comandos individuales */
+.ark-command-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.ark-command-item:last-child {
+  margin-bottom: 0;
+}
+
+.ark-command-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(4px);
+}
+
+.ark-command-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ark-primary);
+  margin-bottom: 0.5rem;
+  font-family: 'Courier New', monospace;
+}
+
+.ark-command-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: var(--ark-text-muted);
+}
+
+.ark-command-cost {
+  display: inline-block;
+  background: var(--ark-warning);
+  color: var(--ark-dark);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.ark-command-restriction {
+  display: inline-block;
+  background: var(--ark-danger);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.ark-command-example {
+  background: rgba(88, 101, 242, 0.1);
+  border-left: 3px solid var(--ark-primary);
+  padding: 0.75rem;
+  margin-top: 0.75rem;
+  border-radius: 0 6px 6px 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+/* Listas de pasos */
+.ark-steps-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  counter-reset: step-counter;
+}
+
+.ark-steps-list li {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid var(--ark-primary);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 0 8px 8px 0;
+  position: relative;
+}
+
+.ark-steps-list li::before {
+  content: counter(step-counter);
+  counter-increment: step-counter;
+  position: absolute;
+  left: -2rem;
+  top: 1rem;
+  background: var(--ark-primary);
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Tablas de referencia */
+.ark-reference-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ark-reference-table th,
+.ark-reference-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ark-reference-table th {
+  background: var(--ark-primary);
+  font-weight: 600;
+}
+
+.ark-reference-table td {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+}
+
+/* Enlaces de referencia */
+.ark-reference-link {
+  color: var(--ark-warning);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.ark-reference-link:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Alertas */
+.ark-alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border-left: 4px solid;
+}
+
+.ark-alert-info {
+  background: rgba(88, 101, 242, 0.1);
+  border-color: var(--ark-primary);
+  color: #fff;
+}
+
+.ark-alert-warning {
+  background: rgba(255, 209, 102, 0.1);
+  border-color: var(--ark-warning);
+  color: #fff;
+}
+
+.ark-alert-danger {
+  background: rgba(255, 107, 107, 0.1);
+  border-color: var(--ark-danger);
+  color: #fff;
+}
+
+/* Responsive para comandos ARK */
+@media (max-width: 768px) {
+  .ark-commands-container {
+    padding: 1rem;
+  }
+
+  .ark-commands-grid {
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .ark-commands-title {
+    font-size: 2rem;
+  }
+
+  .ark-section-header {
+    padding: 1.25rem 1rem;
+  }
+
+  .ark-section-content.active {
+    padding: 1.5rem;
+  }
+
+  .ark-steps-list li::before {
+    left: -1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .ark-commands-page {
+    --ase-nav-offset: 56px;
+  }
+}
+
+/* Fin del módulo ARK Commands */
+
+/* ========================================
+   ARK CONFIG MODULE STYLES
+   ======================================== */
+
+/* Variables CSS para el módulo de configuración ARK */
+.ark-config-page {
+  --ark-primary: #5865F2;
+  --ark-secondary: #FFD166;
+  --ark-success: #4ECDC4;
+  --ark-danger: #FF6B6B;
+  --ark-warning: #FFD166;
+  --ark-purple: #8B5CF6;
+  /* Medium intensity for purple: balance between original and previous change */
+  --ark-purple-light: rgba(139, 92, 246, 0.085);
+  --ark-purple-border: rgba(139, 92, 246, 0.16);
+  --ark-text-light: #E5E7EB;
+  --ark-text-muted: rgba(229, 231, 235, 0.7);
+}
+
+/* Contenedor principal del módulo de configuración */
+.ark-config-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Secciones principales */
+.ark-section {
+  margin-bottom: 2rem;
+  background: transparent;
+  border-radius: 8px;
+}
+
+/* Headers de sección */
+.ark-section-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0;
+  background: transparent;
+}
+
+/* Make absolutely sure section headers and titles align left */
+.ark-section-header {
+  justify-content: flex-start !important;
+}
+
+.ark-section-title {
+  text-align: left !important;
+}
+
+.ark-section-icon {
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+}
+
+.ark-section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: var(--ark-text-light);
+}
+
+/* Acordeones */
+.ark-accordion {
+  margin-bottom: 1rem;
+}
+
+.ark-config-page .ark-accordion-header {
+  background: linear-gradient(135deg, rgba(139,92,246,0.20) 0%, rgba(124,58,237,0.18) 100%);
+  border: 1px solid var(--ark-purple-border);
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(124,58,237,0.08);
+}
+
+.ark-config-page .ark-accordion-header:hover {
+  background: linear-gradient(135deg, rgba(124,58,237,0.22) 0%, rgba(139,92,246,0.18) 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(124,58,237,0.12);
+}
+
+.ark-accordion-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+}
+
+.ark-accordion-icon {
+  font-size: 1rem;
+  color: #FFFFFF;
+  transition: transform 0.3s ease;
+}
+
+.ark-accordion-header.active .ark-accordion-icon {
+  transform: rotate(180deg);
+}
+
+/* Contenido del acordeón */
+.ark-accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: var(--ark-purple-light);
+  border: 1px solid var(--ark-purple-border);
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.ark-accordion-content.active {
+  max-height: 2000px;
+}
+
+.ark-accordion-body {
+  padding: 1.5rem;
+}
+
+/* Cards dentro de acordeones */
+.ark-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Force 2x2 grid for the general configuration cards inside ase_config */
+.ark-config-page .ark-general-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .ark-config-page .ark-general-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ark-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.ark-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.ark-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+  color: var(--ark-text-light);
+  display: flex;
+  align-items: center;
+}
+
+.ark-card-icon {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+.ark-card p {
+  margin: 0.5rem 0;
+  color: var(--ark-text-light);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Badges */
+.ark-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.ark-badge-primary {
+  background: var(--ark-primary);
+  color: #FFFFFF;
+}
+
+.ark-badge-warning {
+  background: var(--ark-warning);
+  color: #1F2937;
+}
+
+.ark-badge-success {
+  background: var(--ark-success);
+  color: #1F2937;
+}
+
+.ark-badge-danger {
+  background: var(--ark-danger);
+  color: #FFFFFF;
+}
+
+/* Tablas */
+.ark-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.ark-table th,
+.ark-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--ark-text-light);
+  font-size: 0.9rem;
+}
+
+.ark-table th {
+  background: rgba(255, 255, 255, 0.05);
+  font-weight: 600;
+  color: var(--ark-text-light);
+}
+
+.ark-table tr:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ark-config-container {
+    padding: 1rem;
+  }
+  
+  .ark-section-title {
+    font-size: 1.25rem;
+  }
+  
+  .ark-accordion-title {
+    font-size: 1rem;
+  }
+  
+  .ark-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .ark-accordion-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .ark-accordion-body {
+    padding: 1rem;
+  }
+}
+
+/* Fin del módulo ARK Config */
 
 

@@ -234,10 +234,16 @@
       padding: 1rem 1.5rem;
       cursor: pointer;
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: center;
+      gap: 0.75rem;
       transition: all 0.3s ease;
       border-bottom: 1px solid var(--ark-border);
+    }
+
+    /* Keep the chevron icon visually at the end */
+    .ark-accordion-header .ark-accordion-icon {
+      margin-left: auto;
     }
 
     .ark-accordion-header:hover {
@@ -424,7 +430,7 @@
     }
   </style>
 </head>
-<body>
+<body class="ark-config-page">
   <header class="header">
     <div id="nav-bar-home-container"></div>
     <div class="game-bar">
@@ -931,13 +937,13 @@
         <!-- ESTRUCTURAS Section -->
         <section class="ark-section">
           <div class="ark-section-header">
-            <i class="fas fa-building ark-section-icon" style="color: var(--ark-success);"></i>
+            <i class="fas fa-building ark-section-icon" style="color: #4ECDC4;"></i>
             <h2 class="ark-section-title">Estructuras y Tiempo de Decay</h2>
           </div>
           <div class="ark-accordion">
             <div class="ark-accordion-header" onclick="toggleAccordion('section-structures')">
               <h3 class="ark-accordion-title">
-                <i class="fas fa-list ark-card-icon" style="margin-right:0.5rem;color:var(--ark-success)"></i>
+                <i class="fas fa-list ark-card-icon" style="margin-right:0.5rem;color:#4ECDC4"></i>
                 Ver configuración de estructuras
               </h3>
               <i class="fas fa-chevron-down ark-accordion-icon"></i>
@@ -1059,14 +1065,14 @@
         <!-- LEVEL MAX PLAYER Section -->
         <section class="ark-section">
           <div class="ark-section-header">
-            <i class="fas fa-star ark-section-icon" style="color: var(--ark-primary);"></i>
+            <i class="fas fa-star ark-section-icon" style="color: #5865F2;"></i>
             <h2 class="ark-section-title">Nivel Máximo de Jugador</h2>
           </div>
           
           <div class="ark-accordion">
             <div class="ark-accordion-header" onclick="toggleAccordion('player-levels')">
               <h3 class="ark-accordion-title">
-                <i class="fas fa-trophy" style="margin-right: 0.5rem; color: var(--ark-primary);"></i>
+                <i class="fas fa-trophy" style="margin-right: 0.5rem; color: #5865F2;"></i>
                 Sistema de Niveles (Máximo: 205)
               </h3>
               <i class="fas fa-chevron-down ark-accordion-icon"></i>
@@ -1151,21 +1157,29 @@
           </div>
         </section>
 
-        <!-- Admin Note Section -->
+        <!-- Sección de reglas -->
         <section class="ark-section">
           <div class="ark-card" style="background: linear-gradient(135deg, rgba(255, 209, 102, 0.1) 0%, rgba(88, 101, 242, 0.1) 100%); border: 1px solid var(--ark-secondary);">
             <h3 style="color: var(--ark-secondary); margin-top: 0; display: flex; align-items: center;">
               <i class="fas fa-info-circle" style="margin-right: 0.75rem;"></i>
-              Nota para Desarrolladores
+              Importante: Reglas del servidor
             </h3>
             <div style="background: rgba(0, 0, 0, 0.2); padding: 1rem; border-radius: 8px; margin: 1rem 0;">
-              <p style="margin: 0; font-size: 0.875rem; line-height: 1.6;">
-                <strong>Áreas marcadas para futuras mejoras:</strong><br>
-                • Las tablas de límites por mapa pueden conectarse a una base de datos para actualizaciones dinámicas<br>
-                • Los tooltips pueden expandirse con más información técnica<br>
-                • Se puede agregar un sistema de búsqueda/filtrado para configuraciones específicas<br>
-                • Los acordeones pueden recordar su estado usando localStorage<br>
-                • Se puede implementar un panel de administración para editar estas configuraciones en tiempo real
+              <p style="margin: 0; font-size: 0.925rem; line-height: 1.6; color: var(--ark-text);">
+                Antes de comenzar tu aventura, te pedimos que leas atentamente nuestras normas de convivencia y comportamiento. Al ingresar y jugar en nuestro servidor, se asume automáticamente que aceptas y respetas estas reglas.
+                <br><br>
+                <strong>Reglas Ark PVE Royal Server</strong> (<a href="https://heyzine.com/flip-book/7de819160a.html#page/1" target="_blank" rel="noopener" style="color: var(--ark-secondary); text-decoration: underline;">ver documento</a>)
+                <br><br>
+                Estas normas están diseñadas para garantizar una experiencia justa, divertida y segura para todos los jugadores. Respetarlas ayuda a mantener un ambiente cordial y amistoso dentro de la comunidad, evitando conflictos innecesarios.
+                <br><br>
+                <strong>Recuerda:</strong>
+                <ul style="margin: 0.5rem 0 0 1.25rem; padding: 0; color: var(--ark-text); font-size: 0.9rem;">
+                  <li>El incumplimiento de las reglas puede derivar en sanciones, desde advertencias hasta expulsión del servidor.</li>
+                  <li>Mantén siempre un comportamiento respetuoso hacia otros jugadores y hacia el staff.</li>
+                  <li>El sentido común y la buena educación son la base de nuestra comunidad.</li>
+                </ul>
+                <br>
+                Al continuar, confirmas que conoces estas normas y te comprometes a cumplirlas durante tu tiempo en el servidor.
               </p>
             </div>
             <p style="margin-bottom: 0; font-size: 0.875rem; color: var(--ark-text-muted);">
